@@ -1,0 +1,73 @@
+[
+    {
+        "start":"Petit Bersac",
+        "end":"Saint Aulaye",
+        "length": "16km",
+        "time": "5h30",
+        "last-departure": "15h",
+        "map": "./assets/parcours/parcours1.png",
+        "price": "17€",
+        "signal-color": "black"
+    },
+    {
+        "start": "Aubeterre",
+        "end": "Saint Aulaye",
+        "length": "10,5km",
+        "time": "3h30",
+        "last-departure": "17h",
+        "map": "./assets/parcours/parcours2.png",
+        "price": "14€",
+        "signal-color": "pink"
+    },
+    {
+        "start": "Bonnes",
+        "end": "Saint Aulaye",
+        "length": "4,5km",
+        "time": "1h30",
+        "last-departure": "19h",
+        "map": "./assets/parcours/parcours3.png",
+        "price": "11€",
+        "signal-color": "orange"
+    },
+    {
+        "start": "Saint Aulaye",
+        "end": "",
+        "length": "",
+        "time": "1h",
+        "last-departure": "19h30",
+        "map": "./assets/parcours/parcours4.png",
+        "price": "10€",
+        "signal-color": "green"
+    },
+    {
+        "start": "Saint Aulaye",
+        "end": "Pont de Chenaud",
+        "length": "3km",
+        "time": "1h",
+        "last-departure": "19h30",
+        "map": "./assets/parcours/parcours5.png",
+        "price": "10€",
+        "signal-color": "yellow"
+    },
+    {
+        "start": "Saint Aulaye",
+        "end": "Chenaud Auziac",
+        "length": "7km",
+        "time": "2h30",
+        "last-departure": "18h",
+        "map": "./assets/parcours/parcours6.png",
+        "price": "13€",
+        "signal-color": "red"
+    },
+    {
+        "start": "Saint Aulaye",
+        "end": "Pont de Parcoul",
+        "length": "11,5km",
+        "time": "4h",
+        "last-departure": "16h30",
+        "map": "./assets/parcours/parcours7.png",
+        "price": "15€",
+        "signal-color": "Purple"
+    }
+]
+   
