@@ -12,7 +12,8 @@
     <link href="https://fonts.googleapis.com/css?family=Rufina:400,700" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet" />
     <link rel="shortcut icon" type="image/icon" href="assets/logo/favicon.webp"/>
-    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script type="application/ld+json">
         {
           "@context": "https://schema.org",
@@ -40,16 +41,17 @@
           "priceRange": "12 to 40 €"
         }
         </script>
-        <script src="https://cart.guidap.net/v1/" async defer data-token="5a6RzNbV04JxtepPiEkgGvrSuB8cfAYF9KdD" data-lang="fr" data-currency="EUR"></script>
-
+       
+        <!--<script src="https://cart.guidap.net/v1/" async defer data-token="5a6RzNbV04JxtepPiEkgGvrSuB8cfAYF9KdD" data-lang="fr" data-currency="EUR"></script>
+        -->
     <title>HDM Canoë</title>
 </head>
 <body>
     <header>
         <div class="header-container">
             <div class="logo-title">
-                <img src="./assets/images/home/logokayakdtoure.png" alt="logo de HDM Canoë La Dordogne Verte"  width="200" title="logo de HDM Canoë La Dordogne Verte">
-                <h1 class="title">HDM Canoë <span>La Dordogne Verte</span></h1>
+                <img class="logo" src="./assets/images/home/logokayakdtoure.png" alt="logo de HDM Canoë La Dordogne Verte"  width="200" title="logo de HDM Canoë La Dordogne Verte">
+                <h1 class="title">HDM Canoë <br><span>La Dordogne Verte</span></h1>
             </div>
             <nav>
                 <ul>
@@ -67,12 +69,109 @@
                 <p>Location de canoës, paddle et pédalos pour des excursions sport et nature sur la Dronne, en Périgord Vert.</p>
             </div>
         </section>
-        <section class="activity" id="activites">
+        <section class="activity-section" id="activites">
             <div class="activity-container">
-                <script>
+                <div class="activities">
                     
-                </script>
+                </div>
+                <div class="activity-selected">
+                    <img src="./assets/images/parcours/imgfunny.webp" width="200">
+                </div>
             </div>
+        </section>
+        <section class="gallery" id="gallery">
+            <div class="gallery-container">
+                <h2>A découvrir!</h2>
+                <div class="gallery-images">
+                    <img class ="gallery-image" src="./assets/images/gallary/g1.jpg" alt="image 1" />
+                    <img class ="gallery-image" src="./assets/images/gallary/g2.jpg" alt="image 2" />
+                    <img class ="gallery-image" src="./assets/images/gallary/g3.jpg" alt="image 3" />
+                    <img class ="gallery-image" src="./assets/images/gallary/g4.jpg" alt="image 4" />
+                    <img class ="gallery-image" src="./assets/images/gallary/g5.jpg" alt="image 5" />
+                    <img class ="gallery-image" src="./assets/images/gallary/g6.jpg" alt="image 6" />
+                </div>
+            </div>
+        </section>
     </main>
+    <footer>
+        <div class="footer-container">
+            <div class="contact" id="contact">
+                <h2>Contact</h2>
+                <p>Adresse: Les Ponts, 24410 Saint Aulaye</p>
+                <p>Mobile: 06 33 55 38 61</p>
+                <p>Email: contact@hdm-canoe.fr</p>
+            </div>
+            <div class="social">
+                <h2>Réseaux Sociaux</h2>
+                <a href="https://www.facebook.com/campingladordogneverte" target="_blank"><i class="fa fa-facebook"></i></a>
+            </div>
+        </div>
+        <div>
+            <p>&copy; 2024 HDM Canoë by <a href="www.lacouralexandre.tech" target="_blank">Dev&apos;your synergy</a></p>
+        </div>
+    </footer>
+<script>
+       
+        fetch('./activities.json')
+        .then(response => response.json())
+        .then(data => {
+            data.forEach((activity) => {
+                
+                const activitiesList = document.querySelector('.activities');
+                const activityElement = document.createElement('div');
+                activityElement.classList.add('activity');
+                activityElement.innerHTML = `
+                    <i class="fa fa-star ${activity['signal-color']}"></i>
+                    <p>${activity.time}</p>
+                `;
+                activityElement.onclick = function() {
+                    handleActivityClick(activity); 
+                };
+                activitiesList.appendChild(activityElement);
+                
+            });
+        });
+        function handleActivityClick(activity) {
+            const activitySelected = document.querySelector('.activity-selected');
+            activitySelected.innerHTML = `
+                <h2 class="parcours-title">Parcours Sélectionné:</h2>
+                <div class="parcours-container">
+                    <div class="parcours-description">
+                        <p>Départ: <span>${activity.start}</span></p>
+                        <p>Arrivée: <span>${activity.end}</span></p>
+                        <p>Distance: <span>${activity.length}</span></p>
+                        <p>Temps: <span>${activity.time}</span></p>
+                        <p>Prix: <span>${activity.price}</span></p>
+                    </div>
+                    <div class="parcours-img">
+                        <img src="${activity.map}" width="200">
+                    </div>
+                </div>
+                <div class="button-container">
+                    <button onclick="handleReservationClick()">Réserver</button>
+                </div>
+            `;
+        }
+        function randomizeImages() {
+    const gallery = document.querySelector('.gallery-images');
+    const images = Array.from(gallery.children); // Convertit HTMLCollection en tableau
+
+    // Ajoute la classe 'fade' à toutes les images pour les faire s'estomper
+    images.forEach(image => image.classList.add('fade'));
+
+    // Attendez 1 seconde (le temps de la transition d'opacité), puis mélangez les images
+    setTimeout(() => {
+        images.sort(() => Math.random() - 0.5); // Trie aléatoirement le tableau
+
+        // Ajoute les images triées à la galerie et supprime la classe 'fade' pour les faire réapparaître
+        images.forEach(image => {
+            gallery.appendChild(image);
+            image.classList.remove('fade');
+        });
+    }, 1000);
+}
+
+setInterval(randomizeImages, 3000); // Randomise les images toutes les 3 secondes
+    </script>
 </body>
 </html>

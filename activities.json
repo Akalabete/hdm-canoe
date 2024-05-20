@@ -5,7 +5,7 @@
         "length": "16km",
         "time": "5h30",
         "last-departure": "15h",
-        "map": "./assets/parcours/parcours1.png",
+        "map": "./assets/images/parcours/parcours1.webp",
         "price": "17€",
         "signal-color": "black"
     },
@@ -15,7 +15,7 @@
         "length": "10,5km",
         "time": "3h30",
         "last-departure": "17h",
-        "map": "./assets/parcours/parcours2.png",
+        "map": "./assets/images/parcours/parcours2.webp",
         "price": "14€",
         "signal-color": "pink"
     },
@@ -25,17 +25,17 @@
         "length": "4,5km",
         "time": "1h30",
         "last-departure": "19h",
-        "map": "./assets/parcours/parcours3.png",
+        "map": "./assets/images/parcours/parcours3.webp",
         "price": "11€",
         "signal-color": "orange"
     },
     {
         "start": "Saint Aulaye",
-        "end": "",
+        "end": "Sur site",
         "length": "",
         "time": "1h",
         "last-departure": "19h30",
-        "map": "./assets/parcours/parcours4.png",
+        "map": "./assets/images/parcours/onsite.webp",
         "price": "10€",
         "signal-color": "green"
     },
@@ -45,7 +45,7 @@
         "length": "3km",
         "time": "1h",
         "last-departure": "19h30",
-        "map": "./assets/parcours/parcours5.png",
+        "map": "./assets/images/parcours/parcours5.webp",
         "price": "10€",
         "signal-color": "yellow"
     },
@@ -55,7 +55,7 @@
         "length": "7km",
         "time": "2h30",
         "last-departure": "18h",
-        "map": "./assets/parcours/parcours6.png",
+        "map": "./assets/images/parcours/parcours6.webp",
         "price": "13€",
         "signal-color": "red"
     },
@@ -65,9 +65,9 @@
         "length": "11,5km",
         "time": "4h",
         "last-departure": "16h30",
-        "map": "./assets/parcours/parcours7.png",
+        "map": "./assets/images/parcours/parcours7.webp",
         "price": "15€",
-        "signal-color": "Purple"
+        "signal-color": "purple"
     }
 ]
    
