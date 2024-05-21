@@ -3,7 +3,7 @@ body {
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
-    min-width: 320px;
+    min-width: 500px;
 }
 
 .upbtn {
@@ -18,7 +18,7 @@ body {
     justify-content: center;
     align-items: center;
     display: none;
-    border-radius: 10px;
+    border-radius: 30px;
 }
 .fa-chevron-up {
     font-size: 2rem;
@@ -27,9 +27,7 @@ body {
     cursor: pointer;
 }
 
-.gallery-image {
-    width: 300px;;
-}
+
 .header-container {
     position: fixed;
     top: 0;
@@ -103,7 +101,6 @@ h1 span {
 }
 
 .activity-section {
-    margin-top: 2vh;
     margin: 2vh 2%;
     border-radius: 30px;
     box-shadow: 5px 5px 10px 5px grey;
@@ -114,6 +111,7 @@ h1 span {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    padding: 1vh 0;
     border-bottom: solid 1px grey;
     
 }
@@ -124,7 +122,7 @@ h1 span {
     align-items: center;
     min-width: 120px;
     margin: 1%;
-    border: solid 1px green;
+    box-shadow: 5px 5px 10px 5px grey;
     text-align: center;
     font-size: 1.3rem;
     font-weight: bold;
@@ -199,19 +197,52 @@ h1 span {
     text-align: center;
     font-size: 1.8rem;
 }
-.gallery-images {
+.service-container {
+    width: 100%;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    gap: 10px; 
+    grid-template-columns: 1fr 1fr;
+    margin: 3vh 5%;
+}
+.service {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    border: solid 1px red;
+    margin-bottom: 2vh;
+    box-shadow: 5px 5px 10px 5px grey;
+}
+.service-image {
+    width: 200px;
+    height: 200px;
+    border: solid 1px blue;
+}
+.service-info {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.gallery-images {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
     margin: 2vh 2%;
+    border-radius: 30px;
+    box-shadow: 5px 5px 10px 5px grey;
+    padding: 2%;
+    gap: 2%;
 }
 .gallery-image {
-    width: 240px;
-    height: 250px;
+    width: 220px;
+    height: 190px;
     object-fit: cover;
     border-radius: 30px;
+    margin-bottom: 2%;
 }
+
 .gallery-images img {
     transition: opacity 1s;
     
@@ -236,13 +267,20 @@ h1 span {
     margin-bottom: 3vh; 
     box-shadow: 5px 5px 10px 5px grey;
     border-radius: 30px;
+    font-size: 1.4rem;
+    padding: 2%;
+}
+.fa-phone, .fa-envelope {
+    font-size: 1.8rem;
+    margin: 2vh 2%;
+    color: teal;
 }
 
 .footerimage {
-    height: 30vh;
     width: 100%;
+    height: 50vh;
     background-image: url("./assets/images/home/dd.webp");
-    background-size: contain;
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
@@ -266,7 +304,182 @@ h1 span {
     font-size: 3rem;
     margin: 1%;
 }
+.social {
+    margin-bottom : 2vh;
+}
 .social-link {
     text-decoration: none;
     color: blue;
+}
+.webmaster {
+    text-align: center;
+}
+
+.webmaster a {
+    text-decoration: none;
+    color: purple;
+}
+@media screen and (min-width: 850px){
+    .header-container {
+        height: 10vh;
+        justify-content: space-evenly;;
+    }
+    .logo-title {
+        flex-direction: row;
+        align-items: center;
+        width: 60%;
+    }
+    .logo {
+        display: block;
+        width: 30%;
+        max-width: 200px;
+        
+    }
+    .header-container nav ul {
+        flex-direction: row;
+        margin-left: -15%;
+    }
+    .header-container nav ul li {
+        margin: 0px 5%;
+    }
+    .header-container nav ul li a {
+        font-size: 1.8rem;
+    }
+    .logo img {
+        width: 100%;
+    }
+    h1 {
+        margin-left: 0;
+    }
+    .home {
+        margin-top: 11vh;
+        height: 70vh;
+    }
+    .home-container {
+        top: 10%;
+    }
+    .activity-section {
+        margin: 2vh 10%;
+    }
+    .activities {
+        padding: 2vh 0;
+        
+    }
+    .activity {
+        min-width: 150px;
+        font-size: 1.8rem;
+        border-radius: 50px;
+    }
+    .activity-selected {
+        padding-left: 5%;
+        padding-bottom: 5%;
+    }
+    .activity-selected h2 {
+        font-size: 2.5rem;
+    }
+    .activity-selected p {
+        font-size: 2rem;
+    }
+    .activity-selected p span {
+        font-size: 2.1rem;
+    }
+    .activity-selected button {
+
+        font-size: 2rem;
+    }
+    .parcours-container {
+        margin: 2vh 10%;
+    }
+    .parcours-image {
+        width: 50%;
+    }
+    .gallery h2 {
+        font-size: 2.5rem;
+    }
+    .gallery-images {
+        margin: 2vh 10%;
+    }
+    .gallery-image {
+        width: 300px;
+        height: 250px;
+    }
+    .footer-container {
+        padding: 2% 0;
+    }
+    .contact {
+        width: 70%;
+    }
+    .contact h2 {
+        font-size: 2.5rem;
+    }
+    .contact p {
+        font-size: 2rem;
+    }
+    .footerimage {
+        height: 40vh;
+    }
+    .location-image-container {
+        margin: 2vh 10%;
+    }
+    .location-image-container img {
+        width: 100%;
+    }
+    .fab, .fa-phone, .fa-envelope {
+        font-size: 4rem;
+    }
+    
+    .social {
+        margin-bottom: 2vh;
+    }
+    .social-link {
+        font-size: 2rem;
+    }
+    .webmaster {
+        font-size: 2rem;
+    }
+    .webmaster a {
+        font-size: 2rem;
+    }
+    .upbtn {
+        width: 50px;
+        height: 50px;
+        border-radius: 50px;
+    }
+}
+
+@media screen and (min-width: 1000px){
+    .home-container {
+        width: 80%;
+        margin-left: 3%;
+        border-radius: 30px;
+        padding: 2%;
+    }
+    .home-container h2 {
+        font-size: 2.1rem;
+    }
+}
+@media screen and (min-width: 1300px){
+    .header-container {
+        height: 13vh;
+    }
+    .logo {
+        width: 30%;
+        max-width: 260px;
+    }
+    .header-container nav ul {
+        margin-left: -50%;
+    }
+    .header-container nav ul li {
+        margin: 0px 5%;
+    }
+    .header-container nav ul li a {
+        font-size: 2rem;
+    }
+    .home-container {
+        width: 60%;
+        margin-left: 5%;
+    }
+    .footerimage {
+        height: 50vh;
+    }
 }

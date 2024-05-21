@@ -67,7 +67,7 @@
         <section class="home" id="home">
             <div class="home-container">
                 <h2>Bienvenue chez HDM Canoë</h2>
-                <p>Location de canoës, paddle et pédalos pour des excursions sport et nature sur la Dronne, en Périgord Vert.</p>
+                <p>Location de canoës, paddle et pédalos pour des excursions sport et nature sur la Dronne, en Périgord Vert, à Saint Aulaye</p>
             </div>
         </section>
         <section class="activity-section" id="activites">
@@ -77,6 +77,38 @@
                 </div>
                 <div class="activity-selected">
                     <img src="./assets/images/parcours/imgfunny.webp" width="200">
+                </div>
+            </div>
+        </section>
+        <section class="services">
+            <div class="service-container">
+                <div class="service">
+                    <img class="service-image" src="#" alt="">
+                    <div class="service-info">
+                        <h3>this service</h3>
+                        <p>description of the service</p>
+                    </div>
+                </div>
+                <div class="service">
+                    <img class="service-image" src="#" alt="">
+                    <div class="service-info">
+                        <h3>this service</h3>
+                        <p>description of the service</p>
+                    </div>
+                </div>
+                <div class="service">
+                    <img class="service-image" src="#" alt="">
+                    <div class="service-info">
+                        <h3>this service</h3>
+                        <p>description of the service</p>
+                    </div>
+                </div>
+                <div class="service">
+                    <img class="service-image" src="#" alt="">
+                    <div class="service-info">
+                        <h3>this service</h3>
+                        <p>description of the service</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -99,8 +131,8 @@
             <div class="contact" id="contact">
                 <h2>Nous sommes ici:</h2>
                 <p>Adresse: Les Ponts, 24410 Saint Aulaye</p>
-                <p>Mobile: 06 33 55 38 61</p>
-                <p>Email: contact@hdm-canoe.fr</p>
+                <a href="phoneto:0633553861"><i class="fa fa-phone"></i></a>
+                <a href="mailto:contact@hdm-canoe.fr"><i class="fa fa-envelope"></i></a>
             </div>
             <div class="location-image-container">
                 <a href="https://www.google.com/maps/place/hdm+cano%C3%AB/@45.2090541,0.135685,17z/data=!3m1!4b1!4m6!3m5!1s0x47ffe58d023cf139:0xa4ebc20dba81c2f3!8m2!3d45.2090541!4d0.135685!16s%2Fg%2F11g1knhv_s?entry=ttu" target="_blank">
@@ -113,7 +145,7 @@
             </div>
             <div class="footerimage"></div>
         </div>
-        <div>
+        <div class="webmaster">
             <p>&copy; 2024 HDM Canoë by <a href="www.lacouralexandre.tech" target="_blank">Dev&apos;your synergy</a></p>
         </div>
         
@@ -126,6 +158,7 @@
                 item.classList.add('active');
             });
         });
+
         fetch('./activities.json')
         .then(response => response.json())
         .then(data => {
@@ -141,10 +174,10 @@
                 activityElement.onclick = function() {
                     handleActivityClick(activity); 
                 };
-                activitiesList.appendChild(activityElement);
-                
+                activitiesList.appendChild(activityElement);      
             });
         });
+
         function handleActivityClick(activity) {
             const activitySelected = document.querySelector('.activity-selected');
             activitySelected.innerHTML = `
@@ -166,22 +199,18 @@
                 </div>
             `;
         }
+
         function randomizeImages() {
             const gallery = document.querySelector('.gallery-images');
             const images = Array.from(gallery.children); 
-
-            images.forEach(image => {
-                
+            images.forEach(image => { 
                 image.classList.add('fade');
             });
-
             setTimeout(() => {
                 images.sort(() => Math.random() - 0.5); 
-
                 images.forEach(image => {
                     gallery.appendChild(image);
                     image.classList.remove('fade');
-                    
                 });
             }, 1000);
         }
@@ -200,6 +229,19 @@
             } else {
                 scrollUpButton.style.display = 'none';
             }
+        });
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const target = document.querySelector(this.getAttribute('href'));
+                const headerOffset = 270; // Remplacez par la hauteur de votre en-tête
+
+                window.scrollTo({
+                    top: target.offsetTop - headerOffset,
+                    behavior: 'smooth'
+                });
+            });
         });
     </script>
 </body>
