@@ -47,6 +47,7 @@
     <title>HDM Canoë</title>
 </head>
 <body>
+    <div class="upbtn"><i class="fa fa-chevron-up"></i></div>
     <header>
         <div class="header-container">
             <div class="logo-title">
@@ -55,9 +56,9 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="#home">Accueil</a></li>
-                    <li><a href="#activites">Activités</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a  class="nav-item active" href="#home">Accueil</a></li>
+                    <li><a  class="nav-item" href="#activites">Activités</a></li>
+                    <li><a  class="nav-item" href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -96,22 +97,35 @@
     <footer>
         <div class="footer-container">
             <div class="contact" id="contact">
-                <h2>Contact</h2>
+                <h2>Nous sommes ici:</h2>
                 <p>Adresse: Les Ponts, 24410 Saint Aulaye</p>
                 <p>Mobile: 06 33 55 38 61</p>
                 <p>Email: contact@hdm-canoe.fr</p>
             </div>
-            <div class="social">
-                <h2>Réseaux Sociaux</h2>
-                <a href="https://www.facebook.com/campingladordogneverte" target="_blank"><i class="fa fa-facebook"></i></a>
+            <div class="location-image-container">
+                <a href="https://www.google.com/maps/place/hdm+cano%C3%AB/@45.2090541,0.135685,17z/data=!3m1!4b1!4m6!3m5!1s0x47ffe58d023cf139:0xa4ebc20dba81c2f3!8m2!3d45.2090541!4d0.135685!16s%2Fg%2F11g1knhv_s?entry=ttu" target="_blank">
+                    <img src="./assets/images/home/locationmap.webp" alt="localisation de la base de kanöe" class="location-map" width="500" height="375">
+                </a>
             </div>
+            <div class="social">
+                <h2>Suivez-nous sur:</h2>
+                <a class="social-link" href="https://www.facebook.com/campingladordogneverte" target="_blank"><i class="fab fa-facebook-square"></i></a>
+            </div>
+            <div class="footerimage"></div>
         </div>
         <div>
             <p>&copy; 2024 HDM Canoë by <a href="www.lacouralexandre.tech" target="_blank">Dev&apos;your synergy</a></p>
         </div>
+        
     </footer>
 <script>
-       
+        const navItems = document.querySelectorAll('.nav-item');
+        navItems.forEach(item => {
+            item.addEventListener('click', () => {
+                navItems.forEach(item => item.classList.remove('active'));
+                item.classList.add('active');
+            });
+        });
         fetch('./activities.json')
         .then(response => response.json())
         .then(data => {
@@ -153,25 +167,40 @@
             `;
         }
         function randomizeImages() {
-    const gallery = document.querySelector('.gallery-images');
-    const images = Array.from(gallery.children); // Convertit HTMLCollection en tableau
+            const gallery = document.querySelector('.gallery-images');
+            const images = Array.from(gallery.children); 
 
-    // Ajoute la classe 'fade' à toutes les images pour les faire s'estomper
-    images.forEach(image => image.classList.add('fade'));
+            images.forEach(image => {
+                
+                image.classList.add('fade');
+            });
 
-    // Attendez 1 seconde (le temps de la transition d'opacité), puis mélangez les images
-    setTimeout(() => {
-        images.sort(() => Math.random() - 0.5); // Trie aléatoirement le tableau
+            setTimeout(() => {
+                images.sort(() => Math.random() - 0.5); 
 
-        // Ajoute les images triées à la galerie et supprime la classe 'fade' pour les faire réapparaître
-        images.forEach(image => {
-            gallery.appendChild(image);
-            image.classList.remove('fade');
+                images.forEach(image => {
+                    gallery.appendChild(image);
+                    image.classList.remove('fade');
+                    
+                });
+            }, 1000);
+        }
+
+        setInterval(randomizeImages, 3000); 
+        const scrollUpButton = document.querySelector('.upbtn');
+        scrollUpButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
         });
-    }, 1000);
-}
-
-setInterval(randomizeImages, 3000); // Randomise les images toutes les 3 secondes
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 0) {
+                scrollUpButton.style.display = 'flex';
+            } else {
+                scrollUpButton.style.display = 'none';
+            }
+        });
     </script>
 </body>
 </html>
