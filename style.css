@@ -111,9 +111,7 @@ h1 span {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    padding: 1vh 0;
-    border-bottom: solid 1px grey;
-    
+    padding: 1vh 0;    
 }
 .activity {
     display: flex;
@@ -127,9 +125,16 @@ h1 span {
     font-size: 1.3rem;
     font-weight: bold;
     background-color: teal;
-    border-radius: 30px
+    border-radius: 30px;
+    cursor: pointer;
+    color: #fff;;
 }
-
+.activity-title {
+    width: 100%;
+    text-align: center;
+    margin: 4vh auto;
+    font-size: 1.8rem;
+}
 .activity-selected {
     padding-left: 3%;
     padding-bottom: 3%;
@@ -197,6 +202,7 @@ h1 span {
     text-align: center;
     font-size: 1.8rem;
 }
+
 .service-container {
     width: 100%;
     display: grid;
@@ -207,14 +213,13 @@ h1 span {
     width: 80%;
     display: flex;
     flex-direction: row;
-    border: solid 1px red;
+    border-radius: 30px;
     margin-bottom: 2vh;
     box-shadow: 5px 5px 10px 5px grey;
 }
 .service-image {
     width: 200px;
     height: 200px;
-    border: solid 1px blue;
 }
 .service-info {
     width: 60%;
@@ -222,6 +227,15 @@ h1 span {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
+}
+.service-info h3 {
+    color: teal;
+    font-size: 1.3rem;
+}
+.service-info p {
+    font-size: 1.2rem;
+    font-style: italic;
 }
 .gallery-images {
     display: flex;
