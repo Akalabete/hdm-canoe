@@ -4,6 +4,7 @@ body {
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
     min-width: 500px;
+    background-color: #f8f8f8;
 }
 
 .upbtn {
@@ -30,6 +31,7 @@ body {
 
 .header-container {
     position: fixed;
+    padding: 2vh;
     top: 0;
     width: 100%;
     display: flex;
@@ -202,15 +204,30 @@ h1 span {
     text-align: center;
     font-size: 1.8rem;
 }
+.service-image-banner{
+    background-image: url("./assets/images/home/subscribe-banner.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 2vh 0;
 
+    height: 30vh;
+}
 .service-container {
+
     width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin: 3vh 5%;
+    max-width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 2%;
+    margin: 3vh auto;
 }
 .service {
     width: 80%;
+    max-width: 450px;
+    min-width: 400px;
     display: flex;
     flex-direction: row;
     border-radius: 30px;
@@ -278,6 +295,7 @@ h1 span {
 }
 .contact {
     width: 60%;
+    max-width: 700px;
     margin-bottom: 3vh; 
     box-shadow: 5px 5px 10px 5px grey;
     border-radius: 30px;
@@ -495,5 +513,29 @@ h1 span {
     }
     .footerimage {
         height: 50vh;
+    }
+    .footer-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .contact, .location-image-container {
+        min-width: 40%;
+        width: min-content;
+        margin: 2%;
+    }
+    .location-image-container {
+        box-shadow: none;
+    }
+    .location-image-container img {
+        width: 100%;
+        box-shadow: 5px 5px 10px 5px grey;
+        object-fit: cover;
+        margin: 0;
+    }
+    .social {
+        width: 100%;
+    }
+    .service-image-banner {
+        height: 40vh;
     }
 }
