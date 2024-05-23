@@ -55,6 +55,11 @@ h1 span {
     font-size: 1.9rem;
     color: #fff
 }
+.gallery-container h2, .activity-title, .social h2 {
+    color: teal;
+    font-style: italic;
+    font-size: 1.8rem;
+}
 
 .logo-title {
     display: flex;
@@ -65,7 +70,7 @@ h1 span {
     display: flex;
     flex-direction: column;
     list-style: none;
-    line-height: 3;
+    line-height: 2.5rem;;
 }
 .header-container nav ul a {
     text-decoration: none;
@@ -101,7 +106,9 @@ h1 span {
 .home-container p {
     font-size: 1.6rem;
 }
-
+.activity-container {
+    max-width: 2000px;
+}
 .activity-section {
     margin: 2vh 2%;
     border-radius: 30px;
@@ -138,8 +145,10 @@ h1 span {
     font-size: 1.8rem;
 }
 .activity-selected {
-    padding-left: 3%;
-    padding-bottom: 3%;
+    padding: 3%;
+}
+.activity-selected img {
+    width: 100%;
 }
 .activity-selected h2 {
     text-align: center;
@@ -233,10 +242,13 @@ h1 span {
     border-radius: 30px;
     margin-bottom: 2vh;
     box-shadow: 5px 5px 10px 5px grey;
+    padding-left: 2%;
+    padding-bottom: 2%;
+    padding-top: 2%;
 }
 .service-image {
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
 }
 .service-info {
     width: 60%;
@@ -403,8 +415,7 @@ h1 span {
         border-radius: 50px;
     }
     .activity-selected {
-        padding-left: 5%;
-        padding-bottom: 5%;
+        padding: 3%;
     }
     .activity-selected h2 {
         font-size: 2.5rem;
@@ -477,6 +488,9 @@ h1 span {
         height: 50px;
         border-radius: 50px;
     }
+    .header-container nav ul {
+        margin-left: -40%;
+    }
 }
 
 @media screen and (min-width: 1000px){
@@ -489,6 +503,7 @@ h1 span {
     .home-container h2 {
         font-size: 2.1rem;
     }
+
 }
 @media screen and (min-width: 1300px){
     .header-container {
