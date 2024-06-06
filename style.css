@@ -253,6 +253,18 @@ h1 span {
 #guidap-widget-btn > * > div > div > div.g-item.box.is-flex.package-item.is-flex.is-justify-content-space-between.clickable {
     display: none !important;
 }
+.g-box {
+    border: none !important;
+    background-color: transparent !important;
+}
+.g-button {
+    background-color: teal !important;
+    color: white !important;
+    font-size: 1.8rem !important;
+}
+.gdp-scoped-ui .guidap-booking-widget {
+    margin: 0 auto !important;
+}
 .main-reservBtn {
     position: absolute;
     top: 60%;
