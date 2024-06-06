@@ -250,6 +250,14 @@ h1 span {
     width: 150px;
     height: 150px;
 }
+#guidap-widget-btn > * > div > div > div.g-item.box.is-flex.package-item.is-flex.is-justify-content-space-between.clickable {
+    display: none !important;
+}
+.main-reservBtn {
+    position: absolute;
+    top: 60%;
+    right: 20%;
+}
 .service-info {
     width: 60%;
     display: flex;
