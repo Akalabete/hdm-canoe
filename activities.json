@@ -1,73 +1,70 @@
 [
     {
         "start":"Petit Bersac",
-        "end":"Saint Aulaye",
+        "end":"St Aulaye",
         "length": "16km",
         "time": "5h30",
         "last-departure": "15h",
         "map": "./assets/images/parcours/parcours1.webp",
-        "price": "17€",
-        "signal-color": "black"
+        "price": "28€",
+        "signal-color": "black",
+        "activityBtn": "<guidap-booking-widget activity-uuid=\"H9gGx7InohXUls4ZPuOybvm3awKBNzTQe820\"></guidap-booking-widget>"
     },
     {
         "start": "Aubeterre",
-        "end": "Saint Aulaye",
+        "end": "St Aulaye",
         "length": "10,5km",
         "time": "3h30",
         "last-departure": "17h",
         "map": "./assets/images/parcours/parcours2.webp",
-        "price": "14€",
-        "signal-color": "pink"
+        "price": "23€",
+        "signal-color": "pink",
+        "activityBtn": "<guidap-booking-widget activity-uuid=\"d8VW5nzxZXESKbI3NmATsrh4kvUJo2t1fpFQ\"></guidap-booking-widget>"
     },
     {
         "start": "Bonnes",
-        "end": "Saint Aulaye",
+        "end": "St Aulaye",
         "length": "4,5km",
         "time": "1h30",
         "last-departure": "19h",
         "map": "./assets/images/parcours/parcours3.webp",
-        "price": "11€",
-        "signal-color": "orange"
+        "price": "20€",
+        "signal-color": "orange",
+        "activityBtn": "<guidap-booking-widget activity-uuid=\"46v7UimYtL0OISxlTWbEA2hpMJNRjKywuFz1\"></guidap-booking-widget>"
     },
     {
-        "start": "Saint Aulaye",
+        "start": "St Aulaye",
         "end": "Sur site",
         "length": "",
         "time": "1h",
         "last-departure": "19h30",
         "map": "./assets/images/parcours/onsite.webp",
         "price": "10€",
-        "signal-color": "green"
+        "signal-color": "green",
+        "activityBtn": "<guidap-booking-widget activity-uuid=\"bgIsqhGkSVKatf1XH6z7Mc94eAODYlBxpUJr\"></guidap-booking-widget>"
     },
     {
-        "start": "Saint Aulaye",
-        "end": "Pont de Chenaud",
-        "length": "3km",
+        "start": "Pédalos",
+        "end": "Sur site",
+        "length": "",
         "time": "1h",
         "last-departure": "19h30",
-        "map": "./assets/images/parcours/parcours5.webp",
-        "price": "10€",
-        "signal-color": "yellow"
+        "map": "./assets/images/parcours/onsite.webp",
+        "price": "7€",
+        "signal-color": "green",
+        "activityBtn": "<guidap-booking-widget activity-uuid=\"xDJPNaE9vtMCLsud7wKrU8gVHhnA4jkZqcWl\"></guidap-booking-widget>"
     },
     {
-        "start": "Saint Aulaye",
-        "end": "Chenaud Auziac",
-        "length": "7km",
-        "time": "2h30",
-        "last-departure": "18h",
-        "map": "./assets/images/parcours/parcours6.webp",
-        "price": "13€",
-        "signal-color": "red"
-    },
-    {
-        "start": "Saint Aulaye",
-        "end": "Pont de Parcoul",
-        "length": "11,5km",
-        "time": "4h",
-        "last-departure": "16h30",
-        "map": "./assets/images/parcours/parcours7.webp",
-        "price": "15€",
-        "signal-color": "purple"
+        "start": "Paddle",
+        "end": "Sur site",
+        "length": "",
+        "time": "1h",
+        "last-departure": "19h30",
+        "map": "./assets/images/parcours/onsite.webp",
+        "price": "11€",
+        "signal-color": "green",
+        "activityBtn": "<guidap-booking-widget activity-uuid=\"0MhZfmTUE9SBRp3aVwidX1PFAOyn4oCxKs6e\"></guidap-booking-widget>"
     }
+
 ]
    
