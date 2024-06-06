@@ -204,14 +204,15 @@
                         <p>Distance: <span>${activity.length}</span></p>
                         <p>Temps: <span>${activity.time}</span></p>
                         <p>A partir de: <span>${activity.price}</span></p>
+                        <div class="button-container" id="guidap-widget-btn">
+                            ${activity.activityBtn}
+                        </div>
                     </div>
                     <div class="parcours-img">
                         <img src="${activity.map}" width="200">
                     </div>
                 </div>
-                <div class="button-container" id="guidap-widget-btn">
-                    ${activity.activityBtn}
-                </div>
+                
             `;
         }
 
