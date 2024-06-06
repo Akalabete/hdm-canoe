@@ -427,20 +427,23 @@ body > header > div > div.cart-container > * > div > button > span > div.guidap-
     .logo {
         display: block;
         width: 30%;
-        max-width: 200px;   
+        width: 150px;
+        margin-right: 2%;
+        max-height: max-content; 
     }
     .parcours-title {
         margin : 0;
     }
+ 
     .header-container nav ul {
         flex-direction: row;
-        margin-left: -15%;
+        padding-left: 10%;
     }
     .header-container nav ul li {
-        margin: 0px 5%;
+        margin: 0px 2%;
     }
     .header-container nav ul li a {
-        font-size: 1.8rem;
+        font-size: 1.5rem;
     }
     .logo img {
         width: 100%;
@@ -555,6 +558,20 @@ body > header > div > div.cart-container > * > div > button > span > div.guidap-
     .home-container h2 {
         font-size: 2.1rem;
     }
+    .activities.header-container nav ul {
+        flex-direction: row;
+        margin-left: -12%;
+    }
+    .header-container nav {
+        width: 50%;
+        margin-left: 10%;
+    }
+    .header-container nav ul li {
+        margin: 0px 4%;
+    }
+    .header-container nav ul li a {
+        font-size: 1.6rem;
+    }
 
 }
 @media screen and (min-width: 1300px){
@@ -563,7 +580,7 @@ body > header > div > div.cart-container > * > div > button > span > div.guidap-
     }
     .logo {
         width: 30%;
-        max-width: 260px;
+        max-width: 190px;
     }
     .header-container nav ul {
         margin-left: -50%;
