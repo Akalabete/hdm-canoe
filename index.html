@@ -52,7 +52,7 @@
             "name": "Nom de l'image"
           }
         </script>
-       <script src="https://cart.guidap.net/v1/" async defer data-token="5a6RzNbV04JxtepPiEkgGvrSuB8cfAYF9KdD" data-lang="fr" data-currency="EUR"></script>
+        <script src="https://cart.guidap.net/v1/" async defer data-token="0HnUcLDPJSaA2Oj753yiuvlxQqzMd4oXGmkT" data-lang="fr" data-currency="EUR"></script>
     <title>HDM Canoë</title>
 </head>
 <body>
@@ -70,6 +70,7 @@
                     <li><a  class="nav-item" href="#contact">Contact</a></li>
                 </ul>
             </nav>
+            <div class="cart-container"><guidap-cart-button></guidap-cart-button></div>
         </div>
     </header>
     <main>
@@ -77,6 +78,9 @@
             <div class="home-container">
                 <h2>Bienvenue chez HDM Canoë</h2>
                 <p>Location de canoës, paddle et pédalos pour des excursions sport et nature sur la Dronne, en Périgord Vert, à Saint Aulaye</p>
+            </div>
+            <div class="main-reservBtn">
+                <guidap-reserve-button></guidap-reserve-button>
             </div>
         </section>
         <h2 class="activity-title">Les parcours que nous vous proposons:</h2>
@@ -142,8 +146,8 @@
             <div class="contact" id="contact">
                 <h2>Nous sommes ici:</h2>
                 <p>Adresse: Les Ponts, 24410 Saint Aulaye</p>
-                <a href="phoneto:0633553861"><i class="fa fa-phone"></i></a>
-                <a href="mailto:contact@hdm-canoe.fr"><i class="fa fa-envelope"></i></a>
+                <a href="phoneto:0633553861"><i class="fa fa-phone"><p class="p-desktop"> 06 33 55 38 61</p></i></a>
+                <a href="mailto:contact@hdm-canoe.fr"><i class="fa fa-envelope"><p class="p-desktop">contact@hdm-canoe.fr</p></i></a>
             </div>
             <div class="location-image-container">
                 <a href="https://www.google.com/maps/place/hdm+cano%C3%AB/@45.2090541,0.135685,17z/data=!3m1!4b1!4m6!3m5!1s0x47ffe58d023cf139:0xa4ebc20dba81c2f3!8m2!3d45.2090541!4d0.135685!16s%2Fg%2F11g1knhv_s?entry=ttu" target="_blank">
@@ -180,7 +184,7 @@
                 activityElement.classList.add('activity');
                 activityElement.innerHTML = `
                     <i class="fa fa-star ${activity['signal-color']}"></i>
-                    <p>${activity.time}</p>
+                    <p>${activity.start}<br>${activity.end}</p>
                 `;
                 activityElement.onclick = function() {
                     handleActivityClick(activity); 
@@ -205,8 +209,8 @@
                         <img src="${activity.map}" width="200">
                     </div>
                 </div>
-                <div class="button-container">
-                    <button onclick="handleReservationClick()">Réserver</button>
+                <div class="button-container" id="guidap-widget-btn">
+                    ${activity.activityBtn}
                 </div>
             `;
         }
@@ -246,7 +250,7 @@
                 e.preventDefault();
 
                 const target = document.querySelector(this.getAttribute('href'));
-                const headerOffset = 270; // Remplacez par la hauteur de votre en-tête
+                const headerOffset = 270; 
 
                 window.scrollTo({
                     top: target.offsetTop - headerOffset,
