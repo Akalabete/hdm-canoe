@@ -33,6 +33,8 @@ body {
     position: fixed;
     padding: 2vh;
     top: 0;
+    box-sizing: border-box; 
+    overflow: hidden;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -429,7 +431,7 @@ body > header > div > div.cart-container > * > div > button > span > div.guidap-
         width: 30%;
         width: 150px;
         margin-right: 2%;
-        max-height: max-content; 
+        max-height: max-content;
     }
     .parcours-title {
         margin : 0;
