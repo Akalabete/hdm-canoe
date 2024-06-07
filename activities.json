@@ -5,7 +5,7 @@
         "length": "16km",
         "time": "5h30",
         "last-departure": "15h",
-        "map": "./assets/images/parcours/parcours1.webp",
+        "map": "./assets/images/parcours/Parcour_2.webp",
         "price": "28€",
         "signal-color": "black",
         "activityBtn": "<guidap-booking-widget activity-uuid=\"H9gGx7InohXUls4ZPuOybvm3awKBNzTQe820\"></guidap-booking-widget>"
