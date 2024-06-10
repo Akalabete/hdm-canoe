@@ -198,6 +198,12 @@ h1 span {
     object-fit: contain;
     
 }
+.default-parcours-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 30px;
+}
 .red {
     color: red;
 }
