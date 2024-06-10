@@ -5,7 +5,7 @@
         "length": "16km",
         "time": "5h30",
         "last-departure": "15h",
-        "map": "./assets/images/parcours/Parcour_2.webp",
+        "map": "./assets/images/parcours/parc_noir.webp",
         "price": "28€",
         "signal-color": "black",
         "activityBtn": "<guidap-booking-widget activity-uuid=\"H9gGx7InohXUls4ZPuOybvm3awKBNzTQe820\"></guidap-booking-widget>"
@@ -16,7 +16,7 @@
         "length": "10,5km",
         "time": "3h30",
         "last-departure": "17h",
-        "map": "./assets/images/parcours/parcours2.webp",
+        "map": "./assets/images/parcours/parc_rose.webp",
         "price": "23€",
         "signal-color": "pink",
         "activityBtn": "<guidap-booking-widget activity-uuid=\"d8VW5nzxZXESKbI3NmATsrh4kvUJo2t1fpFQ\"></guidap-booking-widget>"
@@ -27,7 +27,7 @@
         "length": "4,5km",
         "time": "1h30",
         "last-departure": "19h",
-        "map": "./assets/images/parcours/parcours3.webp",
+        "map": "./assets/images/parcours/parc_orange.webp",
         "price": "20€",
         "signal-color": "orange",
         "activityBtn": "<guidap-booking-widget activity-uuid=\"46v7UimYtL0OISxlTWbEA2hpMJNRjKywuFz1\"></guidap-booking-widget>"
@@ -38,7 +38,7 @@
         "length": "",
         "time": "1h",
         "last-departure": "19h30",
-        "map": "./assets/images/parcours/onsite.webp",
+        "map": "./assets/images/parcours/sursite.webp",
         "price": "10€",
         "signal-color": "green",
         "activityBtn": "<guidap-booking-widget activity-uuid=\"bgIsqhGkSVKatf1XH6z7Mc94eAODYlBxpUJr\"></guidap-booking-widget>"
@@ -49,7 +49,7 @@
         "length": "",
         "time": "1h",
         "last-departure": "19h30",
-        "map": "./assets/images/parcours/onsite.webp",
+        "map": "./assets/images/parcours/sursite.webp",
         "price": "7€",
         "signal-color": "green",
         "activityBtn": "<guidap-booking-widget activity-uuid=\"xDJPNaE9vtMCLsud7wKrU8gVHhnA4jkZqcWl\"></guidap-booking-widget>"
@@ -60,7 +60,7 @@
         "length": "",
         "time": "1h",
         "last-departure": "19h30",
-        "map": "./assets/images/parcours/onsite.webp",
+        "map": "./assets/images/parcours/sursite.webp",
         "price": "11€",
         "signal-color": "green",
         "activityBtn": "<guidap-booking-widget activity-uuid=\"0MhZfmTUE9SBRp3aVwidX1PFAOyn4oCxKs6e\"></guidap-booking-widget>"
