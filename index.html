@@ -131,14 +131,7 @@
         <section class="gallery" id="gallery">
             <div class="gallery-container">
                 <h2>A découvrir!</h2>
-                <div class="gallery-images">
-                    <img class ="gallery-image" src="./assets/images/gallary/g1.jpg" alt="image 1" />
-                    <img class ="gallery-image" src="./assets/images/gallary/g2.jpg" alt="image 2" />
-                    <img class ="gallery-image" src="./assets/images/gallary/g3.jpg" alt="image 3" />
-                    <img class ="gallery-image" src="./assets/images/gallary/g4.jpg" alt="image 4" />
-                    <img class ="gallery-image" src="./assets/images/gallary/g5.jpg" alt="image 5" />
-                    <img class ="gallery-image" src="./assets/images/gallary/g6.jpg" alt="image 6" />
-                </div>
+                <div class="gallery-images"></div>
             </div>
         </section>
     </main>
@@ -218,22 +211,42 @@
             `;
         }
 
-        function randomizeImages() {
-            const gallery = document.querySelector('.gallery-images');
-            const images = Array.from(gallery.children); 
-            images.forEach(image => { 
-                image.classList.add('fade');
-            });
-            setTimeout(() => {
-                images.sort(() => Math.random() - 0.5); 
-                images.forEach(image => {
-                    gallery.appendChild(image);
-                    image.classList.remove('fade');
+        function buildImageArray() {
+        fetch('./gallery.json') 
+            .then(response => response.json())
+            .then(data => {
+                data.sort(() => Math.random() - 0.5); 
+                const imagesArray = Array.from(data).slice(0, 6);
+                const galleryContainer= document.querySelector('.gallery-images');
+                imagesArray.forEach((image) => {
+                    const imageElement = document.createElement('img');
+                    imageElement.src = image.url;
+                    imageElement.alt = image.alt;
+                    imageElement.classList.add('gallery-image');
+                    galleryContainer.appendChild(imageElement);
                 });
-            }, 1000);
+                setInterval(() => randomizeImages(data), 5000);
+            });
         }
 
-        setInterval(randomizeImages, 3000); 
+        function randomizeImages(data) { 
+            const galleryItems = document.querySelectorAll('.gallery-image');
+            data.sort(() => Math.random() - 0.5); 
+            const imagesArray = Array.from(data).slice(0, 6);
+            galleryItems.forEach((item, index) => {
+                item.classList.add('fade');
+            });
+
+            setTimeout(() => {
+                galleryItems.forEach((item, index) => {
+                    item.src = imagesArray[index].url;
+                    item.alt = imagesArray[index].alt;
+                    item.classList.remove('fade');
+                });
+            }, 700);
+        }
+
+        buildImageArray();
         const scrollUpButton = document.querySelector('.upbtn');
         scrollUpButton.addEventListener('click', () => {
             window.scrollTo({
