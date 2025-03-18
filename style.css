@@ -385,6 +385,18 @@ body > header > div > div.cart-container > * > div > button > span > div.guidap-
     margin: 2vh auto;
     width: 90%;
 }
+.cgv {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 0 auto;
+}
+.cgv a {
+    text-decoration: none;
+    color: teal;
+    text-align: center;
+    font-size: 1.5rem;
+}
 .contact, .social {
     text-align: center;
 }
