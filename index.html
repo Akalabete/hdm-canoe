@@ -212,10 +212,10 @@
             const expanding = document.getElementById(arg);
             const contentHidden = expanding.querySelector('.content-hidden'); 
             if (contentHidden) {
-                if (contentHidden.style.display === 'none' || contentHidden.style.display === '') {
-                    contentHidden.style.display = 'block'; 
+                if (contentHidden.classList.contains('appear')) {
+                    contentHidden.classList.remove('appear');
                 } else {
-                    contentHidden.style.display = 'none'; 
+                    contentHidden.classList.add('appear');
                 }
             }
         }

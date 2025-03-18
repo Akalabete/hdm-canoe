@@ -229,9 +229,15 @@ h1 span {
     flex-direction: row;
 }
 .content-hidden {
-    display: none; /* Masquer par défaut */
+    max-height: 0; 
+    overflow: hidden;
+    opacity: 0; 
+    transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
 }
-
+.appear { 
+    max-height: 200px; 
+    opacity: 1; /
+}
 
 .default-parcours-img {
     width: 80%;
