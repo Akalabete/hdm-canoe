@@ -95,15 +95,25 @@ h1 span {
     background-position: center;
     background-repeat: no-repeat;
     position: relative;
-    animation: slide 15s infinite;
+    animation: slide 20s infinite;
 }
 
 
 @keyframes slide {
-    0% { background-image: url('image1.jpg'); }
-    33% { background-image: url('image2.jpg'); }
-    66% { background-image: url('image3.jpg'); }
-    100% { background-image: url('image1.jpg'); }
+    0% { background-image: url('./assets/images/slider/p32optism.webp'); }
+    25% { background-image: url('./assets/images/slider/p36optism.webp'); }
+    50% { background-image: url('./assets/images/slider/supp1optism.webp'); }
+    75% { background-image: url('./assets/images/slider/supp3optism.webp'); }
+    100% { background-image: url('./assets/images/slider/p32optism.webp'); }
+}
+@media screen and (min-width: 850px){
+    @keyframes slide {
+        0% { background-image: url('./assets/images/slider/p32opti.webp'); }
+        25% { background-image: url('./assets/images/slider/p36opti.webp'); }
+        50% { background-image: url('./assets/images/slider/supp1opti.webp'); }
+        75% { background-image: url('./assets/images/slider/supp3opti.webp'); }
+        100% { background-image: url('./assets/images/slider/p32opti.webp'); }
+    }
 }
 .home-container {
     background-color: rgba(0, 0, 0, 0.4);
@@ -160,9 +170,11 @@ h1 span {
     font-size: 1.8rem;
 }
 .activity-selected {
-    padding: 3%;
     width: 85%;
     margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .activity-selected h2 {
@@ -206,8 +218,14 @@ h1 span {
     object-fit: contain;
     
 }
+.service-container a {
+    text-decoration: none;
+}
+.service-container a p {
+    color: black;
+}
 .default-parcours-img {
-    width: 100%;
+    width: 80%;
     height: 100%;
     object-fit: cover;
     border-radius: 30px;
@@ -240,7 +258,7 @@ h1 span {
     font-size: 1.8rem;
 }
 .service-image-banner{
-    background-image: url("./assets/images/home/subscribe-banner.webp");
+    background-image: url("./assets/images/gallary/p32opti.webp");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -263,6 +281,7 @@ h1 span {
     width: 80%;
     max-width: 450px;
     min-width: 400px;
+    min-height: 20vh;
     display: flex;
     flex-direction: row;
     border-radius: 30px;
@@ -328,6 +347,7 @@ body > header > div > div.cart-container > * > div > button > span > div.guidap-
     margin: 2vh auto;
 }
 .gallery-images {
+    cursor: pointer;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -362,6 +382,8 @@ body > header > div > div.cart-container > * > div > button > span > div.guidap-
     justify-content: center;
     align-items: center;
     padding : 2% 0;
+    margin: 2vh auto;
+    width: 90%;
 }
 .contact, .social {
     text-align: center;
@@ -386,14 +408,19 @@ body > header > div > div.cart-container > * > div > button > span > div.guidap-
 .parcours-description {
     margin: 1vh 0; 
 }
-.footerimage {
+.footervideo {
     width: 100%;
-    height: 50vh;
-    background-image: url("./assets/images/home/dd.webp");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    max-width: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+.activity.selected {
+    border: teal 2px solid;
+    background-color: white;
+    color: teal;
+}
+
 .location-image-container {
     display: flex;
     flex-direction: row;
@@ -432,7 +459,14 @@ body > header > div > div.cart-container > * > div > button > span > div.guidap-
 @media screen and (min-width: 850px){
     .header-container {
         height: 10vh;
-        justify-content: space-evenly;;
+        justify-content: space-evenly;
+    }
+    .default-parcours-img {
+        margin: auto;
+        width: 50%;
+        height: 50%;
+        object-fit: cover;
+        border-radius: 30px;
     }
     .main-reservBtn {
         position: absolute;
@@ -520,16 +554,9 @@ body > header > div > div.cart-container > * > div > button > span > div.guidap-
 
         font-size: 2rem;
     }
-    .parcours-container {
-        width: 100%;
-        flex-direction: row;
-        justify-content: space-evenly;
-        align-items: center;
-        overflow: hidden;
-        padding-top: 1%;
-        
-    }
+
     .parcours-img {
+        margin: 1vh auto;
         max-height: max-content ;
         max-width: max-content;
         transform: scale(1.2);
@@ -641,6 +668,15 @@ body > header > div > div.cart-container > * > div > button > span > div.guidap-
     .header-container nav ul li {
         margin: 0px 5%;
     }
+    .parcours-container {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        overflow: hidden;
+        padding-top: 1%;
+        
+    }
     .header-container nav ul li a {
         font-size: 2rem;
     }
@@ -675,4 +711,63 @@ body > header > div > div.cart-container > * > div > button > span > div.guidap-
     .service-image-banner {
         height: 40vh;
     }
+}
+
+/* modale */
+
+
+.site-modal {
+    display: none;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    padding-top: 60px;
+    left: 10%;
+    top: 25vh;
+    width: 80%;
+    height: 60%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,1);
+    border-radius: 30px;
+}
+.site-modal-content {
+    animation : modale 40s infinite;
+    width: 80%;
+    height: 90%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size : cover;
+}
+@keyframes modale {
+    0% {background-image : url('./assets/images/gallary/p6opti.webp');}
+    8% {background-image : url('./assets/images/gallary/p9opti.webp');}
+    16% {background-image : url('./assets/images/gallary/p17opti.webp');}
+    24% {background-image : url('./assets/images/gallary/p21opti.webp');}
+    32% {background-image : url('./assets/images/gallary/p24opti.webp');}
+    40% {background-image : url('./assets/images/gallary/p32opti.webp');}
+    48% {background-image : url('./assets/images/gallary/p38opti.webp');}
+    56% {background-image : url('./assets/images/gallary/p41opti.webp');}
+    64% {background-image : url('./assets/images/gallary/p43opti.webp');}
+    72% {background-image : url('./assets/images/gallary/p46opti.webp');}
+    80% {background-image : url('./assets/images/gallary/supp1opti.webp');}
+    90% {background-image : url('./assets/images/gallary/supp2opti.webp');}
+    100% {background-image : url('./assets/images/gallary/supp3opti.webp');}
+}
+.close {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: red;
+    border-radius: 30px;
+    border: none;
+    background-color: white;
+    float: right;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-right: 2%;
+    cursor: pointer;
 }

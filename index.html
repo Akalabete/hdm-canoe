@@ -15,6 +15,16 @@
     <link rel="shortcut icon" type="image/icon" href="assets/logo/favicon.webp"/>
     <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preload" src="./assets/images/slider/p32opti.webp" as="image" media="min-width: 850px"/>
+    <link rel="preload" src="./assets/images/slider/p32optism.webp" as="image" media="max-width: 849px" />
+    <link rel="preload" href="./assets/videos/v12opti.mp4" as="video" media="(min-width: 850px)">
+    <link rel="preload" href="./assets/videos/v12opti4-3.mp4" as="video" media="(max-width: 849px)">
+    <link rel="preload" href="./assets/videos/v14opti.mp4" as="video" media="(min-width: 850px)">
+    <link rel="preload" href="./assets/videos/v14opti4-3.mp4" as="video" media="(max-width: 849px)">
+    <link rel="preload" href="./assets/videos/v13opti.mp4" as="video" media="(min-width: 850px)">
+    <link rel="preload" href="./assets/videos/v13opti4-3.mp4" as="video" media="(max-width: 849px)">
+    <link rel="preload" href="./assets/videos/v9opti.mp4" as="video" media="(min-width: 850px)">
+    <link rel="preload" href="./assets/videos/v9opti4-3.mp4" as="video" media="(max-width: 849px)">    
     <script type="application/ld+json">
         {
           "@context": "https://schema.org",
@@ -41,7 +51,6 @@
           "openingMonths": "June to September",
           "priceRange": "12 to 40 €"
         },
-       
         {
             "@context": "https://schema.org",
             "@type": "ImageObject",
@@ -51,9 +60,9 @@
             "datePublished": "Date de publication",
             "description": "Description de l'image",
             "name": "Nom de l'image"
-          }
+        }
         </script>
-        <script src="https://cart.guidap.net/v1/" async defer data-token="0HnUcLDPJSaA2Oj753yiuvlxQqzMd4oXGmkT" data-lang="fr" data-currency="EUR"></script>
+       <script src="https://cart.guidap.net/v1/" async defer data-token="0HnUcLDPJSaA2Oj753yiuvlxQqzMd4oXGmkT" data-lang="fr" data-currency="EUR"></script>
     <title>HDM Canoë</title>
 </head>
 <body>
@@ -91,7 +100,8 @@
                     
                 </div>
                 <div class="activity-selected">
-                    <img class="default-parcours-img" src="./assets/images/parcours/imgfunny.webp" width="auto">
+                    <p>Choisissez votre parcours</p>
+                    <img class="default-parcours-img" src="./assets/images/parcours/parc_noir.webp" width="auto">
                 </div>
             </div>
         </section>
@@ -112,13 +122,17 @@
                         <p>A ne pas manquer</p>
                     </div>
                 </div>
-                <div class="service">
+            
+                
+                <a  class="service" href="https://camping-dordogneverte.fr/" target="_blank">
                     <img class="service-image" src="./assets/images/service/tente.webp" alt="week end descente et bivouac">
                     <div class="service-info">
                         <h3>Week-ends descente</h3>
                         <p>Avec hébergement le soir au camping</p>
                     </div>
-                </div>
+                </a>
+                
+               
                 <div class="service">
                     <img class="service-image" src="./assets/images/service/canoe.webp" alt="image d'un canoé">
                     <div class="service-info">
@@ -152,10 +166,17 @@
                 <h2>Suivez-nous sur:</h2>
                 <a class="social-link" href="https://www.facebook.com/campingladordogneverte" target="_blank"><i class="fab fa-facebook-square"></i></a>
             </div>
-            <div class="footerimage"></div>
+            <div class="footervideo">
+                <video  id="footerVideo" preload="none" controls loop autoplay src="./assets/videos/v8opti.mp4"></video>
+            </div>
+        </div>
+        <div class="cgv">
+            <a href="./assets/docs/cgv hdm canoe vf.pdf">Conditions générales de vente</a>
+            <a href="./assets/docs/Contrat loc francais 2024.pdf">Contrat de location</a>
+            <a href="./assets/docs/Contrat loc anglais 2019.pdf">Lease agreement</a>
         </div>
         <div class="webmaster">
-            <p>&copy; 2024 HDM Canoë by <a href="www.lacouralexandre.tech" target="_blank">Dev&apos;your synergy</a></p>
+            <p>&copy; 2024 HDM Canoë by <a href="https://www.lacouralexandre.tech" target="_blank">Dev&apos;your synergy</a></p>
         </div>
         
     </footer>
@@ -167,7 +188,18 @@
                 item.classList.add('active');
             });
         });
-
+        window.onload = function() {
+            var screenWidth = window.innerWidth;
+            console.log(screenWidth);
+            if (screenWidth > 1650 ){
+                document.getElementById('footerVideo').src = "./assets/videos/v8opti8-6.mp4";
+                document.getElementById('footerVideo').setAttribute('width', '740px');
+            } else {
+                document.getElementById('footerVideo').src = "./assets/videos/v8opti4-3.mp4";
+                document.getElementById('footerVideo').setAttribute('width', '320px');
+                
+            } 
+        }
         fetch('./activities.json')
         .then(response => response.json())
         .then(data => {
@@ -178,10 +210,12 @@
                 activityElement.classList.add('activity');
                 activityElement.innerHTML = `
                     <i class="fa fa-star ${activity['signal-color']}"></i>
-                    <p>${activity.start}<br>${activity.end}</p>
+                    <p>${activity.number}</p>
                 `;
                 activityElement.onclick = function() {
-                    handleActivityClick(activity); 
+                    handleActivityClick(activity);
+                    document.querySelectorAll('.activity').forEach(item => item.classList.remove('selected'));
+                    activityElement.classList.add('selected');
                 };
                 activitiesList.appendChild(activityElement);      
             });
@@ -190,27 +224,61 @@
         function handleActivityClick(activity) {
             const activitySelected = document.querySelector('.activity-selected');
             activitySelected.innerHTML = "";
-            activitySelected.innerHTML = `
-                <h2 class="parcours-title">Parcours Sélectionné:</h2>
-                <div class="parcours-container">
-                    <div class="parcours-description">
-                        <p>Départ: <span>${activity.start}</span></p>
-                        <p>Arrivée: <span>${activity.end}</span></p>
-                        <p>Distance: <span>${activity.length}</span></p>
-                        <p>Temps: <span>${activity.time}</span></p>
-                        <p>A partir de: <span>${activity.price}</span></p>
-                        <div class="button-container" id="guidap-widget-btn">
-                            ${activity.activityBtn}
+            var screenWidth = window.innerWidth
+            if (activity.video !== "" && screenWidth > 1250) {
+                activitySelected.innerHTML = `
+                    <div class="parcours-container">
+                        <div class="parcours-description">
+                            <h2 class="parcours-title">Parcours Sélectionné:</h2>
+                            <p>Départ: <span>${activity.start}</span></p>
+                            <p>Arrivée: <span>${activity.end}</span></p>
+                            <p>Distance: <span>${activity.length}</span></p>
+                            <p>Temps: <span>${activity.time}</span></p>
+                            <p>A partir de: <span>${activity.price}</span></p>
+                            <div class="button-container" id="guidap-widget-btn">
+                                ${activity.activityBtn}
+                            </div>
+                        </div>
+                        <div class=" card parcours-img">
+                            <img class="card-image" src="${activity.map}" alt="image du parcours ${activity.number}" width="auto">
+                            <video style="display: none;" width="520px" class="responsive-video card-video" src="${activity.videolg}" title="video de présentation du parcours ${activity.number}"></video>
                         </div>
                     </div>
-                    <div class="parcours-img">
-                        <img src="${activity.map}" alt="representation du parcours" width="200">
+                `;
+                }else if (activity.video !== "" && screenWidth <= 1250) {
+                activitySelected.innerHTML = `
+                    <div class="parcours-container">
+                        <div class="parcours-description">
+                            <h2 class="parcours-title">Parcours Sélectionné:</h2>
+                            <p>Départ: <span>${activity.start}</span></p>
+                            <p>Arrivée: <span>${activity.end}</span></p>
+                            <p>Distance: <span>${activity.length}</span></p>
+                            <p>Temps: <span>${activity.time}</span></p>
+                            <p>A partir de: <span>${activity.price}</span></p>
+                            <div class="button-container" id="guidap-widget-btn">
+                                ${activity.activityBtn}
+                            </div>
+                        </div>
+                        <div class=" card parcours-img">
+                            <img class="card-image" src="${activity.map}" alt="image du parcours ${activity.number}" width="auto">
+                            <video style="display: none;" width="320px" class="responsive-video card-video" src="${activity.videosm}" title="video de présentation du parcours ${activity.number}"></video>
+                        </div>
                     </div>
-                </div>
-            
-            `;
-        }
-
+                    `;
+                };
+                const cardVideo = document.querySelector('.card-video');
+                cardVideo.addEventListener('ended', (event) => {
+                    cardVideo.style.display = 'none';
+                    document.querySelector('.card-image').style.display = 'block';
+                });
+                setTimeout(() => {
+                    const cardImage = document.querySelector('.card-image');
+                    const cardVideo = document.querySelector('.card-video');
+                    cardImage.style.display = 'none';
+                    cardVideo.style.display = 'block';
+                    cardVideo.play();
+                }, 5000);
+            }
         function buildImageArray() {
         fetch('./gallery.json') 
             .then(response => response.json())
@@ -261,6 +329,16 @@
                 scrollUpButton.style.display = 'none';
             }
         });
+        
+    setTimeout(() => {
+        const cardImage = document.querySelector('.card-image');
+        const cardVideo = document.querySelector('.card-video');
+        cardImage ? cardImage.style.display = 'none':null;
+        cardVideo ? cardVideo.style.display = 'block': null;
+        cardVideo ? cardVideo.load() : null;
+        cardVideo ? cardVideo.play() : null;
+        }, 3000);
+
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -274,6 +352,26 @@
                 });
             });
         });
+        galleryClicker = document.querySelector(".gallery-images");
+        galleryClicker.addEventListener('click', () => {
+            openModal()
+        });
+        function openModal() {
+            console.log("called")
+            const modal = document.createElement('div');
+            modal.classList.add('site-modal');
+            modal.style.display = 'flex';
+            modal.innerHTML = `
+                <div class="site-modal-content">
+                    <span class="close">&times;</span>                    
+                </div>
+            `;
+            document.body.appendChild(modal);
+            const closeButton = document.querySelector('.close');
+            closeButton.addEventListener('click', () => {
+                modal.remove();
+            });
+        }
     </script>
 </body>
 </html>
