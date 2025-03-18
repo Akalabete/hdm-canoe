@@ -108,37 +108,64 @@
         <section class="services">
             <div class="service-image-banner"></div>
             <div class="service-container">
-                <div class="service">
-                    <img class="service-image" src="./assets/images/service/gilet-haute-visibilite.webp" alt="gilet de sauvetage et équipement de sécurité">
-                    <div class="service-info">
-                        <h3>Des équipements sécurisés</h3>
-                        <p>Afin de vous garantir une expérience sereine</p>
+                <div class="service expandable" onclick="expand('equipments')" id="equipments">
+                    <div class="flex-row">
+                        <img class="service-image" src="./assets/images/service/gilet-haute-visibilite.webp" alt="gilet de sauvetage et équipement de sécurité">
+                        <div class="service-info">
+                            <h3>Des équipements sécurisés</h3>
+                            <p>Afin de vous garantir une expérience sereine</p>
+                        </div>
+                    </div>
+                    <div class="content-hidden">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean faucibus dapibus odio, nec interdum ex
+                         varius sit amet. Sed sit amet justo ac quam fermentum interdum faucibus vel nibh.
+                         Nam in congue orci, vel laoreet ante. Curabitur laoreet risus sed.
                     </div>
                 </div>
-                <div class="service">
-                    <img class="service-image" src="./assets/images/service/neige-nocturne.webp" alt="descente en soirée possibles">
-                    <div class="service-info">
-                        <h3>Descentes nocturnes</h3>
-                        <p>A ne pas manquer</p>
+                <div class="service expandable" onclick="expand('nighty')" id="nighty">
+                    <div class="flex-row">
+                        <img class="service-image" src="./assets/images/service/neige-nocturne.webp" alt="descente en soirée possibles">
+                        <div class="service-info">
+                            <h3>Descentes nocturnes</h3>
+                            <p>A ne pas manquer</p>
+                        </div>
                     </div>
+                    <div class="content-hidden">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean faucibus dapibus odio, nec interdum ex
+                         varius sit amet. Sed sit amet justo ac quam fermentum interdum faucibus vel nibh.
+                         Nam in congue orci, vel laoreet ante. Curabitur laoreet risus sed.
+                    </div>
+
                 </div>
-            
-                
-                <a  class="service" href="https://camping-dordogneverte.fr/" target="_blank">
-                    <img class="service-image" src="./assets/images/service/tente.webp" alt="week end descente et bivouac">
-                    <div class="service-info">
-                        <h3>Week-ends descente</h3>
-                        <p>Avec hébergement le soir au camping</p>
+                <div class="service expandable" onclick="expand('weekends')" id="weekends">
+                    <div class="flex-row">
+                        <img class="service-image" src="./assets/images/service/tente.webp" alt="week end descente et bivouac">
+                        <div class="service-info">
+                            <h3>Week-ends descente</h3>
+                            <p>Avec hébergement le soir au camping</p>
+                        </div>
                     </div>
-                </a>
-                
-               
-                <div class="service">
-                    <img class="service-image" src="./assets/images/service/canoe.webp" alt="image d'un canoé">
-                    <div class="service-info">
-                        <h3>Snack et boissons</h3>
-                        <p>Sur place ou à emporter</p>
+                    <div class="content-hidden">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean faucibus dapibus odio, nec interdum ex
+                         varius sit amet. Sed sit amet justo ac quam fermentum interdum faucibus vel nibh.
+                         Nam in congue orci, vel laoreet ante. Curabitur laoreet risus sed.
                     </div>
+
+                </div>
+                <div class="service expandable" onclick="expand('snacking')" id="snacking">
+                    <div class="flex-row">
+                        <img class="service-image" src="./assets/images/service/canoe.webp" alt="image d'un canoé">
+                        <div class="service-info">
+                            <h3>Snack et boissons</h3>
+                            <p>Sur place ou à emporter</p>
+                        </div>
+                    </div>
+                    <div class="content-hidden">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean faucibus dapibus odio, nec interdum ex
+                         varius sit amet. Sed sit amet justo ac quam fermentum interdum faucibus vel nibh.
+                         Nam in congue orci, vel laoreet ante. Curabitur laoreet risus sed.
+                    </div>
+
                 </div>
             </div>
         </section>
@@ -181,6 +208,17 @@
         
     </footer>
 <script>
+        function expand(arg) {
+            const expanding = document.getElementById(arg);
+            const contentHidden = expanding.querySelector('.content-hidden'); 
+            if (contentHidden) {
+                if (contentHidden.style.display === 'none' || contentHidden.style.display === '') {
+                    contentHidden.style.display = 'block'; 
+                } else {
+                    contentHidden.style.display = 'none'; 
+                }
+            }
+        }
         const navItems = document.querySelectorAll('.nav-item');
         navItems.forEach(item => {
             item.addEventListener('click', () => {
@@ -372,6 +410,7 @@
                 modal.remove();
             });
         }
+       
     </script>
 </body>
 </html>

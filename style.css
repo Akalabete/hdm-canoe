@@ -224,6 +224,15 @@ h1 span {
 .service-container a p {
     color: black;
 }
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+.content-hidden {
+    display: none; /* Masquer par défaut */
+}
+
+
 .default-parcours-img {
     width: 80%;
     height: 100%;
@@ -267,7 +276,6 @@ h1 span {
     height: 30vh;
 }
 .service-container {
-
     width: 90%;
     max-width: 1200px;
     display: flex;
@@ -283,13 +291,14 @@ h1 span {
     min-width: 400px;
     min-height: 20vh;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     border-radius: 30px;
     margin-bottom: 2vh;
     box-shadow: 5px 5px 10px 5px grey;
     padding-left: 2%;
     padding-bottom: 2%;
     padding-top: 2%;
+    cursor: pointer;
 }
 .service-image {
     width: 150px;
@@ -396,6 +405,7 @@ body > header > div > div.cart-container > * > div > button > span > div.guidap-
     color: teal;
     text-align: center;
     font-size: 1.5rem;
+    cursor: pointer;
 }
 .contact, .social {
     text-align: center;
