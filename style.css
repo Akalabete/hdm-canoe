@@ -422,6 +422,9 @@ body > header > div > div.cart-container > * > div > button > span > div.guidap-
     font-size: 1.4rem;
     padding: 2%;
 }
+.contact a {
+    text-decoration: none;
+}
 .fa-phone, .fa-envelope {
     font-size: 1.8rem;
     margin: 2vh 2%;
@@ -511,6 +514,7 @@ body > header > div > div.cart-container > * > div > button > span > div.guidap-
         display: block;
         color: black;
         font-size: 0.8rem;
+        letter-spacing: 0.2rem;
         font-weight: normal;
     }
     .activity {
