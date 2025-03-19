@@ -85,6 +85,11 @@
     </header>
     <main>
         <section class="home" id="home">
+            <div class="carousel-container">
+                <div class="carousel-images"></div>
+                <button class="carousel-button prev" onclick="moveSlide(-1)">&#10094;</button>
+                <button class="carousel-button next" onclick="moveSlide(1)">&#10095;</button>
+            </div>
             <div class="home-container">
                 <h2>Bienvenue chez HDM Canoë</h2>
                 <p>Location de canoës, paddle et pédalos pour des excursions sport et nature sur la Dronne, en Périgord Vert, à Saint Aulaye</p>
@@ -198,9 +203,9 @@
             </div>
         </div>
         <div class="cgv">
-            <a href="./assets/docs/cgv hdm canoe vf.pdf">Conditions générales de vente</a>
-            <a href="./assets/docs/Contrat loc francais 2024.pdf">Contrat de location</a>
-            <a href="./assets/docs/Contrat loc anglais 2019.pdf">Lease agreement</a>
+            <a href="./assets/docs/cgv hdm canoe vf.pdf" target="_blank">Conditions générales de vente</a>
+            <a href="./assets/docs/Contrat loc francais 2024.pdf" target="_blank">Contrat de location</a>
+            <a href="./assets/docs/Contrat loc anglais 2019.pdf" target="_blank">Lease agreement</a>
         </div>
         <div class="webmaster">
             <p>&copy; 2024 HDM Canoë by <a href="https://www.lacouralexandre.tech" target="_blank">Dev&apos;your synergy</a></p>
@@ -208,6 +213,45 @@
         
     </footer>
 <script>
+        async function initCarousel() {
+            try {
+                const response = await fetch('./carousel.json');
+                if (!response.ok) {
+                throw new Error(`Response status: ${response.status}`);
+                }
+                const json = await response.json();
+                const windowSize = window.innerWidth;
+
+                
+                const carouselImgs = document.querySelector('.carousel-images')
+                json.forEach(object => {
+                    const image = document.createElement("img"); 
+                    image.setAttribute('src', `./assets/images/slider/${windowSize >= 840 ? object.lg : object.sm}`);
+                    image.setAttribute('alt', `${object.alt}`);
+                    image.setAttribute('z-index', -1)
+                    carouselImgs.appendChild(image); 
+                });
+                
+                
+            } catch (error) {
+                console.error(error.message);
+            }
+        }
+
+        initCarousel();
+        let currentSlide = 0;
+        function moveSlide(direction) {
+            const slides = document.querySelectorAll('.carousel-images img'); 
+            currentSlide = (currentSlide + direction + slides.length) % slides.length;
+            slides.forEach((slide, index) => {
+                if (index === currentSlide) {
+                    slide.style.zIndex = 1; 
+                } else {
+                    slide.style.zIndex = 0; 
+                }
+            });
+        }
+
         function expand(arg) {
             const expanding = document.getElementById(arg);
             const contentHidden = expanding.querySelector('.content-hidden'); 
@@ -227,8 +271,8 @@
             });
         });
         window.onload = function() {
+            
             var screenWidth = window.innerWidth;
-            console.log(screenWidth);
             if (screenWidth > 1650 ){
                 document.getElementById('footerVideo').src = "./assets/videos/v8opti8-6.mp4";
                 document.getElementById('footerVideo').setAttribute('width', '740px');
@@ -410,7 +454,10 @@
                 modal.remove();
             });
         }
-       
+        window.onload = function() {
+            initializeCarousel(); 
+            buildImageArray();
+            };
     </script>
 </body>
 </html>

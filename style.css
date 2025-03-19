@@ -95,9 +95,44 @@ h1 span {
     background-position: center;
     background-repeat: no-repeat;
     position: relative;
-    animation: slide 20s infinite;
+    max-width: 100%;
+    overflow: hidden;
+    /*animation: slide 20s infinite;*/
+}
+.carousel-container {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+.carousel-image {
+    width: 100%;
+    display: block;
+}
+.carousel-images img {
+    position: absolute; /* Nécessaire pour que le z-index fonctionne */
+    top: 0;
+    left: 0;
+    width: 100%; /* Ajustez selon vos besoins */
+    display: block;
+    transition: opacity 0.5s ease; /* Pour une transition douce */
+}
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 10;
 }
 
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
 
 @keyframes slide {
     0% { background-image: url('./assets/images/slider/p32optism.webp'); }
@@ -121,6 +156,7 @@ h1 span {
     top: 10%;
     color: #fff;
     text-align: center;
+    z-index: 2;
 }
 
 .home-container h2 {
@@ -236,7 +272,7 @@ h1 span {
 }
 .appear { 
     max-height: 200px; 
-    opacity: 1; /
+    opacity: 1;
 }
 
 .default-parcours-img {
@@ -329,6 +365,7 @@ h1 span {
     position: absolute;
     bottom: 10%;
     right: 20%;
+    z-index: 2;
 }
 .service-info {
     width: 60%;
