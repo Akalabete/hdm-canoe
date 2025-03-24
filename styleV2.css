@@ -14,6 +14,9 @@ html {
 body {
     line-height: 1.5; /* Améliore la lisibilité */
     font-family: Arial, sans-serif; /* Définit une police par défaut */
+    max-width: 1800px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.5);
 }
 
 /* Éléments de base */
@@ -74,11 +77,130 @@ textarea:disabled {
     cursor: not-allowed; /* Change le curseur pour indiquer que c'est désactivé */
 }
 
-header {
+header, .footer-links-container {
     text-align: center;
     padding: 20px;
     background-color: rgb(66, 65, 65);
     color: white;
+}
+:root {
+    /* Palette de couleurs principale */
+    --primary: #0077B6;    /* Bleu profond pour l'eau */
+    --secondary: #00B4D8;  /* Bleu clair pour l'accent */
+    --accent: #FF9F1C;     /* Orange vif pour les CTA */
+    --light: #CAF0F8;      /* Bleu très clair pour les fonds */
+    --dark: #03045E;       /* Bleu foncé pour les textes */
+    --nature: #2D6A4F;     /* Vert forêt pour les éléments nature */
+}
+.main-reservBtn {
+    color: white;
+    padding: 15px 30px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+.main-reservBtn:hover {
+    
+    transform: scale(1.05);
+}
+.travel-card {
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+.travel-card:hover {
+    transform: translateY(-15px);
+}
+
+.travel-card-info {
+    background-color: var(--primary);
+    opacity: 0.95;
+    
+}
+.travel-card-info button {
+    cursor: pointer;
+    width: 50%
+}
+.service-container {
+    background-color: var(--light);
+    border: 2px solid var(--secondary);
+    transition: all 0.3s ease;
+}
+
+.service-container:hover {
+    transform: translateX(10px);
+    background-color: white;
+}
+.nav-desktop ul li a:hover {
+    color:#FF9F1C ;
+}
+.footer-container {
+   
+    padding: 20px 0;
+}
+
+.links a {
+    color: var(--secondary);
+    transition: color 0.3s ease;
+}
+
+.links a:hover {
+    color: var(#FF9F1C);
+}
+
+#guidap-widget-btn > * > div > div > div.g-item.box.is-flex.package-item.is-flex.is-justify-content-space-between.clickable {
+    display: none !important;
+}
+.g-box {
+    border: none !important;
+    background-color: transparent !important;
+}
+.g-button {
+    background-color: teal !important;
+    color: white !important;
+    font-size: 1.8rem !important;
+}
+.gdp-scoped-ui .guidap-booking-widget {
+    margin: 0 auto !important;
+}
+h2 {
+    position: relative;
+}
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background-color: var(--accent);
+}
+.nav-mobile {
+    background-color: var(--primary);
+    align-items: center;
+    border-radius: 15px;
+}
+
+.line {
+    border-color: white;
+    margin: auto;
+}
+.video-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+}
+.video-list h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 10px auto;
+}
+.video-list ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 /*
@@ -174,6 +296,7 @@ h1 {
 }
 
 /* section home */
+
 .cover-photo-container{
     width: 90%;
     margin: 10px auto;
@@ -181,7 +304,9 @@ h1 {
     overflow: hidden;   
 }
 .cover-photo-container img {
-    object-fit : contain;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
     filter: contrast(55%);
 }
 /* title area */
@@ -206,7 +331,7 @@ h1 {
 /* guidap main btn */
 .main-reservBtn{
     position: absolute;
-    top: 50%;
+    bottom: 10%;
     right: 20%;
 }
 #home p {
@@ -217,12 +342,13 @@ h1 {
 }
 
 /* les trajets */
-#travels h2, #services h2, #video h2 {
+#travels h2, #services h2, #video h2, .footer-container h2{
     width: 80%;
     margin: 10px auto;
     font-size: 1.2rem;
     font-weight: bold;
     text-align: center;
+    color: var(--primary);
    
 }
 .travel-cards-container {
@@ -285,17 +411,197 @@ h1 {
     width: 100%;
     max-width: 1000px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 20px 0;
+    margin: 20px auto;
+    border: 1px solid var(--primary);
+    padding: 10px;
+    border-radius: 10px;
 }
 /* footer */
-footer {
+.footer-container {
     display: flex;
     flex-direction: column;
 }
-.footer-info-container, .footer-links-container {
+.contact-info-container, .footer-links-container {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px auto;
+    text-align: center;
+    padding: 10px;
+}
+.contact-info-container {
+    width: 90%;
+}
+.map-container {
+    width: 80%;
 
+    margin: 10px auto;
+}
+.map-container img {
+    width: 100%;
+    height: auto;
+}
+.links{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+    margin: 10px auto;
+}
+.links a {
+    padding: 10px;
+    text-decoration: none;
+    color: teal;
+}
+.links a:hover {
+    text-decoration: underline;
+}
+.webmaster-link {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 20px auto;
+}
+.webmaster-link a {
+    text-decoration: none;
+    color: inherit;
+}
+.footer-links-container p {
+    font-size: 1.2rem;
+    font-weight: bold;
+    
+}
+@media (min-width: 840px) {
+    .cover-photo-container img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+    .map-container{
+        max-width: 800px;
+    }
+    .home-container h2 {
+        font-size: 1.8rem;
+        font-weight: bold;
+    }
+    .home-container p{
+        display: block;
+        color: white;
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+    .footervideo {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    .video-list h3{
+        font-size: 1.8rem;
+        font-weight: bold;
+    }
+    .video-list li{
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+    #home p {
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+    .header-container {
+        justify-content: space-around;
+    }
+    .nav-mobile {
+        display: none;
+    }
+    .logo-container {
+        width: 25%;
+    }
+    .cart {
+        width: 10%;
+    }
+    .nav-desktop {
+        display: flex;
+    }
+    .nav-container {
+        width: 50%;
+    }
+    .nav-desktop ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+    .nav-desktop ul li {
+        margin: 0 10px;
+        font-size: 1.5rem;
+    }
+    #travels h2, #services h2, #video h2, .footer-container h2{
+        font-size: 2.4rem;
+        font-weight: bold;
+        margin: 20px auto;
+    }
+    .footer-links-container p {
+        font-size: 1.5rem;
+       
+    }
+    
+}
+
+@media (min-width: 1024px) {
+    .travel-card {
+        width : 450px;
+        height: 300px;
+    }   
+    .travel-card-info {
+        height: 30%;
+    }
+    .travel-card-info-sub, .service-info, .footer-container p {
+        font-size: 1.5rem;
+    }
+    .footer-container p {
+        font-weight: bold;
+    }
+    .links a {
+        font-size: 1.5rem;
+    }
+    .logo-container img {
+        width: 300px;
+        height: 224px;
+    }
+    .nav-container {
+        width: 45%;
+    }
+    .header-container {
+        justify-content: space-between;
+    }
+    .nav-desktop ul li a{
+        font-size: 1.5rem;
+    }
+    .service-container {
+        max-width: 700px;
+    }
+    #services {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .service-container:nth-child(even) {
+        flex-direction: row-reverse;
+
+    }
+}
+@media (min-width: 1250px) {
+    .nav-desktop ul li a{
+        font-size: 2.0rem;
+    }
+    .contact-info-container {
+        justify-content: space-evenly;
+    }
+    .cover-photo-container {
+        max-height: 800px;
+}
 }

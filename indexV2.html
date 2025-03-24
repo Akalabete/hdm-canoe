@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HDM Canoë</title>
     <link rel="stylesheet" href="styleV2.css">
-    <!--<script src="https://cart.guidap.net/v1/" async defer data-token="0HnUcLDPJSaA2Oj753yiuvlxQqzMd4oXGmkT" data-lang="fr" data-currency="EUR"></script>-->
+    <script src="https://cart.guidap.net/v1/" async defer data-token="0HnUcLDPJSaA2Oj753yiuvlxQqzMd4oXGmkT" data-lang="fr" data-currency="EUR"></script>
 </head>
 
 <body>
@@ -14,11 +14,9 @@
         <div class="header-container flex-row">
             <div class="logo-container">
                 <h1>HDM Canoë</h1>
-                <img src="./assets/images/home/smlogohdmcanoe.webp" width="150" height="112" alt="HDM Canoë logo">
+                <img src="./assets/images/home/lglogohdmcanoe.webp" width="150" height="112" alt="HDM Canoë logo">
             </div>
-            <div class="cart">
-                <div class="cart-container"><guidap-cart-button></guidap-cart-button></div>
-            </div>
+            
             <div class="nav-container flex-row">
                 <div class="nav-desktop">
                     <nav>
@@ -41,8 +39,17 @@
     <main>
         <section id="home">
             <div class="cover-photo-container border">
-                <img src="./assets/images/slider/supp1optism.webp" alt="photo du débarcadère d'Aubeterre Sur Drone" width="600" height="360">
-            
+                
+                <picture>
+                    <source media="(min-width: 840px)" 
+                            srcset="./assets/images/slider/supp1opti.webp"
+                            width="1200"
+                            height="960">
+                    <img src="./assets/images/slider/supp1opti.webp" 
+                         alt="photo du débarcadère d'Aubeterre Sur Drone" 
+                         width="600" 
+                         height="360">
+                </picture>
                 <div class="home-container border">
                     <h2>Bienvenue chez HDM Canoë</h2>
                     <p>Location de canoës, paddle et pédalos pour des excursions sport et nature sur la Dronne, en Périgord Vert, à Saint Aulaye</p>
@@ -66,16 +73,16 @@
                 <div class="travel-card">
                     <div class="travel-card-info">
                         <div class="travel-card-info-sub">
-                            <p>From</p>
-                            <p>dist</p>
+                            <p>Bersac</p>
+                            <p>16km</p>
                         </div>
                         <div class="travel-card-info-sub">
-                            <p>to</p>
-                            <p>time</p>
+                            <p>Saint Aulaye</p>
+                            <p>5h30</p>
                         </div>
                         <div class="travel-card-info-sub">
-                            <p>price ph</p>
-                            <button></button>
+                            <p>A partir de 25€</p>
+                            <button><guidap-booking-widget activity-uuid=\"H9gGx7InohXUls4ZPuOybvm3awKBNzTQe820\"></guidap-booking-widget></button>
                         </div>
                     </div>
                     <img src="./assets/images/slider/p36optism.webp">
@@ -173,7 +180,7 @@
             <div class="service-container">
                 <div class="service-img-container"> ph</div>
                 <div class="service-info">
-                    <p>Profitez de votre aventure en toute sérénité,
+                    <p>Sécurité pour votre aventure, en toute sérénité,
                         gilets de sauvetage et conteneurs 
                         hermétiques, garantissant la protection de vos 
                         objets sensibles lors de vos sorties en canoë.</p>
@@ -181,7 +188,7 @@
             </div>
             <div class="service-container">
                 <div class="service-info">
-                    <p>Profitez de notre base de loisirs, où vous trouverez des 
+                    <p>Restauration sur place possible: vous trouverez des 
                     snacks savoureux et des boissons rafraîchissantes pour 
                     agrémenter votre journée.</p>
                 </div>
@@ -190,7 +197,7 @@
             <div class="service-container">
                 <div class="service-img-container">ph</div>
                 <div class="service-info">
-                    <p>Profitez de départs réguliers tout au long de la journée : dernier 
+                    <p>Des départs réguliers tout au long de la journée : dernier 
                         départ à 12h30 pour le parcours long et 16h30 pour le 
                         parcours court. 17h00 pour les locations de paddle et pédalos.</p>
                 </div>
@@ -207,31 +214,51 @@
         <section id="video">
             <h2>Un avant goût :</h2>
             <div class="footervideo">
+                <div class="video-list">
+                    <h3>Liste des videos</h3>
+                    <ul>
+                        <li>video 2</li>
+                        <li>video 3</li>
+                        <li>video 4</li>
+                    </ul>
+                </div>
                 <video  id="footerVideo" preload="none" controls loop autoplay src="./assets/videos/v8opti4-3.mp4"></video>
             </div>
         </section>
     </main>
     <footer>
         <div class="footer-container">
+            <h2>Nous sommes ici:</h2>
             <div class="contact-info-container">
-                <h2>Nous sommes ici:</h2>
-                <p>Adresse: Les Ponts, 24410 Saint Aulaye</p>
+                <p>Les Ponts, 24410 Saint Aulaye</p>
                 <div class="contact-container">
                     <a href="phoneto:0633553861"><i class="fa fa-phone"></i><p class="p-desktop"> 06 33 55 38 61</p></a>
                     <a href="mailto:contact@hdm-canoe.fr"><i class="fa fa-envelope"></i><p class="p-desktop">contact@hdm-canoe.fr</p></a>
                 </div>
-                <div class="map-container">
-                    <a href="https://www.google.com/maps/place/hdm+cano%C3%AB/@45.2090541,0.135685,17z/data=!3m1!4b1!4m6!3m5!1s0x47ffe58d023cf139:0xa4ebc20dba81c2f3!8m2!3d45.2090541!4d0.135685!16s%2Fg%2F11g1knhv_s?entry=ttu" target="_blank">
-                        <img src="./assets/images/home/locationmap.webp" alt="localisation de la base de kanöe" class="location-map" width="500" height="375">
-                    </a>
-                </div>
+            </div>
+            <div class="map-container">
+                <a href="https://www.google.com/maps/place/hdm+cano%C3%AB/@45.2090541,0.135685,17z/data=!3m1!4b1!4m6!3m5!1s0x47ffe58d023cf139:0xa4ebc20dba81c2f3!8m2!3d45.2090541!4d0.135685!16s%2Fg%2F11g1knhv_s?entry=ttu" target="_blank">
+                    <img src="./assets/images/home/locationmap.webp" alt="localisation de la base de kanöe" class="location-map" width="500" height="375">
+                </a>
             </div>
         </div>
         <div class="footer-links-container">
-            <div class="legal-links"></div>
-            <div class="partners-link"></div>
+            <div class="links">
+                <p>Aux alentours</p>
+                <a>content</a>
+                <a>content</a>
+                <a>content</a>
+                <a>content</a>
+            </div>
+            <div class="links">
+                <p>Nos partenaires</p>
+                <a>content</a>
+                <a>content</a>
+                <a>content</a>
+                <a>content</a>
+            </div>
         </div>
-        <div class="webmaster-link"></div>
+        <div class="webmaster-link"><a href="https://www.lacouralexandre.tech" target="_blank"></a>Dev'your synergy</a></div>
     </footer>
 <script src="script.js"></script>
 </body>
