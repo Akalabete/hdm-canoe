@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="HDM Canoë, location de canoës, paddle et pédalos pour excursions sport et nature sur la Dronne, en périgord vert, hébergement et bivouac possible">
+    <meta property="og:site_name" content="hdm canoe, la dordogne verte"/>
+    <meta property="og:title" content="hdm-canoe.fr: location de canoës, paddle et pédalos pour excursions sport et nature sur la Dronne, en périgord vert, hébergement et bivouac possible" />
+    <meta property="og:url" content="https://www.hdm-canoe.fr"/>
+    <meta property="og:image" content="http://www.hdm-canoe.fr/assets/home/logokayakdtoure.webp"/>
+    <meta name="robots" content="index, follow">
+    <link href="https://fonts.googleapis.com/css?family=Rufina:400,700" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet" />
+    <link rel="shortcut icon" type="image/icon" href="assets/logo/favicon.webp"/>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preload" src="./assets/images/slider/p32opti.webp" as="image" media="min-width: 850px"/>
+    <link rel="preload" src="./assets/images/slider/p32optism.webp" as="image" media="max-width: 849px" />
+    <link rel="preload" href="./assets/videos/v12opti.mp4" as="video" media="(min-width: 850px)">
+    <link rel="preload" href="./assets/videos/v12opti4-3.mp4" as="video" media="(max-width: 849px)">
+    <link rel="preload" href="./assets/videos/v14opti.mp4" as="video" media="(min-width: 850px)">
+    <link rel="preload" href="./assets/videos/v14opti4-3.mp4" as="video" media="(max-width: 849px)">
+    <link rel="preload" href="./assets/videos/v13opti.mp4" as="video" media="(min-width: 850px)">
+    <link rel="preload" href="./assets/videos/v13opti4-3.mp4" as="video" media="(max-width: 849px)">
+    <link rel="preload" href="./assets/videos/v9opti.mp4" as="video" media="(min-width: 850px)">
+    <link rel="preload" href="./assets/videos/v9opti4-3.mp4" as="video" media="(max-width: 849px)">    
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          "name": "HDM CANOE",
+          "description": "HDM Canoë, location de canoës, paddle et pédalos pour des excursions sur la Dronne, en Dordogne, périgord vert.",
+          "image": "https://hdm-canoe/assets/logo/favicon.webp",
+          "telephone": "0553906220",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "les Ponts",
+            "addressLocality": "Saint Aulaye",
+            "postalCode": "24410",
+            "addressCountry": "France"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "45.2090541",
+            "longitude": "0.135685"
+          },
+          "openingHours": "Jun-Sept Mo-Sun 10-19",
+          "priceRange": "12 to 40 €"
+        },
+        {
+            "@context": "https://schema.org",
+            "@type": "ImageGallery",
+            "image": [
+                {
+                    "@context": "https://schema.org",
+                    "@type": "ImageObject",
+                    "author": "HDM Canoë",
+                    "contentLocation": "Parcours de canoës sur la Dronne, en Périgord Vert, à Saint Aulaye",
+                    "contentUrl": "https://www.hdm-canoe.fr/assets/images/gallery/p6opti.webp",
+                    "datePublished": "2024-01-06",
+                    "description": "Prise de vue de la dronne en drone avec un barrage sur la gauche et des arbres sur les rives",
+                    "name": "Prise de vue barrage Dronne"
+                },
+                {
+                    "@context": "https://schema.org",
+                    "@type": "ImageObject",
+                    "author": "HDM Canoë",
+                    "contentLocation": "Parcours de canoës sur la Dronne, en Périgord Vert, à Saint Aulaye",
+                    "contentUrl": "https://www.hdm-canoe.fr/assets/images/gallery/p9opti.webp",
+                    "datePublished": "2024-01-06",
+                    "description": "photo de la dronne avec en arriere plan un moulin réhabitlité en restaurant",
+                    "name": "Moulin saint Aulaye plage"
+                },
+                {
+                    "@context": "https://schema.org",
+                    "@type": "ImageObject",
+                    "author": "HDM Canoë",
+                    "contentLocation": "Parcours de canoës sur la Dronne, en Périgord Vert, à Saint Aulaye",
+                    "contentUrl": "https://www.hdm-canoe.fr/assets/images/gallery/p17opti.webp",
+                    "datePublished": "2024-01-02",
+                    "description": "photo de la dronne avec en second plan plan un moulin réhabitlité en restaurant",
+                    "name": "Moulin saint Aulaye plage"
+                },
+                {
+                    "@context": "https://schema.org",
+                    "@type": "ImageObject",
+                    "author": "HDM Canoë",
+                    "contentLocation": "Parcours de canoës sur la Dronne, en Périgord Vert, à Saint Aulaye",
+                    "contentUrl": "https://www.hdm-canoe.fr/assets/images/gallery/p21opti.webp",
+                    "datePublished": "2024-01-06",
+                    "description": "Dphoto en drone du débarcadère de saint aulaye",
+                    "name": "Débarcadaire canoës Saint Aulaye"
+                },
+                {
+                    "@context": "https://schema.org",
+                    "@type": "ImageObject",
+                    "author": "HDM Canoë",
+                    "contentLocation": "Parcours de canoës sur la Dronne, en Périgord Vert, à Saint Aulaye",
+                    "contentUrl": "https://www.hdm-canoe.fr/assets/images/gallery/p24opti.webp",
+                    "datePublished": "2024-01-06",
+                    "description": "photo du pont prés du départ d'aubeterre sur dronne",
+                    "name": "Photo pont départ Aubeterre"
+                },
+                {
+                    "@context": "https://schema.org",
+                    "@type": "ImageObject",
+                    "author": "HDM Canoë",
+                    "contentLocation": "Parcours de canoës sur la Dronne, en Périgord Vert, à Saint Aulaye",
+                    "contentUrl": "https://www.hdm-canoe.fr/assets/images/gallery/p32opti.webp",
+                    "datePublished": "2024-01-06",
+                    "description": "photo du pont prés du départ d'aubeterre sur dronne zoomée",
+                    "name": "Photo pont départ Aubeterre zoomée"
+                },
+                {
+                    "@context": "https://schema.org",
+                    "@type": "ImageObject",
+                    "author": "HDM Canoë",
+                    "contentLocation": "Parcours de canoës sur la Dronne, en Périgord Vert, à Saint Aulaye",
+                    "contentUrl": "https://www.hdm-canoe.fr/assets/images/gallery/p36opti.webp",
+                    "datePublished": "2024-01-06",
+                    "description": "photo du départ du moulin de poltrot",
+                    "name": "Départ canoës Poltrot"
+                },
+                {
+                    "@context": "https://schema.org",
+                    "@type": "ImageObject",
+                    "author": "HDM Canoë",
+                    "contentLocation": "Parcours de canoës sur la Dronne, en Périgord Vert, à Saint Aulaye",
+                    "contentUrl": "https://www.hdm-canoe.fr/assets/images/gallery/p38opti.webp",
+                    "datePublished": "2024-01-06",
+                    "description": "photo du départ de Bonnes",
+                    "name": "Départ canoës Bonnes"
+                },
+                {
+                    "@context": "https://schema.org",
+                    "@type": "ImageObject",
+                    "author": "HDM Canoë",
+                    "contentLocation": "Parcours de canoës sur la Dronne, en Périgord Vert, à Saint Aulaye",
+                    "contentUrl": "https://www.hdm-canoe.fr/assets/images/gallery/p41opti.webp",
+                    "datePublished": "2024-01-06",
+                    "description": "photo du parcours depuis le départ de Bonnes",
+                    "name": "prise de vue parcours canoës Bonnes"
+                },
+                {
+                    "@context": "https://schema.org",
+                    "@type": "ImageObject",
+                    "author": "HDM Canoë",
+                    "contentLocation": "Parcours de canoës sur la Dronne, en Périgord Vert, à Saint Aulaye",
+                    "contentUrl": "https://www.hdm-canoe.fr/assets/images/gallery/p43opti.webp",
+                    "datePublished": "2024-01-06",
+                    "description": "photo du parcours pleine nature",
+                    "name": "Prise de vue pleine nature"
+                },
+                {
+                    "@context": "https://schema.org",
+                    "@type": "ImageObject",
+                    "author": "HDM Canoë",
+                    "contentLocation": "Parcours de canoës sur la Dronne, en Périgord Vert, à Saint Aulaye",
+                    "contentUrl": "https://www.hdm-canoe.fr/assets/images/gallery/p46opti.webp",
+                    "datePublished": "2024-01-06",
+                    "description": "photo du parcours prise depuis un barrage",
+                    "name": "Photo barrage sur le parcours saint Aulaye Aubeterre"
+                },
+                {
+                    "@context": "https://schema.org",
+                    "@type": "ImageObject",
+                    "author": "HDM Canoë",
+                    "contentLocation": "Parcours de canoës sur la Dronne, en Périgord Vert, à Saint Aulaye",
+                    "contentUrl": "https://www.hdm-canoe.fr/assets/images/gallery/supp1opti.webp",
+                    "datePublished": "2024-01-06",
+                    "description": "photo du parcours depuis les canoës",
+                    "name": "Prise de vue depuis les canoës"
+                },
+                {
+                    "@context": "https://schema.org",
+                    "@type": "ImageObject",
+                    "author": "HDM Canoë",
+                    "contentLocation": "Parcours de canoës sur la Dronne, en Périgord Vert, à Saint Aulaye",
+                    "contentUrl": "https://www.hdm-canoe.fr/assets/images/gallery/supp2opti.webp",
+                    "datePublished": "2024-01-06",
+                    "description": "photo du passage d'un pont depuis un canoë",
+                    "name": "Prise de vue passage d'un pont depuis les canoës"
+                },
+                {
+                    "@context": "https://schema.org",
+                    "@type": "ImageObject",
+                    "author": "HDM Canoë",
+                    "contentLocation": "Parcours de canoës sur la Dronne, en Périgord Vert, à Saint Aulaye",
+                    "contentUrl": "https://www.hdm-canoe.fr/assets/images/gallery/supp3opti.webp",
+                    "datePublished": "2024-01-06",
+                    "description": "photo prise depuis un canoë d'un barrage de près",
+                    "name": "Prise de vue passage d'un pont depuis les canoës zoomé"
+                },
+            ]
+        }
+        </script>
+       <script src="https://cart.guidap.net/v1/" async defer data-token="0HnUcLDPJSaA2Oj753yiuvlxQqzMd4oXGmkT" data-lang="fr" data-currency="EUR"></script>
+    <title>HDM Canoë</title>
+</head>
+<body>
+    <div class="upbtn"><i class="fa fa-chevron-up"></i></div>
+    <header>
+        <div class="header-container">
+            <div class="logo-title">
+                <img class="logo" src="./assets/images/home/lglogohdmcanoe.webp" alt="logo de HDM Canoë La Dordogne Verte"  width="200" title="logo de HDM Canoë La Dordogne Verte">
+                <h1 class="title">HDM Canoë <br><span>La Dordogne Verte</span></h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a  class="nav-item active" href="#home">Accueil</a></li>
+                    <li><a  class="nav-item" href="#activites">Activités</a></li>
+                    <li><a  class="nav-item" href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="cart-container"><guidap-cart-button></guidap-cart-button></div>
+        </div>
+    </header>
+    <main>
+        <section class="home" id="home">
+            <!--<div class="carousel-container">
+                <div class="carousel-images"></div>
+                <button class="carousel-button prev" onclick="moveSlide(-1)">&#10094;</button>
+                <button class="carousel-button next" onclick="moveSlide(1)">&#10095;</button>
+            </div> -->
+            <div class="carousel-wrapper">
+                <div class="carousel">
+                    <img class="carousel__photo initial" src="./assets/images/slider/p32opti.webp">
+                    <img class="carousel__photo" src="./assets/images/slider/p36opti.webp">
+                    <img class="carousel__photo" src="./assets/images/slider/supp1opti.webp">
+                    <img class="carousel__photo" src="./assets/images/slider/supp3opti.webp">
+                    <div class="carousel__button--next"></div>
+                    <div class="carousel__button--prev"></div>
+                </div>
+            </div>
+            <div class="home-container">
+                <h2>Bienvenue chez HDM Canoë</h2>
+                <p>Location de canoës, paddle et pédalos pour des excursions sport et nature sur la Dronne, en Périgord Vert, à Saint Aulaye</p>
+            </div>
+            <div class="main-reservBtn">
+                <guidap-reserve-button></guidap-reserve-button>
+            </div>
+        </section>
+        <h2 class="activity-title">Les parcours que nous vous proposons:</h2>
+        <section class="activity-section" id="activites">
+            <div class="activity-container">
+                <div class="activities">
+                    
+                </div>
+                <div class="activity-selected">
+                    <p>Choisissez votre parcours</p>
+                    <img class="default-parcours-img" src="./assets/images/parcours/parc_noir.webp" width="auto">
+                </div>
+            </div>
+        </section>
+        <section class="services">
+            <div class="service-image-banner"></div>
+            <div class="service-container">
+                <div class="service expandable" onclick="expand('equipments')" id="equipments">
+                    <div class="flex-row">
+                        <img class="service-image" src="./assets/images/service/gilet-haute-visibilite.webp" alt="gilet de sauvetage et équipement de sécurité">
+                        <div class="service-info">
+                            <h3>Des équipements sécurisés</h3>
+                            <p>Afin de vous garantir une expérience sereine</p>
+                        </div>
+                    </div>
+                    <div class="content-hidden">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean faucibus dapibus odio, nec interdum ex
+                         varius sit amet. Sed sit amet justo ac quam fermentum interdum faucibus vel nibh.
+                         Nam in congue orci, vel laoreet ante. Curabitur laoreet risus sed.
+                    </div>
+                </div>
+                <div class="service expandable" onclick="expand('nighty')" id="nighty">
+                    <div class="flex-row">
+                        <img class="service-image" src="./assets/images/service/neige-nocturne.webp" alt="descente en soirée possibles">
+                        <div class="service-info">
+                            <h3>Descentes nocturnes</h3>
+                            <p>A ne pas manquer</p>
+                        </div>
+                    </div>
+                    <div class="content-hidden">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean faucibus dapibus odio, nec interdum ex
+                         varius sit amet. Sed sit amet justo ac quam fermentum interdum faucibus vel nibh.
+                         Nam in congue orci, vel laoreet ante. Curabitur laoreet risus sed.
+                    </div>
+
+                </div>
+                <div class="service expandable" onclick="expand('weekends')" id="weekends">
+                    <div class="flex-row">
+                        <img class="service-image" src="./assets/images/service/tente.webp" alt="week end descente et bivouac">
+                        <div class="service-info">
+                            <h3>Week-ends descente</h3>
+                            <p>Avec hébergement le soir au camping</p>
+                        </div>
+                    </div>
+                    <div class="content-hidden">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean faucibus dapibus odio, nec interdum ex
+                         varius sit amet. Sed sit amet justo ac quam fermentum interdum faucibus vel nibh.
+                         Nam in congue orci, vel laoreet ante. Curabitur laoreet risus sed.
+                    </div>
+
+                </div>
+                <div class="service expandable" onclick="expand('snacking')" id="snacking">
+                    <div class="flex-row">
+                        <img class="service-image" src="./assets/images/service/canoe.webp" alt="image d'un canoé">
+                        <div class="service-info">
+                            <h3>Snack et boissons</h3>
+                            <p>Sur place ou à emporter</p>
+                        </div>
+                    </div>
+                    <div class="content-hidden">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean faucibus dapibus odio, nec interdum ex
+                         varius sit amet. Sed sit amet justo ac quam fermentum interdum faucibus vel nibh.
+                         Nam in congue orci, vel laoreet ante. Curabitur laoreet risus sed.
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <section class="gallery" id="gallery">
+            <div class="gallery-container">
+                <h2>A découvrir!</h2>
+                <div class="gallery-images"></div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-container">
+            <div class="contact" id="contact">
+                <h2>Nous sommes ici:</h2>
+                <p>Adresse: Les Ponts, 24410 Saint Aulaye</p>
+                <a href="phoneto:0633553861"><i class="fa fa-phone"></i><p class="p-desktop"> 06 33 55 38 61</p></a>
+                <a href="mailto:contact@hdm-canoe.fr"><i class="fa fa-envelope"></i><p class="p-desktop">contact@hdm-canoe.fr</p></a>
+                <div class="social">
+                    <h3>Suivez-nous sur:</h2>
+                    <a class="social-link" href="https://www.facebook.com/campingladordogneverte" target="_blank"><i class="fab fa-facebook-square"></i></a>
+                </div>
+            </div>
+            <div class="location-image-container">
+                <a href="https://www.google.com/maps/place/hdm+cano%C3%AB/@45.2090541,0.135685,17z/data=!3m1!4b1!4m6!3m5!1s0x47ffe58d023cf139:0xa4ebc20dba81c2f3!8m2!3d45.2090541!4d0.135685!16s%2Fg%2F11g1knhv_s?entry=ttu" target="_blank">
+                    <img src="./assets/images/home/locationmap.webp" alt="localisation de la base de kanöe" class="location-map" width="500" height="375">
+                </a>
+            </div>
+            
+            <div class="footervideo">
+                <video  id="footerVideo" preload="none" controls loop autoplay src="./assets/videos/v8opti8-6.mp4"></video>
+            </div>
+        </div>
+        <div class="cgv">
+            <a href="./assets/docs/cgv hdm canoe vf.pdf" target="_blank">Conditions générales de vente</a>
+            <a href="./assets/docs/Contrat loc francais 2024.pdf" target="_blank">Contrat de location</a>
+            <a href="./assets/docs/Contrat loc anglais 2019.pdf" target="_blank">Lease agreement</a>
+        </div>
+        <div class="webmaster">
+            <p>&copy; 2024 HDM Canoë by <a href="https://www.lacouralexandre.tech" target="_blank">Dev&apos;your synergy</a></p>
+        </div>
+        
+    </footer>
+<script>
+    var itemClassName = "carousel__photo";
+    items = document.getElementsByClassName(itemClassName),
+    totalItems = items.length,
+    slide = 0,
+    moving = true;
+    // Set classes
+function setInitialClasses() {
+  // Targets the previous, current, and next items
+  // This assumes there are at least three items.
+  items[totalItems - 1].classList.add("prev");
+  items[0].classList.add("active");
+  items[1].classList.add("next");
+}
+// Set event listeners
+function setEventListeners() {
+  var next = document.getElementsByClassName('carousel__button--next')[0],
+      prev = document.getElementsByClassName('carousel__button--prev')[0];
+  next.addEventListener('click', moveNext);
+  prev.addEventListener('click', movePrev);
+}
+// Next navigation handler
+function moveNext() {
+  // Check if moving
+  if (!moving) {
+    // If it's the last slide, reset to 0, else +1
+    if (slide === (totalItems - 1)) {
+      slide = 0;
+    } else {
+      slide++;
+    }
+    // Move carousel to updated slide
+    moveCarouselTo(slide);
+  }
+}
+// Previous navigation handler
+function movePrev() {
+    console.log('left')
+  // Check if moving
+  if (!moving) {
+    // If it's the first slide, set as the last slide, else -1
+    if (slide === 0) {
+      slide = (totalItems - 1);
+    } else {
+      slide--;
+    }
+          
+    // Move carousel to updated slide
+    moveCarouselTo(slide);
+  }
+}
+function disableInteraction() {
+  // Set 'moving' to true for the same duration as our transition.
+  // (0.5s = 500ms)
+  
+  moving = true;
+  // setTimeout runs its function once after the given time
+  setTimeout(function(){
+    moving = false
+  }, 500);
+}
+function moveCarouselTo(slide) {
+    if (!moving) {
+        disableInteraction(); // Désactive l'interaction pendant la transition
+
+        // Calculer les indices des images adjacentes
+        var newPrevious = slide - 1;
+        var newNext = slide + 1;
+
+        // Gérer les cas de débordement
+        if (newPrevious < 0) newPrevious = totalItems - 1;
+        if (newNext >= totalItems) newNext = 0;
+
+        // Réinitialiser les classes des images
+        items.forEach((item, index) => {
+            item.className = itemClassName; // Réinitialiser toutes les classes
+        });
+
+        // Ajouter les nouvelles classes
+        items[newPrevious].classList.add("prev");
+        items[slide].classList.add("active");
+        items[newNext].classList.add("next");
+    }
+}
+function initCarousel() {
+  setInitialClasses();
+  setEventListeners();
+  console.log('log')
+  // Set moving to false so that the carousel becomes interactive
+  moving = false;
+}
+// make it rain
+initCarousel();
+
+        /*async function initCarousel() {
+            try {
+                const response = await fetch('./carousel.json');
+                if (!response.ok) {
+                throw new Error(`Response status: ${response.status}`);
+                }
+                const json = await response.json();
+                const windowSize = window.innerWidth;
+
+                
+                const carouselImgs = document.querySelector('.carousel-images')
+                console.log(windowSize)
+                json.forEach(object => {
+                    const image = document.createElement("img"); 
+                    image.setAttribute('src', `./assets/images/slider/${windowSize >= 840 ? object.lg : object.sm}`);
+                    image.setAttribute('alt', `${object.alt}`);
+                    image.setAttribute('z-index', -1)
+                    carouselImgs.appendChild(image); 
+                });
+                
+                
+            } catch (error) {
+                console.error(error.message);
+            }
+        }
+
+        let currentSlide = 0;
+        function moveSlide(direction) {
+            const slides = document.querySelectorAll('.carousel-images img'); 
+            const totalSlides = slides.length;
+            currentSlide = (currentSlide + direction + slides.length) % slides.length;
+            slides.forEach((slide, index) => {
+                if (index === currentSlide) {
+                    slide.style.transform = 'translateX(0)'; // Position de départ
+                    slide.style.zIndex = 1; // Image active
+                } else if (index === (currentSlide - 1 + totalSlides) % totalSlides) {
+                    slide.style.transform = 'translateX(-100%)'; // Image précédente
+                    slide.style.zIndex = 0; // Non active
+                } else {
+                    slide.style.transform = 'translateX(100%)'; // Image suivante
+                    slide.style.zIndex = 0; // Non active
+                }
+            });
+        }
+
+        initCarousel();
+
+        let autoSlideInterval;
+
+        function startAutoSlide() {
+            autoSlideInterval = setInterval(() => {
+                moveSlide(1);
+            }, 3000); 
+        }
+
+        function stopAutoSlide() {
+            clearInterval(autoSlideInterval);
+            startAutoSlide();
+        }
+
+        startAutoSlide();
+
+        const prevButton = document.querySelector('.carousel-button.prev');
+        const nextButton = document.querySelector('.carousel-button.next');
+        prevButton.addEventListener('click', () => {
+            moveSlide(-1);
+        });
+
+        nextButton.addEventListener('click', () => {
+            moveSlide(1);
+        });
+
+        prevButton.addEventListener('click', stopAutoSlide);
+        nextButton.addEventListener('click', stopAutoSlide);
+        */
+        function expand(arg) {
+            const expanding = document.getElementById(arg);
+            const contentHidden = expanding.querySelector('.content-hidden'); 
+            if (contentHidden) {
+                if (contentHidden.classList.contains('appear')) {
+                    contentHidden.classList.remove('appear');
+                } else {
+                    contentHidden.classList.add('appear');
+                }
+            }
+        }
+
+        const navItems = document.querySelectorAll('.nav-item');
+        navItems.forEach(item => {
+            item.addEventListener('click', () => {
+                navItems.forEach(item => item.classList.remove('active'));
+                item.classList.add('active');
+            });
+        });
+        window.onload = function() {    
+            var screenWidth = window.innerWidth;
+            if (screenWidth > 1650 ){
+                document.getElementById('footerVideo').src = "./assets/videos/v8opti8-6.mp4";
+                document.getElementById('footerVideo').setAttribute('width', '740px');
+            } else {
+                document.getElementById('footerVideo').src = "./assets/videos/v8opti4-3.mp4";
+                document.getElementById('footerVideo').setAttribute('width', '320px');
+                
+            } 
+        }
+        fetch('./activities.json')
+        .then(response => response.json())
+        .then(data => {
+            data.forEach((activity) => {
+                
+                const activitiesList = document.querySelector('.activities');
+                const activityElement = document.createElement('div');
+                activityElement.classList.add('activity');
+                activityElement.innerHTML = `
+                    <i class="fa fa-star ${activity['signal-color']}"></i>
+                    <p>${activity.number}</p>
+                `;
+                activityElement.onclick = function() {
+                    handleActivityClick(activity);
+                    document.querySelectorAll('.activity').forEach(item => item.classList.remove('selected'));
+                    activityElement.classList.add('selected');
+                };
+                activitiesList.appendChild(activityElement);      
+            });
+        });
+
+        function handleActivityClick(activity) {
+            const activitySelected = document.querySelector('.activity-selected');
+            activitySelected.innerHTML = "";
+            var screenWidth = window.innerWidth
+            if (activity.video !== "" && screenWidth > 1250) {
+                activitySelected.innerHTML = `
+                    <div class="parcours-container">
+                        <div class="parcours-description">
+                            <h2 class="parcours-title">Parcours Sélectionné:</h2>
+                            <p>Départ: <span>${activity.start}</span></p>
+                            <p>Arrivée: <span>${activity.end}</span></p>
+                            <p>Distance: <span>${activity.length}</span></p>
+                            <p>Temps: <span>${activity.time}</span></p>
+                            <p>A partir de: <span>${activity.price}</span></p>
+                            <div class="button-container" id="guidap-widget-btn">
+                                ${activity.activityBtn}
+                            </div>
+                        </div>
+                        <div class=" card parcours-img">
+                            <img class="card-image" src="${activity.map}" alt="image du parcours ${activity.number}" width="auto">
+                            <video style="display: none;" width="520px" class="responsive-video card-video" src="${activity.videolg}" title="video de présentation du parcours ${activity.number}"></video>
+                        </div>
+                    </div>
+                `;
+                }else if (activity.video !== "" && screenWidth <= 1250) {
+                activitySelected.innerHTML = `
+                    <div class="parcours-container">
+                        <div class="parcours-description">
+                            <h2 class="parcours-title">Parcours Sélectionné:</h2>
+                            <p>Départ: <span>${activity.start}</span></p>
+                            <p>Arrivée: <span>${activity.end}</span></p>
+                            <p>Distance: <span>${activity.length}</span></p>
+                            <p>Temps: <span>${activity.time}</span></p>
+                            <p>A partir de: <span>${activity.price}</span></p>
+                            <div class="button-container" id="guidap-widget-btn">
+                                ${activity.activityBtn}
+                            </div>
+                        </div>
+                        <div class=" card parcours-img">
+                            <img class="card-image" src="${activity.map}" alt="image du parcours ${activity.number}" width="auto">
+                            <video style="display: none;" width="320px" class="responsive-video card-video" src="${activity.videosm}" title="video de présentation du parcours ${activity.number}"></video>
+                        </div>
+                    </div>
+                    `;
+                };
+                const cardVideo = document.querySelector('.card-video');
+                cardVideo.addEventListener('ended', (event) => {
+                    cardVideo.style.display = 'none';
+                    document.querySelector('.card-image').style.display = 'block';
+                });
+                setTimeout(() => {
+                    const cardImage = document.querySelector('.card-image');
+                    const cardVideo = document.querySelector('.card-video');
+                    cardImage.style.display = 'none';
+                    cardVideo.style.display = 'block';
+                    cardVideo.play();
+                }, 5000);
+            }
+        function buildImageArray() {
+            fetch('./gallery.json') 
+                .then(response => response.json())
+                .then(data => {
+                    data.sort(() => Math.random() - 0.5); 
+                    const imagesArray = Array.from(data).slice(0, 6);
+                    const galleryContainer= document.querySelector('.gallery-images');
+                    imagesArray.forEach((image) => {
+                        const imageElement = document.createElement('img');
+                        imageElement.src = image.url;
+                        imageElement.alt = image.alt;
+                        imageElement.classList.add('gallery-image');
+                        galleryContainer.appendChild(imageElement);
+                    });
+                    setInterval(() => randomizeImages(data), 5000);
+                });
+            }
+
+        function randomizeImages(data) { 
+            const galleryItems = document.querySelectorAll('.gallery-image');
+            data.sort(() => Math.random() - 0.5); 
+            const imagesArray = Array.from(data).slice(0, 6);
+            galleryItems.forEach((item, index) => {
+                item.classList.add('fade');
+            });
+
+            setTimeout(() => {
+                galleryItems.forEach((item, index) => {
+                    item.src = imagesArray[index].url;
+                    item.alt = imagesArray[index].alt;
+                    item.classList.remove('fade');
+                });
+            }, 700);
+        }
+
+        buildImageArray();
+        const scrollUpButton = document.querySelector('.upbtn');
+        scrollUpButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 0) {
+                scrollUpButton.style.display = 'flex';
+            } else {
+                scrollUpButton.style.display = 'none';
+            }
+        });
+        
+    setTimeout(() => {
+        const cardImage = document.querySelector('.card-image');
+        const cardVideo = document.querySelector('.card-video');
+        cardImage ? cardImage.style.display = 'none':null;
+        cardVideo ? cardVideo.style.display = 'block': null;
+        cardVideo ? cardVideo.load() : null;
+        cardVideo ? cardVideo.play() : null;
+        }, 3000);
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const target = document.querySelector(this.getAttribute('href'));
+                const headerOffset = 270; 
+
+                window.scrollTo({
+                    top: target.offsetTop - headerOffset,
+                    behavior: 'smooth'
+                });
+            });
+        });
+        galleryClicker = document.querySelector(".gallery-images");
+        galleryClicker.addEventListener('click', () => {
+            openModal()
+        });
+        function openModal() {
+            console.log("called")
+            const modal = document.createElement('div');
+            modal.classList.add('site-modal');
+            modal.style.display = 'flex';
+            modal.innerHTML = `
+                <div class="site-modal-content">
+                    <span class="close">&times;</span>                    
+                </div>
+            `;
+            document.body.appendChild(modal);
+            const closeButton = document.querySelector('.close');
+            closeButton.addEventListener('click', () => {
+                modal.remove();
+            });
+        }
+        
+       
+    </script>
+</body>
+</html>

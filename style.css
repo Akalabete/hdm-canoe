@@ -1,912 +1,729 @@
-body {
+/* Reset CSS */
+* {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
-    min-width: 100%;  
-    max-width: 3200px;
-    background-color: #f8f8f8;
-}
-@media (min-width: 500px) {
-    body {
-        min-width: 500px;
-    }
-}
-.upbtn {
-    position: fixed;
-    bottom: 40px; 
-    right: 40px;
-    width: 40px;
-    height: 40px;
-    background-color: teal;
-    z-index: 999;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    display: none;
-    border-radius: 30px;
-}
-.fa-chevron-up {
-    font-size: 2rem;
-    color: #fff;
-    cursor: pointer;
+    box-sizing: border-box; /* Utilise le modèle de boîte pour tous les éléments */
 }
 
-.header-container {
-    position: fixed;
-    padding: 2vh;
-    top: 0;
-    box-sizing: border-box; 
-    overflow: hidden;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    background-color: rgb(66, 65, 65);
-    align-items: center;
-    height: 20vh;
-    z-index: 1000;
-}
-.logo {
-    display: none;
-}
-h1 {
-    font-size: 1.5rem;
-    color: teal;
-    text-align: center;
-    margin-left: 2%;
-}
-h1 span {
-    font-size: 1.9rem;
-    color: #fff
-}
-.gallery-container h2, .activity-title, .social h2 {
-    color: teal;
-    font-style: italic;
-    font-size: 1.8rem;
+html {
+    -webkit-text-size-adjust: 100%; /* Pour Safari */
+    -ms-text-size-adjust: 100%; /* Pour IE */
+    min-width: 420px;
 }
 
-.logo-title {
-    display: flex;
-    flex-direction: column;
-}
-
-.header-container nav ul {
-    display: flex;
-    flex-direction: column;
-    list-style: none;
-    line-height: 2.5rem;;
-}
-.header-container nav ul a {
-    text-decoration: none;
-    color: #fff;
-    cursor: pointer;
-    font-size: 1.6rem;
-}
-.header-container nav ul a:focus, .header-container nav ul a:hover, .header-container nav ul a.active{
-    text-decoration: underline;
-    color:teal;
-}
-
-.home {
-    margin-top: 16vh;
-    height: 50vh;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: relative;
-    max-width: 100%;
-    overflow: hidden;
-    /*animation: slide 20s infinite;*/
-}
-.carousel-container {
-    display: flex;
-    transition: transform 0.5s ease;
-}
-.carousel-wrapper {
-    overflow: hidden;
-    width: 100%;
-}
-.carousel-wrapper * {
-    box-sizing: border-box;
-}
-.carousel {
-    transform-style: preserve-3d;
-}
-.carousel__photo {
-    opacity: 0;
-    position: absolute;
-    top:0;
-    width: 100%;
-    margin: auto;
-    padding: 1rem 4rem;
-    z-index: 100;
-    transition: transform .5s, opacity .5s, z-index .5s;
-}
-.carousel__photo.initial,
-.carousel__photo.active {
-  opacity: 1;
-  position: relative;
-  z-index: 900;
-}
-.carousel__photo.prev,
-.carousel__photo.next {
-  z-index: 800;
-}
-.carousel__photo.prev {
-  transform: translateX(-100%); /* Move 'prev' item to the left */
-}
-.carousel__photo.next {
-  transform: translateX(100%); /* Move 'next' item to the right */
-}
-.carousel__button--prev,
-.carousel__button--next {
-  position: absolute;
-  top:50%;
-  width: 3rem;
-  height: 3rem;
-  background-color: #FFF;
-  transform: translateY(-50%);
-  border-radius: 50%;
-  cursor: pointer; 
-  z-index: 1001; /* Sit on top of everything */
-  border: 1px solid black;
-}
-.carousel__button--prev {
-  left:0;
-}
-.carousel__button--next {
-  right:0;
-}
-.carousel__button--prev::after,
-.carousel__button--next::after {
-  content: " ";
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  top: 50%;
-  left: 54%;
-  border-right: 2px solid black;
-  border-bottom: 2px solid black;
-  transform: translate(-50%, -50%) rotate(135deg);
-}
-.carousel__button--next::after {
-  left: 47%;
-  transform: translate(-50%, -50%) rotate(-45deg);
-}
-.carousel-image {
-    width: 100%;
-    display: block;
-}
-.carousel-images img {
-    position: absolute; /* Nécessaire pour que le z-index fonctionne */
-    top: 0;
-    left: 0;
-    width: 100%; /* Ajustez selon vos besoins */
-    display: block;
-    transition: opacity 0.5s ease; /* Pour une transition douce */
-    transition: transform 0.5s ease;
-}
-.carousel-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+body {
+    line-height: 1.5; /* Améliore la lisibilité */
+    font-family: Arial, sans-serif; /* Définit une police par défaut */
+    max-width: 1800px;
+    margin: 0 auto;
     background-color: rgba(255, 255, 255, 0.5);
-    border: none;
-    cursor: pointer;
-    padding: 10px;
-    z-index: 10;
 }
 
-.prev {
-    left: 10px;
+/* Éléments de base */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal; /* Normalise le poids de la police */
 }
 
-.next {
-    right: 10px;
+ul, ol {
+    list-style: none; /* Supprime les puces et numéros par défaut */
 }
 
-@keyframes slide {
-    0% { background-image: url('./assets/images/slider/p32optism.webp'); }
-    25% { background-image: url('./assets/images/slider/p36optism.webp'); }
-    50% { background-image: url('./assets/images/slider/supp1optism.webp'); }
-    75% { background-image: url('./assets/images/slider/supp3optism.webp'); }
-    100% { background-image: url('./assets/images/slider/p32optism.webp'); }
+a {
+    text-decoration: none; /* Supprime le soulignement des liens */
+    color: inherit; /* Hérite de la couleur du texte parent */
 }
-@media screen and (min-width: 850px){
-    @keyframes slide {
-        0% { background-image: url('./assets/images/slider/p32opti.webp'); }
-        25% { background-image: url('./assets/images/slider/p36opti.webp'); }
-        50% { background-image: url('./assets/images/slider/supp1opti.webp'); }
-        75% { background-image: url('./assets/images/slider/supp3opti.webp'); }
-        100% { background-image: url('./assets/images/slider/p32opti.webp'); }
-    }
+
+img {
+    max-width: 100%; /* Assure que les images ne débordent pas de leur conteneur */
+    height: auto; /* Maintient le ratio d'aspect */
+    display: block; /* Évite les espaces en bas des images */
 }
-.home-container {
-    background-color: rgba(0, 0, 0, 0.4);
-    position: absolute;
-    top: 10%;
-    color: #fff;
+
+/* Boutons */
+button {
+    cursor: pointer; /* Change le curseur pour indiquer que c'est cliquable */
+    border: none; /* Supprime les bordures par défaut */
+    background: none; /* Supprime le fond par défaut */
+}
+
+/* Formulaires */
+input, textarea, select {
+    font-family: inherit; /* Hérite de la police du parent */
+    font-size: inherit; /* Hérite de la taille de police du parent */
+}
+
+/* Styles pour les éléments de formulaire */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+    border: 1px solid #ccc; /* Bordure par défaut */
+    border-radius: 4px; /* Coins arrondis */
+    padding: 10px; /* Espacement interne */
+    width: 100%; /* Prend toute la largeur du conteneur */
+}
+
+/* Styles pour les éléments de formulaire au focus */
+input:focus,
+textarea:focus {
+    border-color: #4CAF50; /* Change la couleur de la bordure au focus */
+    outline: none; /* Supprime le contour par défaut */
+}
+
+/* Styles pour les éléments de formulaire désactivés */
+input:disabled,
+textarea:disabled {
+    background-color: #f5f5f5; /* Couleur de fond pour les éléments désactivés */}
+
+header, .footer-links-container {
     text-align: center;
-    z-index: 2;
+    padding: 20px;
+    background-color: rgb(66, 65, 65);
+    color: white;
+}
+:root {
+    /* Palette de couleurs principale */
+    --primary: #0077B6;    /* Bleu profond pour l'eau */
+    --secondary: #00B4D8;  /* Bleu clair pour l'accent */
+    --accent: #FF9F1C;     /* Orange vif pour les CTA */
+    --light: #CAF0F8;      /* Bleu très clair pour les fonds */
+    --dark: #03045E;       /* Bleu foncé pour les textes */
+    --nature: #2D6A4F;     /* Vert forêt pour les éléments nature */
+}
+.main-reservBtn {
+    color: white;
+    padding: 15px 30px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+.main-reservBtn:hover {
+    
+    transform: scale(1.05);
+}
+.travel-card {
+    position: relative;
+    width: 350px;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 10px;
+    margin: 10px auto;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+.travel-card:hover {
+    transform: translateY(-15px);
 }
 
-.home-container h2 {
-    font-size: 1.7rem;
-}
-.home-container p {
-    font-size: 1.5rem;
-}
-.activity-container {
-    max-width: 2000px;
-}
-.activity-section {
-    width: 90%;
-    margin: 2vh auto;
-    border-radius: 30px;
-    box-shadow: 5px 5px 10px 5px grey;
-}
-.activities {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    padding: 1vh 0;    
-}
-.activity {
+.travel-card-info {
+    color: white;
+    width: 100%;
+    height: 20%;
+    background-color: rgb(0,0,0,0.5);
+    position: absolute;
+    bottom: 0%;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    align-items: center;
-    min-width: 120px;
-    margin: 1%;
-    box-shadow: 5px 5px 10px 5px grey;
-    text-align: center;
-    font-size: 1.3rem;
-    font-weight: bold;
-    background-color: teal;
-    border-radius: 30px;
-    cursor: pointer;
-    color: #fff;
-    padding: 0 2%;
+    pointer-events: none; /* Permet de cliquer à travers l'info */
 }
-.activity-title {
+.travel-card-info-sub {
+    width: 33%;
+}
+.travel-card-info button {
+    pointer-events: none; /* Permet de cliquer à travers le bouton */
+    cursor: pointer;
     width: 90%;
-    text-align: center;
-    margin: 4vh auto;
-    font-size: 1.8rem;
+    background-color: var(--primary);
+    color: white;
+    border-radius: 20px;
+    padding: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
 }
-.activity-selected {
-    width: 85%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
+
+.travel-card-info button:hover {
+    background-color: var(--accent);
+    transform: scale(1.05);
+}
+
+.service-container {
+    background-color: var(--light);
+    border: 2px solid var(--secondary);
+    transition: all 0.3s ease;
+}
+
+.service-container:hover {
+    transform: translateX(10px);
+    background-color: white;
+}
+.nav-desktop ul li a:hover {
+    color:#FF9F1C ;
+}
+.footer-container {
+   
+    padding: 20px 0;
+}
+
+.links a {
+    color: var(--secondary);
+    transition: color 0.3s ease;
+}
+
+.links a:hover {
+    color: var(#FF9F1C);
+}
+
+/* Style de base pour tous les h2 */
+h2 {
+    position: relative;
+    color: var(--primary);
+}
+
+/* Ligne décorative sous les h2 */
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background-color: var(--accent);
+}
+
+/* Exception pour les h2 dans .home-container */
+.home-container h2 {
+    color: white;
+}
+
+/* Exception pour les h2 dans les sections principales */
+#travels h2, 
+#services h2, 
+#video h2, 
+.footer-container h2 {
+    width: 80%;
+    margin: 10px auto;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    color: var(--primary);
+}
+
+.nav-mobile {
+    background-color: var(--primary);
     align-items: center;
+    border-radius: 15px;
 }
 
-.activity-selected h2 {
-    text-align: center;
-    color: teal;
+.line {
+    border-color: white;
+    margin: auto;
 }
-.activity-selected p {
-    font-size: 1.3rem;
-    font-weight: bold;
-}
-.activity-selected p span {
-    font-size: 1.4rem;
-    font-weight: bold;
-    color: teal;;
-}
-.activity-selected button {
-    background-color: teal;
-    color: #fff;
-    border: none;
-    padding: 3%;
-    border-radius: 30px;
-    font-size: 1.3rem;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.button-container {
-    text-align: center;
-}
-
-.parcours-container {
+.video-list {
     display: flex;
     flex-direction: column;
-    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+}
+.video-list h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 10px auto;
+}
+.video-list ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
 }
 
-.parcours-img img{
+/*
+
+.carousel-container {
+    position: relative;
     width: 100%;
-    height: 100%;
-    object-fit: contain;
-    
+    max-width: 800px; 
+    margin: auto;
+    overflow: hidden; 
 }
-.service-container a {
-    text-decoration: none;
+
+.carousel {
+    display: flex; 
+    transition: transform 0.5s ease; 
 }
-.service-container a p {
-    color: black;
+
+.carousel__photo {
+    min-width: 100%; 
+    display: block; 
+}
+
+.carousel__photo.active {
+    display: block; 
+}
+
+.carousel__button--prev,
+.carousel__button--next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.carousel__button--prev {
+    left: 10px;
+}
+
+.carousel__button--next {
+    right: 10px;
+}
+*/
+h1 {
+    display: none;
 }
 .flex-row {
     display: flex;
     flex-direction: row;
+    align-items:center;  
 }
-.content-hidden {
-    max-height: 0; 
-    overflow: hidden;
-    opacity: 0; 
-    transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+.border {
+    border-radius: 10px;
 }
-.appear { 
-    max-height: 200px; 
-    opacity: 1;
+.header-container {
+    justify-content: space-around;
+}
+.logo-container {
+    width: 50%;
 }
 
-.default-parcours-img {
-    width: 80%;
+.nav-container {
+    width: 25%;
     height: 100%;
-    object-fit: cover;
-    border-radius: 30px;
+    
 }
-.red {
-    color: red;
+/* ph cart */
+.cart {
+    width: 25%;
+    height: 50px;
+    background-color: blue;
 }
-.pink {
-    color: pink;
-}
-.yellow {
-    color: yellow;
-}
-.purple {
-    color: purple;
-}
-.black {
-    color: black;
-}
-.green {
-    color: green;
-}
-
-.orange {
-    color: orange;
-}
-
-.gallery h2{
-    text-align: center;
-    font-size: 1.8rem;
-}
-.service-image-banner{
-    background-image: url("./assets/images/gallary/p32opti.webp");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    padding: 2vh 0;
-
-    height: 30vh;
-}
-.service-container {
-    width: 90%;
-    max-width: 1200px;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    gap: 2%;
-    margin: 3vh auto;
-}
-.service {
-    width: 80%;
-    max-width: 450px;
-    min-width: 400px;
-    min-height: 20vh;
+/* design nav burger */
+.nav-mobile {
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
-    border-radius: 30px;
-    margin-bottom: 2vh;
-    box-shadow: 5px 5px 10px 5px grey;
-    padding-left: 2%;
-    padding-bottom: 2%;
-    padding-top: 2%;
-    cursor: pointer;
+    justify-content: center;;
+    width: 50%;
+    padding: 2%;
 }
-.service-image {
-    width: 150px;
-    height: 150px;
+.line {
+    width: 30px;
+    height: 4px;
+    border: solid 2px white;
+    margin: 8px 0;
 }
-#guidap-widget-btn > * > div > div > div.g-item.box.is-flex.package-item.is-flex.is-justify-content-space-between.clickable {
-    display: none !important;
+/* design nav desktop  caché en mf*/
+.nav-desktop {
+    display: none;
 }
-.g-box {
-    border: none !important;
-    background-color: transparent !important;
+
+/* section home */
+
+.cover-photo-container{
+    width: 90%;
+    margin: 10px auto;
+    position: relative;
+    overflow: hidden;   
 }
-.g-button {
-    background-color: teal !important;
-    color: white !important;
-    font-size: 1.8rem !important;
+.cover-photo-container img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    filter: contrast(55%);
 }
-.gdp-scoped-ui .guidap-booking-widget {
-    margin: 0 auto !important;
+/* title area */
+.home-container {
+    position: absolute;
+    width: 40%;
+    top: 10%;
+    left: 10%;
+    background-color: rgb(0, 0, 0, 0.4);
+    padding: 5px;
+    text-align: center;
 }
-.main-reservBtn {
+.home-container  h2{ 
+    font-size: 1.2rem;
+    color: white;
+    
+}
+/* caché en mobile first */
+.home-container p {
+    display: none;
+}
+/* guidap main btn */
+.main-reservBtn{
     position: absolute;
     bottom: 10%;
     right: 20%;
-    z-index: 2;
 }
-.service-info {
-    width: 60%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+#home p {
+    margin: 20px;
     text-align: center;
-}
-.cart-container {
-    margin-right: 3%;
+    font-size: 1.1rem;
+
 }
 
-body > header > div > div.cart-container > * > div > button > span > div.guidap-button-root-icon-container.guidap-cart-button-icon-container {
-    font-size: 2.0em !important;
-    color: white !important;
-}
-body > header > div > div.cart-container > * > div > button > span > div.guidap-button-root-text.guidap-cart-button-text {
-    display: none;
-}
-.service-info h3 {
-    color: teal;
-    font-size: 1.3rem;
-}
-.service-info p {
+/* les trajets */
+#travels h2, #services h2, #video h2, .footer-container h2{
+    width: 80%;
+    margin: 10px auto;
     font-size: 1.2rem;
-    font-style: italic;
+    font-weight: bold;
+    text-align: center;
+    color: var(--primary);
+   
 }
-.gallery-container {
+.travel-cards-container {
+    display: flex;
+    flex-wrap: wrap;
     width: 90%;
-    margin: 2vh auto;
+    margin: 10px auto;
 }
-.gallery-images {
+
+.travel-card {
+    position: relative;
+    width: 350px;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 10px;
+    margin: 10px auto;
     cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+.travel-card-info {
+    color: white;
+    width: 100%;
+    height: 20%;
+    background-color: rgb(0,0,0,0.5);
+    position: absolute;
+    bottom: 0%;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
     justify-content: space-evenly;
-    align-items: center;
-    margin: 2vh 2%;
-    border-radius: 30px;
-    box-shadow: 5px 5px 10px 5px grey;
-    padding-top: 2%;
-    gap: 1%;
-}
-.gallery-image {
-    width: 40%;
-    height: 190px;
-    object-fit: cover;
-    border-radius: 30px;
-    margin-bottom: 2%;
+    pointer-events: none; /* Permet de cliquer à travers l'info */
 }
 
-.gallery-images img {
-    transition: opacity 1s;
-    
-}
+/* services */
 
-.fade {
-    opacity: 0;
-}
-
-.footer-container{
+.service-container {
+    width: 90%;
+    margin: 20px auto;
+    border-radius: 10px;
+    background-color: rgb(0, 0, 0, 0.07);
+    padding: 10px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    align-items: center;
+}
+.service-info {
+    font-size: 0.9rem;
+    width: 50%;
+    padding: 10px;
+    text-align:left;
+}
+.service-img-container {
+    width: 50%;
+    height: 60px;
+    border: solid 1px blue;
+    display: flex;
     justify-content: center;
     align-items: center;
-    padding : 2% 0;
-    margin: 2vh auto;
-    width: 90%;
+    flex: 1; 
 }
-.cgv {
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    margin: 0 auto;
-}
-.cgv a {
-    text-decoration: none;
-    color: teal;
-    text-align: center;
-    font-size: 1.5rem;
-    cursor: pointer;
-}
-.contact, .social {
-    text-align: center;
-}
-.p-desktop {
-    display: none;
-}
-.contact {
-    width: 65%;
-    max-width: 450px;
-    margin-bottom: 3vh; 
-    box-shadow: 5px 5px 10px 5px grey;
-    border-radius: 30px;
-    font-size: 1.4rem;
-    padding: 2%;
-}
-.contact a {
-    text-decoration: none;
-}
-.fa-phone, .fa-envelope {
-    font-size: 1.5rem;
-    margin: 1vh 2%;
-    color: teal;
-}
-.parcours-description {
-    margin: 1vh 0; 
-}
+/* chaine video  opt */
+
 .footervideo {
     width: 100%;
     max-width: 1000px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 20px auto;
+    border: 1px solid var(--primary);
+    padding: 10px;
+    border-radius: 10px;
 }
-.activity.selected {
-    border: teal 2px solid;
-    background-color: white;
-    color: teal;
+/* footer */
+.footer-container {
+    display: flex;
+    flex-direction: column;
 }
-
-.location-image-container {
+.contact-info-container, .footer-links-container {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    box-shadow: 5px 5px 10px 5px grey;
-    margin: 2vh 2%;
-}
-.location-image-container img {
-    width: 100%;
-   
-}
-
-.location-image-container {
-    opacity: 0.9;
-}
-.fab {
-    font-size: 3rem;
-    margin: 1%;
-}
-.social {
-    margin-bottom : 2vh;
-}
-.social-link {
-    text-decoration: none;
-    color: blue;
-}
-.webmaster {
+    margin: 10px auto;
     text-align: center;
+    padding: 10px;
 }
+.contact-info-container {
+    width: 90%;
+}
+.map-container {
+    width: 80%;
 
-.webmaster a {
+    margin: 10px auto;
+}
+.map-container img {
+    width: 100%;
+    height: auto;
+}
+.links{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+    margin: 10px auto;
+}
+.links a {
+    padding: 10px;
     text-decoration: none;
-    color: purple;
+    color: teal;
 }
-@media screen and (min-width: 850px){
-    .header-container {
-        height: 10vh;
-        justify-content: space-evenly;
-    }
-    .default-parcours-img {
-        margin: auto;
-        width: 50%;
-        height: 50%;
-        object-fit: cover;
-        border-radius: 30px;
-    }
-    .main-reservBtn {
-        position: absolute;
-        bottom: 25%;
-        right: 20%;
-        transform: scale(1.3);
-    }
-    .one {
-        margin-left: -15%;
-    }
-    .logo-title {
-        flex-direction: row;
-        align-items: center;
-        width: 60%;
-    }
-    .activities {
-        padding: 1vh 0 0 0;
-    }
-    .p-desktop {
-        display: block;
-        color: black;
-        font-size: 0.8rem;
-        letter-spacing: 0.2rem;
-        font-weight: normal;
-    }
-    .activity {
-        min-width: 160px;
-        font-size: 1.2rem;
-        border-radius: 50px;
-        padding: 0 1% 0 0;
-    }
-    .logo {
-        display: block;
-        width: 30%;
-        width: 150px;
-        margin-right: 2%;
-        max-height: max-content;
-    }
-    .parcours-title {
-        margin : 0;
-    }
- 
-    .header-container nav ul {
-        flex-direction: row;
-        padding-left: 10%;
-    }
-    .header-container nav ul li {
-        margin: 0px 2%;
-    }
-    .header-container nav ul li a {
-        font-size: 1.5rem;
-    }
-    .logo img {
-        width: 100%;
-    }
-    h1 {
-        margin-left: 0;
-    }
-    .home {
-        margin-top: 11vh;
-        height: 70vh;
-    }
-    .home-container {
-        top: 10%;
-    }
-    .activity-section {
-        margin: 2vh 10%;
-    }
-    .activity-section  {
-        width: 95%;
-        margin: 2vh auto;
-    }
-    .activity-selected {
-        padding: 3%;
-    }
-    .activity-selected h2 {
-        font-size: 2.5rem;
-    }
-    .activity-selected p {
-        font-size: 2rem;
-    }
-    .activity-selected p span {
-        font-size: 2.1rem;
-    }
-    .activity-selected button {
-
-        font-size: 2rem;
-    }
-
-    .parcours-img {
-        margin: 1vh auto;
-        max-height: max-content ;
-        max-width: max-content;
-        transform: scale(1.2);
-    }
-    
-    .parcours-description p {
-        margin: 1vh 0;
-    }
-    .gallery h2 {
-        font-size: 2.5rem;
-    }
-    .gallery-images {
-        margin: 2vh 10%;
-    }
-    .gallery-image {
-        width: 300px;
-        height: 250px;
-    }
-    .footer-container {
-        padding: 2% 0;
-    }
-    
-    .contact h2 {
-        font-size: 1.8rem;
-    }
-    .contact p {
-        font-size: 1.5rem;
-    }
-    .footerimage {
-        height: 40vh;
-    }
-    .location-image-container {
-        margin: 2vh 10%;
-    }
-    .location-image-container img {
-        width: 100%;
-    }
-    .fab, .fa-phone, .fa-envelope {
-        font-size: 2rem;
-    }
-    
-    .social {
-        margin-bottom: 2vh;
-    }
-    .social-link {
-        font-size: 2rem;
-    }
-    .webmaster {
-        font-size: 2rem;
-    }
-    .webmaster a {
-        font-size: 2rem;
-    }
-    .upbtn {
-        width: 50px;
-        height: 50px;
-        border-radius: 50px;
-    }
-    .header-container nav ul {
-        margin-left: -40%;
-    }
+.links a:hover {
+    text-decoration: underline;
 }
-
-@media screen and (min-width: 1000px){
-    .home-container {
-        width: 80%;
-        margin-left: 3%;
-        border-radius: 30px;
-        padding: 2%;
+.webmaster-link {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 20px auto;
+}
+.webmaster-link a {
+    text-decoration: none;
+    color: inherit;
+}
+.footer-links-container p {
+    font-size: 1.2rem;
+    font-weight: bold;
+    
+}
+@media (min-width: 840px) {
+    .cover-photo-container img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
     }
-    .one {
-        display: none;
-    }
-    .cart-container .two{
-        margin-right: 150px;
+    .map-container{
+        max-width: 800px;
     }
     .home-container h2 {
-        font-size: 2.1rem;
+        font-size: 1.8rem;
+        font-weight: bold;
     }
-    .activities.header-container nav ul {
-        flex-direction: row;
-        margin-left: -12%;
+    .home-container p{
+        display: block;
+        color: white;
+        font-size: 1.5rem;
+        font-weight: bold;
     }
-    .header-container nav {
-        width: 50%;
-        margin-left: 10%;
-    }
-    .header-container nav ul li {
-        margin: 0px 4%;
-    }
-    .header-container nav ul li a {
-        font-size: 1.6rem;
-    }
-
-}
-@media screen and (min-width: 1300px){
-    .header-container {
-        height: 13vh;
-    }
-    .logo {
-        width: 30%;
-        max-width: 190px;
-    }
-    .header-container nav ul {
-        margin-left: -50%;
-    }
-    .header-container nav ul li {
-        margin: 0px 5%;
-    }
-    .parcours-container {
-        width: 100%;
+    .footervideo {
         flex-direction: row;
         justify-content: space-evenly;
-        align-items: center;
-        overflow: hidden;
-        padding-top: 1%;
-        
     }
-    .header-container nav ul li a {
-        font-size: 2rem;
+    .video-list h3{
+        font-size: 1.8rem;
+        font-weight: bold;
     }
-    .home-container {
-        width: 60%;
-        margin-left: 5%;
+    .video-list li{
+        font-size: 1.5rem;
+        font-weight: bold;
     }
-    .footerimage {
-        height: 50vh;
+    #home p {
+        font-size: 1.5rem;
+        font-weight: bold;
     }
-    .footer-container {
+    .header-container {
+        justify-content: space-around;
+    }
+    .nav-mobile {
+        display: none;
+    }
+    .logo-container {
+        width: 25%;
+    }
+    .cart {
+        width: 10%;
+    }
+    .nav-desktop {
+        display: flex;
+    }
+    .nav-container {
+        width: 50%;
+    }
+    .nav-desktop ul {
+        display: flex;
         flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+    .nav-desktop ul li {
+        margin: 0 10px;
+        font-size: 1.5rem;
+    }
+    #travels h2, #services h2, #video h2, .footer-container h2{
+        font-size: 2.4rem;
+        font-weight: bold;
+        margin: 20px auto;
+    }
+    .footer-links-container p {
+        font-size: 1.5rem;
+       
+    }
+    
+}
+
+@media (min-width: 1024px) {
+    .travel-card {
+        width : 450px;
+        height: 300px;
+    }   
+    .travel-card-info {
+        height: 30%;
+    }
+    .travel-card-info-sub, .service-info, .footer-container p {
+        font-size: 1.5rem;
+    }
+    .footer-container p {
+        font-weight: bold;
+    }
+    .links a {
+        font-size: 1.5rem;
+    }
+    .logo-container img {
+        width: 300px;
+        height: 224px;
+    }
+    .nav-container {
+        width: 45%;
+    }
+    .header-container {
+        justify-content: space-between;
+    }
+    .nav-desktop ul li a{
+        font-size: 1.5rem;
+    }
+    .service-container {
+        max-width: 700px;
+    }
+    #services {
+        display: flex;
         flex-wrap: wrap;
     }
-    .contact, .location-image-container {
-        min-width: 40%;
-        width: min-content;
-        margin: 2%;
+    .service-container:nth-child(even) {
+        flex-direction: row-reverse;
+
     }
-    .location-image-container {
-        box-shadow: none;
+}
+@media (min-width: 1250px) {
+    .nav-desktop ul li a{
+        font-size: 2.0rem;
     }
-    .location-image-container img {
-        width: 100%;
-        box-shadow: 5px 5px 10px 5px grey;
-        object-fit: cover;
-        margin: 0;
+    .contact-info-container {
+        justify-content: space-evenly;
     }
-    .social {
-        width: 100%;
+    .cover-photo-container {
+        max-height: 800px;
     }
-    .service-image-banner {
-        height: 40vh;
+    .travel-card {
+        width : 500px;
+        height: 350px;
+    }   
+    .travel-card-info {
+        height: 30%;
+    }
+    .travel-card-info-sub, .service-info, .footer-container p {
+        font-size: 1.5rem;
     }
 }
 
-/* modale */
-
-
-.site-modal {
+/* Styles pour le widget Guidap */
+.gdp-scoped-ui .guidap-booking-widget {
     display: none;
-    position: fixed;
-    justify-content: center;
-    align-items: center;
-    z-index: 1;
-    padding-top: 60px;
-    left: 10%;
-    top: 25vh;
-    width: 80%;
-    height: 60%;
-    overflow: auto;
-    background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0,1);
-    border-radius: 30px;
 }
-.site-modal-content {
-    animation : modale 40s infinite;
-    width: 80%;
-    height: 90%;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size : cover;
+
+.gdp-scoped-ui .guidap-booking-widget .g-box {
+    border: none !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
 }
-@keyframes modale {
-    0% {background-image : url('./assets/images/gallary/p6opti.webp');}
-    8% {background-image : url('./assets/images/gallary/p9opti.webp');}
-    16% {background-image : url('./assets/images/gallary/p17opti.webp');}
-    24% {background-image : url('./assets/images/gallary/p21opti.webp');}
-    32% {background-image : url('./assets/images/gallary/p24opti.webp');}
-    40% {background-image : url('./assets/images/gallary/p32opti.webp');}
-    48% {background-image : url('./assets/images/gallary/p38opti.webp');}
-    56% {background-image : url('./assets/images/gallary/p41opti.webp');}
-    64% {background-image : url('./assets/images/gallary/p43opti.webp');}
-    72% {background-image : url('./assets/images/gallary/p46opti.webp');}
-    80% {background-image : url('./assets/images/gallary/supp1opti.webp');}
-    90% {background-image : url('./assets/images/gallary/supp2opti.webp');}
-    100% {background-image : url('./assets/images/gallary/supp3opti.webp');}
+
+.gdp-scoped-ui .guidap-booking-widget .button {
+    cursor: pointer !important;
+    background-color: var(--primary) !important;
+    color: white !important;
+    font-size: 1.8rem !important;
+    padding: 15px 30px !important;
+    border-radius: 25px !important;
+    transition: all 0.3s ease !important;
+    border: none !important;
+    box-shadow: none !important;
 }
-.close {
-    width: 40px;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: red;
-    border-radius: 30px;
-    border: none;
-    background-color: white;
-    float: right;
-    font-size: 3rem;
-    font-weight: bold;
-    margin-right: 2%;
+
+.gdp-scoped-ui .guidap-booking-widget .button:hover {
+    transform: scale(1.05);
+    background-color: var(--accent) !important;
+}
+
+/* Surcharge des styles désactivés de Guidap */
+.gdp-scoped-ui .guidap-booking-widget [disabled].button,
+.gdp-scoped-ui .guidap-booking-widget fieldset[disabled] .button {
+    cursor: pointer !important;
+    opacity: 1 !important;
+    background-color: var(--primary) !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+/* Style du conteneur du widget */
+.gdp-scoped-ui .guidap-booking-widget {
+    margin: 0 auto !important;
+    width: 100% !important;
+    max-width: 300px !important;
+    border: none !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+}
+
+/* Style pour cacher le widget Guidap tout en gardant sa fonctionnalité */
+button guidap-booking-widget {
+    display: none;
+}
+
+/* Style pour le bouton de réservation */
+button {
     cursor: pointer;
+    width: 90%;
+    background-color: var(--primary);
+    color: white;
+    border-radius: 20px;
+    padding: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--accent);
+    transform: scale(1.05);
 }
