@@ -218,10 +218,20 @@
     </header>
     <main>
         <section class="home" id="home">
-            <div class="carousel-container">
+            <!--<div class="carousel-container">
                 <div class="carousel-images"></div>
                 <button class="carousel-button prev" onclick="moveSlide(-1)">&#10094;</button>
                 <button class="carousel-button next" onclick="moveSlide(1)">&#10095;</button>
+            </div> -->
+            <div class="carousel-wrapper">
+                <div class="carousel">
+                    <img class="carousel__photo initial" src="./assets/images/slider/p32opti.webp">
+                    <img class="carousel__photo" src="./assets/images/slider/p36opti.webp">
+                    <img class="carousel__photo" src="./assets/images/slider/supp1opti.webp">
+                    <img class="carousel__photo" src="./assets/images/slider/supp3opti.webp">
+                    <div class="carousel__button--next"></div>
+                    <div class="carousel__button--prev"></div>
+                </div>
             </div>
             <div class="home-container">
                 <h2>Bienvenue chez HDM Canoë</h2>
@@ -321,18 +331,19 @@
                 <p>Adresse: Les Ponts, 24410 Saint Aulaye</p>
                 <a href="phoneto:0633553861"><i class="fa fa-phone"></i><p class="p-desktop"> 06 33 55 38 61</p></a>
                 <a href="mailto:contact@hdm-canoe.fr"><i class="fa fa-envelope"></i><p class="p-desktop">contact@hdm-canoe.fr</p></a>
+                <div class="social">
+                    <h3>Suivez-nous sur:</h2>
+                    <a class="social-link" href="https://www.facebook.com/campingladordogneverte" target="_blank"><i class="fab fa-facebook-square"></i></a>
+                </div>
             </div>
             <div class="location-image-container">
                 <a href="https://www.google.com/maps/place/hdm+cano%C3%AB/@45.2090541,0.135685,17z/data=!3m1!4b1!4m6!3m5!1s0x47ffe58d023cf139:0xa4ebc20dba81c2f3!8m2!3d45.2090541!4d0.135685!16s%2Fg%2F11g1knhv_s?entry=ttu" target="_blank">
                     <img src="./assets/images/home/locationmap.webp" alt="localisation de la base de kanöe" class="location-map" width="500" height="375">
                 </a>
             </div>
-            <div class="social">
-                <h2>Suivez-nous sur:</h2>
-                <a class="social-link" href="https://www.facebook.com/campingladordogneverte" target="_blank"><i class="fab fa-facebook-square"></i></a>
-            </div>
+            
             <div class="footervideo">
-                <video  id="footerVideo" preload="none" controls loop autoplay src="./assets/videos/v8opti.mp4"></video>
+                <video  id="footerVideo" preload="none" controls loop autoplay src="./assets/videos/v8opti8-6.mp4"></video>
             </div>
         </div>
         <div class="cgv">
@@ -346,7 +357,100 @@
         
     </footer>
 <script>
-        async function initCarousel() {
+    var itemClassName = "carousel__photo";
+    items = document.getElementsByClassName(itemClassName),
+    totalItems = items.length,
+    slide = 0,
+    moving = true;
+    // Set classes
+function setInitialClasses() {
+  // Targets the previous, current, and next items
+  // This assumes there are at least three items.
+  items[totalItems - 1].classList.add("prev");
+  items[0].classList.add("active");
+  items[1].classList.add("next");
+}
+// Set event listeners
+function setEventListeners() {
+  var next = document.getElementsByClassName('carousel__button--next')[0],
+      prev = document.getElementsByClassName('carousel__button--prev')[0];
+  next.addEventListener('click', moveNext);
+  prev.addEventListener('click', movePrev);
+}
+// Next navigation handler
+function moveNext() {
+  // Check if moving
+  if (!moving) {
+    // If it's the last slide, reset to 0, else +1
+    if (slide === (totalItems - 1)) {
+      slide = 0;
+    } else {
+      slide++;
+    }
+    // Move carousel to updated slide
+    moveCarouselTo(slide);
+  }
+}
+// Previous navigation handler
+function movePrev() {
+    console.log('left')
+  // Check if moving
+  if (!moving) {
+    // If it's the first slide, set as the last slide, else -1
+    if (slide === 0) {
+      slide = (totalItems - 1);
+    } else {
+      slide--;
+    }
+          
+    // Move carousel to updated slide
+    moveCarouselTo(slide);
+  }
+}
+function disableInteraction() {
+  // Set 'moving' to true for the same duration as our transition.
+  // (0.5s = 500ms)
+  
+  moving = true;
+  // setTimeout runs its function once after the given time
+  setTimeout(function(){
+    moving = false
+  }, 500);
+}
+function moveCarouselTo(slide) {
+    if (!moving) {
+        disableInteraction(); // Désactive l'interaction pendant la transition
+
+        // Calculer les indices des images adjacentes
+        var newPrevious = slide - 1;
+        var newNext = slide + 1;
+
+        // Gérer les cas de débordement
+        if (newPrevious < 0) newPrevious = totalItems - 1;
+        if (newNext >= totalItems) newNext = 0;
+
+        // Réinitialiser les classes des images
+        items.forEach((item, index) => {
+            item.className = itemClassName; // Réinitialiser toutes les classes
+        });
+
+        // Ajouter les nouvelles classes
+        items[newPrevious].classList.add("prev");
+        items[slide].classList.add("active");
+        items[newNext].classList.add("next");
+    }
+}
+function initCarousel() {
+  setInitialClasses();
+  setEventListeners();
+  console.log('log')
+  // Set moving to false so that the carousel becomes interactive
+  moving = false;
+}
+// make it rain
+initCarousel();
+
+        /*async function initCarousel() {
             try {
                 const response = await fetch('./carousel.json');
                 if (!response.ok) {
@@ -357,6 +461,7 @@
 
                 
                 const carouselImgs = document.querySelector('.carousel-images')
+                console.log(windowSize)
                 json.forEach(object => {
                     const image = document.createElement("img"); 
                     image.setAttribute('src', `./assets/images/slider/${windowSize >= 840 ? object.lg : object.sm}`);
@@ -374,16 +479,22 @@
         let currentSlide = 0;
         function moveSlide(direction) {
             const slides = document.querySelectorAll('.carousel-images img'); 
+            const totalSlides = slides.length;
             currentSlide = (currentSlide + direction + slides.length) % slides.length;
             slides.forEach((slide, index) => {
                 if (index === currentSlide) {
-                    slide.style.zIndex = 1; 
+                    slide.style.transform = 'translateX(0)'; // Position de départ
+                    slide.style.zIndex = 1; // Image active
+                } else if (index === (currentSlide - 1 + totalSlides) % totalSlides) {
+                    slide.style.transform = 'translateX(-100%)'; // Image précédente
+                    slide.style.zIndex = 0; // Non active
                 } else {
-                    slide.style.zIndex = 0; 
+                    slide.style.transform = 'translateX(100%)'; // Image suivante
+                    slide.style.zIndex = 0; // Non active
                 }
             });
         }
-        
+
         initCarousel();
 
         let autoSlideInterval;
@@ -403,9 +514,17 @@
 
         const prevButton = document.querySelector('.carousel-button.prev');
         const nextButton = document.querySelector('.carousel-button.next');
+        prevButton.addEventListener('click', () => {
+            moveSlide(-1);
+        });
+
+        nextButton.addEventListener('click', () => {
+            moveSlide(1);
+        });
 
         prevButton.addEventListener('click', stopAutoSlide);
         nextButton.addEventListener('click', stopAutoSlide);
+        */
         function expand(arg) {
             const expanding = document.getElementById(arg);
             const contentHidden = expanding.querySelector('.content-hidden'); 
@@ -608,10 +727,8 @@
                 modal.remove();
             });
         }
-        window.onload = function() {
-            initializeCarousel(); 
-            buildImageArray();
-            };
+        
+       
     </script>
 </body>
 </html>
