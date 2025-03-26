@@ -6,23 +6,9 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log('DOM chargé !');
     
     // Sélectionner tous les boutons qui contiennent un widget Guidap
-    const reservButtons = document.querySelectorAll('button:has(guidap-booking-widget)');
     
-    reservButtons.forEach(button => {
-        button.addEventListener('click', function(e) {
-            e.preventDefault();
-            // Trouver le widget Guidap dans le bouton
-            const guidapWidget = this.querySelector('guidap-booking-widget');
-            if (guidapWidget) {
-                // Trouver le bouton dans le widget et simuler un clic
-                const guidapButton = guidapWidget.querySelector('.button');
-                if (guidapButton) {
-                    guidapButton.click();
-                    console.log('click');
-                }
-            }
-        });
-    });
+    
+    
 
     // 1. Gestion de la classe active pour la navigation
     const sections = document.querySelectorAll('section');
