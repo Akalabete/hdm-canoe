@@ -330,7 +330,9 @@ strong {
 .logo-container {
     width: 50%;
 }
-
+.logo-container img {
+    object-fit: cover;
+}
 .nav-container {
     width: 25%;
     height: 100%;
@@ -745,7 +747,7 @@ footer h3 {
     right: 40px;
     width: 40px;
     height: 40px;
-    background-color: teal;
+    background-color: var(--nature);
     z-index: 999;
     display: flex;
     justify-content: center;
