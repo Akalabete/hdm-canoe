@@ -9,6 +9,7 @@ html {
     -webkit-text-size-adjust: 100%; /* Pour Safari */
     -ms-text-size-adjust: 100%; /* Pour IE */
     min-width: 420px;
+    background-color: var(--nature);
 }
 
 body {
@@ -16,7 +17,9 @@ body {
     font-family: Arial, sans-serif; /* Définit une police par défaut */
     max-width: 1800px;
     margin: 0 auto;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgb(240, 240, 240);
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
 }
 
 /* Éléments de base */
@@ -81,6 +84,7 @@ header, .footer-links-container {
     background-color: rgb(66, 65, 65);
     color: white;
 }
+
 :root {
     /* Palette de couleurs principale */
     --primary: #0077B6;    /* Bleu profond pour l'eau */
@@ -88,13 +92,21 @@ header, .footer-links-container {
     --accent: #FF9F1C;     /* Orange vif pour les CTA */
     --light: #CAF0F8;      /* Bleu très clair pour les fonds */
     --dark: #03045E;       /* Bleu foncé pour les textes */
-    --nature: #2D6A4F;     /* Vert forêt pour les éléments nature */
+    --nature: #47886b;     /* Vert forêt pour les éléments nature */
 }
 .main-reservBtn {
     color: white;
     padding: 15px 30px;
     border-radius: 25px;
     transition: all 0.3s ease;
+}
+header {
+    height: 18vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
 }
 .main-reservBtn:hover {
     
@@ -105,7 +117,7 @@ header, .footer-links-container {
     width: 350px;
     height: 250px;
     overflow: hidden;
-    border-radius: 10px;
+    border-radius: 20px;
     margin: 10px auto;
     cursor: pointer;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
@@ -116,55 +128,66 @@ header, .footer-links-container {
 }
 
 .travel-card-info {
+    position: absolute;
     color: white;
     width: 100%;
-    height: 20%;
+    height: 25%;
     background-color: rgb(0,0,0,0.5);
-    position: absolute;
     bottom: 0%;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    align-items: center;
     pointer-events: none; /* Permet de cliquer à travers l'info */
 }
+ .guidap-booking-widget{
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
+}
+.g-box{
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+.g-box button {
+    padding: 3px !important;
+    background-color: var(--nature) !important;
+    color: white !important;
+    opacity: 1 !important;
+    border: none !important;
+}
+
 .travel-card-info-sub {
     width: 33%;
-}
-.travel-card-info button {
-    pointer-events: none; /* Permet de cliquer à travers le bouton */
-    cursor: pointer;
-    width: 90%;
-    background-color: var(--primary);
-    color: white;
-    border-radius: 20px;
+    text-align: center;
     padding: 10px;
-    font-size: 1.2rem;
+}
+
+.travel-card-info-sub p {
+    font-size: 1.0rem;
     font-weight: bold;
-    transition: all 0.3s ease;
 }
 
-.travel-card-info button:hover {
-    background-color: var(--accent);
-    transform: scale(1.05);
+.nav-mobile-container {
+    margin: 0 auto;
 }
 
-.service-container {
-    background-color: var(--light);
-    border: 2px solid var(--secondary);
-    transition: all 0.3s ease;
-}
-
-.service-container:hover {
-    transform: translateX(10px);
-    background-color: white;
-}
-.nav-desktop ul li a:hover {
+.nav-desktop ul li a:hover, .nav-mobile-container ul li a:hover {
     color:#FF9F1C ;
+    text-decoration: underline;
 }
-.footer-container {
-   
-    padding: 20px 0;
+.nav-item.active{
+    color: var(--accent);
+    text-decoration: underline;
 }
+
+
 
 .links a {
     color: var(--secondary);
@@ -201,10 +224,10 @@ h2::after {
 /* Exception pour les h2 dans les sections principales */
 #travels h2, 
 #services h2, 
-#video h2, 
+#contact h2, 
 .footer-container h2 {
     width: 80%;
-    margin: 10px auto;
+    margin: 15px auto;
     font-size: 1.2rem;
     font-weight: bold;
     text-align: center;
@@ -212,11 +235,14 @@ h2::after {
 }
 
 .nav-mobile {
-    background-color: var(--primary);
+    display: block;
+    background-color: var(--nature);
     align-items: center;
-    border-radius: 15px;
+    border-radius: 20px;
 }
-
+.nav-mobile-container {
+    display: none;
+}
 .line {
     border-color: white;
     margin: auto;
@@ -291,8 +317,12 @@ h1 {
     flex-direction: row;
     align-items:center;  
 }
+strong {
+    color: var(--nature);
+    font-weight: bolder;
+} 
 .border {
-    border-radius: 10px;
+    border-radius: 20px;
 }
 .header-container {
     justify-content: space-around;
@@ -364,6 +394,9 @@ h1 {
 /* caché en mobile first */
 .home-container p {
     display: none;
+    padding: 10px;
+    border: none;
+    box-shadow: none;
 }
 /* guidap main btn */
 .main-reservBtn{
@@ -371,15 +404,21 @@ h1 {
     bottom: 10%;
     right: 20%;
 }
-#home p {
+#home {
+    margin-top: 18vh;
+    padding-top: 10px;
+}
+#home .main-explanation {
     margin: 20px;
     text-align: center;
     font-size: 1.1rem;
-
+    padding: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+    border-radius: 20px;
 }
 
 /* les trajets */
-#travels h2, #services h2, #video h2, .footer-container h2{
+#travels h2, #services h2, #contact h2, .footer-container h2{
     width: 80%;
     margin: 10px auto;
     font-size: 1.2rem;
@@ -400,71 +439,75 @@ h1 {
     width: 350px;
     height: 250px;
     overflow: hidden;
-    border-radius: 10px;
+    border-radius: 20px;
     margin: 10px auto;
     cursor: pointer;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     transition: transform 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
 }
-.travel-card-info {
-    color: white;
-    width: 100%;
-    height: 20%;
-    background-color: rgb(0,0,0,0.5);
-    position: absolute;
-    bottom: 0%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    pointer-events: none; /* Permet de cliquer à travers l'info */
-}
+
 
 /* services */
 
+
 .service-container {
+    color: black;
     width: 90%;
-    margin: 20px auto;
-    border-radius: 10px;
-    background-color: rgb(0, 0, 0, 0.07);
+    margin: 30px auto;
+    border-radius: 20px;
     padding: 10px;
     display: flex;
     flex-direction: row;
     align-items: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
 }
 .service-info {
-    font-size: 0.9rem;
+    font-size: 1.2rem;
     width: 50%;
     padding: 10px;
     text-align:left;
 }
 .service-img-container {
-    width: 50%;
-    height: 60px;
-    border: solid 1px blue;
+    width: 240px;
+    min-width: 180px;
+    max-height: 260px;
+    margin: 5px;
+    overflow: hidden;
+    border-radius: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex: 1; 
 }
+
+.service-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
 /* chaine video  opt */
 
 .footervideo {
-    width: 100%;
+    width: 90%;
     max-width: 1000px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: 20px auto;
-    border: 1px solid var(--primary);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
     padding: 10px;
-    border-radius: 10px;
+    border-radius: 20px;
+    
 }
 /* footer */
 .footer-container {
     display: flex;
     flex-direction: column;
+    padding: 20px 0;
 }
+
 .contact-info-container, .footer-links-container {
     display: flex;
     flex-direction: row;
@@ -485,6 +528,15 @@ h1 {
 .map-container img {
     width: 100%;
     height: auto;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+}
+footer h3 {
+    font-size: 1.3rem;
+    text-decoration: underline;
+    font-weight: bold;
+    margin: 10px auto;
+    color: var(--accent);
 }
 .links{
     display: flex;
@@ -497,10 +549,12 @@ h1 {
 .links a {
     padding: 10px;
     text-decoration: none;
-    color: teal;
+    color: white;
+    cursor: pointer;
 }
 .links a:hover {
     text-decoration: underline;
+    color: var(--accent);
 }
 .webmaster-link {
     text-align: center;
@@ -517,6 +571,20 @@ h1 {
     font-weight: bold;
     
 }
+#footerVideo {
+    max-width: 100%;
+    border-radius: 20px;
+}
+@media (min-width: 600px) {
+    .contact-info-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+}
+
 @media (min-width: 840px) {
     .cover-photo-container img {
         width: 100%;
@@ -533,8 +601,10 @@ h1 {
     .home-container p{
         display: block;
         color: white;
-        font-size: 1.5rem;
+        font-size: 1.1rem;
         font-weight: bold;
+        border: none;
+        box-shadow: none;
     }
     .footervideo {
         flex-direction: row;
@@ -548,7 +618,7 @@ h1 {
         font-size: 1.5rem;
         font-weight: bold;
     }
-    #home p {
+    #home .main-explanation {
         font-size: 1.5rem;
         font-weight: bold;
     }
@@ -581,7 +651,7 @@ h1 {
         margin: 0 10px;
         font-size: 1.5rem;
     }
-    #travels h2, #services h2, #video h2, .footer-container h2{
+    #travels h2, #services h2, #contact h2, .footer-container h2{
         font-size: 2.4rem;
         font-weight: bold;
         margin: 20px auto;
@@ -594,12 +664,21 @@ h1 {
 }
 
 @media (min-width: 1024px) {
+    header {
+        height: 25vh;
+    }
+    #home {
+        margin-top: 25vh;
+    }
+    .home-container p {
+        font-size: 1.5rem;
+    }
     .travel-card {
         width : 450px;
         height: 300px;
-    }   
+    } 
     .travel-card-info {
-        height: 30%;
+        height: 25%;
     }
     .travel-card-info-sub, .service-info, .footer-container p {
         font-size: 1.5rem;
@@ -611,8 +690,8 @@ h1 {
         font-size: 1.5rem;
     }
     .logo-container img {
-        width: 300px;
-        height: 224px;
+        width: 250px;
+        height: 180px;
     }
     .nav-container {
         width: 45%;
@@ -624,21 +703,24 @@ h1 {
         font-size: 1.5rem;
     }
     .service-container {
-        max-width: 700px;
-    }
-    #services {
-        display: flex;
-        flex-wrap: wrap;
+        max-width: 800px;
     }
     .service-container:nth-child(even) {
-        flex-direction: row-reverse;
-
+        margin-left: 10%;
     }
+    .service-container:nth-child(odd) {
+        margin-right: 10%;
+    }
+    .service-img-container {
+        margin: 20px;
+    }
+    
 }
 @media (min-width: 1250px) {
     .nav-desktop ul li a{
         font-size: 2.0rem;
     }
+    
     .contact-info-container {
         justify-content: space-evenly;
     }
@@ -656,74 +738,25 @@ h1 {
         font-size: 1.5rem;
     }
 }
-
-/* Styles pour le widget Guidap */
-.gdp-scoped-ui .guidap-booking-widget {
+/* design du bouton de retour en haut */
+.upbtn {
+    position: fixed;
+    bottom: 40px; 
+    right: 40px;
+    width: 40px;
+    height: 40px;
+    background-color: teal;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     display: none;
+    border-radius: 30px;
 }
-
-.gdp-scoped-ui .guidap-booking-widget .g-box {
-    border: none !important;
-    background-color: transparent !important;
-    box-shadow: none !important;
-}
-
-.gdp-scoped-ui .guidap-booking-widget .button {
-    cursor: pointer !important;
-    background-color: var(--primary) !important;
-    color: white !important;
-    font-size: 1.8rem !important;
-    padding: 15px 30px !important;
-    border-radius: 25px !important;
-    transition: all 0.3s ease !important;
-    border: none !important;
-    box-shadow: none !important;
-}
-
-.gdp-scoped-ui .guidap-booking-widget .button:hover {
-    transform: scale(1.05);
-    background-color: var(--accent) !important;
-}
-
-/* Surcharge des styles désactivés de Guidap */
-.gdp-scoped-ui .guidap-booking-widget [disabled].button,
-.gdp-scoped-ui .guidap-booking-widget fieldset[disabled] .button {
-    cursor: pointer !important;
-    opacity: 1 !important;
-    background-color: var(--primary) !important;
-    border: none !important;
-    box-shadow: none !important;
-}
-
-/* Style du conteneur du widget */
-.gdp-scoped-ui .guidap-booking-widget {
-    margin: 0 auto !important;
-    width: 100% !important;
-    max-width: 300px !important;
-    border: none !important;
-    background-color: transparent !important;
-    box-shadow: none !important;
-}
-
-/* Style pour cacher le widget Guidap tout en gardant sa fonctionnalité */
-button guidap-booking-widget {
-    display: none;
-}
-
-/* Style pour le bouton de réservation */
-button {
+.fa-chevron-up {
+    font-size: 2rem;
+    color: #fff;
     cursor: pointer;
-    width: 90%;
-    background-color: var(--primary);
-    color: white;
-    border-radius: 20px;
-    padding: 10px;
-    font-size: 1.2rem;
-    font-weight: bold;
-    transition: all 0.3s ease;
 }
 
-button:hover {
-    background-color: var(--accent);
-    transform: scale(1.05);
-}
+
