@@ -265,6 +265,9 @@ h2::after {
     align-items: center;
     justify-content: center;
 }
+.video-list ul li a{
+    cursor: pointer;
+}
 
 /*
 

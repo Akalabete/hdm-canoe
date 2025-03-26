@@ -43,17 +43,18 @@ document.addEventListener('DOMContentLoaded', function() {
     updateActiveLink(); // Initial call
 
     // 2. Gestion des vidéos
-    const videoLinks = document.querySelectorAll('.video-list a');
+    const videoLinks = document.querySelectorAll('.video-list ul li a');
     const videoContainer = document.getElementById('footerVideo');
-    
+    console.log(videoLinks);
     videoLinks.forEach(link => {
         link.addEventListener('click', function(e) {
             e.preventDefault();
+            console.log(this.dataset.video);
             const videoSrc = this.getAttribute('data-video');
-            const videoPlayer = videoContainer.querySelector('video');
-            if (videoPlayer) {
-                videoPlayer.src = videoSrc;
-                videoPlayer.play();
+            if (videoContainer) {
+                console.log(videoSrc);
+                videoContainer.src = videoSrc;
+                videoContainer.play();
             }
         });
     });
