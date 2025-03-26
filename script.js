@@ -4,12 +4,11 @@ console.log('Script chargé !');
 
 document.addEventListener('DOMContentLoaded', function() {
     console.log('DOM chargé !');
-    
-    // Sélectionner tous les boutons qui contiennent un widget Guidap
-    
-    
-    
-
+    //windows resisze reloader
+    window.addEventListener('resize', () => {
+        window.location.reload();
+    });
+ 
     // 1. Gestion de la classe active pour la navigation
     const sections = document.querySelectorAll('section');
     const navLinks = document.querySelectorAll('.nav-desktop ul li a');
@@ -49,7 +48,6 @@ document.addEventListener('DOMContentLoaded', function() {
     videoLinks.forEach(link => {
         link.addEventListener('click', function(e) {
             e.preventDefault();
-            console.log(this.dataset.video);
             const videoSrc = this.getAttribute('data-video');
             if (videoContainer) {
                 console.log(videoSrc);

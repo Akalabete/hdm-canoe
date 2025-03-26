@@ -331,10 +331,16 @@ strong {
     justify-content: space-around;
 }
 .logo-container {
-    height: 90%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
 .logo-container img {
-    object-fit: cover;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
 }
 .nav-container {
     width: 25%;
@@ -639,6 +645,10 @@ footer h3 {
     .logo-container {
         width: 25%;
     }
+    .logo-container img {
+        max-width: 100%;
+        height: auto;
+    }
     .cart {
         width: 10%;
     }
@@ -698,8 +708,8 @@ footer h3 {
         font-size: 1.5rem;
     }
     .logo-container img {
-        width: 250px;
-        height: 180px;
+        width: 300px;
+        height: auto;
     }
     .nav-container {
         width: 45%;
