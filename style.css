@@ -328,7 +328,7 @@ strong {
     justify-content: space-around;
 }
 .logo-container {
-    width: 50%;
+    height: 90%;
 }
 .logo-container img {
     object-fit: cover;
@@ -343,6 +343,9 @@ strong {
     width: 25%;
     height: 50px;
     background-color: blue;
+}
+.package-item {
+    display: none;
 }
 /* design nav burger */
 .nav-mobile {
