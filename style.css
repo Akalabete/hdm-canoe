@@ -418,6 +418,9 @@ strong {
     bottom: 10%;
     right: 20%;
 }
+.g-item .box .is-flex .package-item .is-flex .is-justify-content-space-between .clickable {
+    display: none;
+}
 #home {
     margin-top: 18vh;
     padding-top: 10px;
