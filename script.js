@@ -1,9 +1,4 @@
-console.log('Script chargé !');
-
-
-
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('DOM chargé !');
     //windows resisze reloader
     window.addEventListener('resize', () => {
         window.location.reload();
@@ -44,22 +39,17 @@ document.addEventListener('DOMContentLoaded', function() {
     // 2. Gestion des vidéos
     const videoLinks = document.querySelectorAll('.video-list ul li a');
     const videoContainer = document.getElementById('footerVideo');
-    console.log(videoLinks);
     videoLinks.forEach(link => {
         link.addEventListener('click', function(e) {
             e.preventDefault();
             const videoSrc = this.getAttribute('data-video');
             if (videoContainer) {
-                console.log(videoSrc);
                 videoContainer.src = videoSrc;
                 videoContainer.play();
             }
         });
     });
-
     // 3. Bouton de retour en haut
-    
-    
     const scrollToTopBtn = document.querySelector('.upbtn');
     
 
