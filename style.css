@@ -140,6 +140,9 @@ header {
     align-items: center;
     pointer-events: none; /* Permet de cliquer à travers l'info */
 }
+.gdp-scoped-ui .g-item.box{
+    display: none !important;
+}
  .guidap-booking-widget{
     background-color: transparent !important;
     border: none !important;
@@ -418,9 +421,7 @@ strong {
     bottom: 10%;
     right: 20%;
 }
-.g-item .box .is-flex .package-item .is-flex .is-justify-content-space-between .clickable {
-    display: none;
-}
+
 #home {
     margin-top: 18vh;
     padding-top: 10px;
@@ -648,10 +649,7 @@ footer h3 {
     .logo-container {
         width: 25%;
     }
-    .logo-container img {
-        max-width: 100%;
-        height: auto;
-    }
+    
     .cart {
         width: 10%;
     }
@@ -711,7 +709,7 @@ footer h3 {
         font-size: 1.5rem;
     }
     .logo-container img {
-        width: 300px;
+        width: 200px;
         height: auto;
     }
     .nav-container {
