@@ -15,7 +15,7 @@ html {
 body {
     line-height: 1.5; /* Améliore la lisibilité */
     font-family: Arial, sans-serif; /* Définit une police par défaut */
-    max-width: 1800px;
+    max-width: 1600px;
     margin: 0 auto;
     background-color: rgb(240, 240, 240);
     border-bottom-right-radius: 20px;
