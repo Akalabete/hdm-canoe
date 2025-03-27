@@ -84,8 +84,7 @@ burger.addEventListener('click', () => {
             burger.style.display = 'flex';
             burgerContainer.style.display = 'none';
             burger.style.height = 'auto';
-        });
-        
+        }); 
     } else {
         burgerContainer.style.display = 'none';
         burger.style.height = 'auto';
