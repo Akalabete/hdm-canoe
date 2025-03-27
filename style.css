@@ -378,6 +378,10 @@ strong {
 .nav-desktop {
     display: none;
 }
+/* header mf hidings*/
+.home-container-lg {
+    display: none;
+}
 
 /* section home */
 
@@ -525,7 +529,12 @@ strong {
     flex-direction: column;
     padding: 20px 0;
 }
-
+.contact-container a{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
 .contact-info-container, .footer-links-container {
     display: flex;
     flex-direction: row;
@@ -758,6 +767,41 @@ footer h3 {
     }
     .travel-card-info-sub, .service-info, .footer-container p {
         font-size: 1.5rem;
+    }
+}
+@media (min-width: 1400px) {
+    #home {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .cover-photo-container {
+        display: flex;
+        max-height: 1000px;
+        width: 50%;
+    }
+    .home-container {
+        display: none;
+    }
+    .home-container-lg {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 10px auto;
+    }
+    .home-container-lg h2 {
+        font-size: 2.5rem;
+        font-weight: bold;
+        margin: 10px auto;
+    }
+    .home-container-lg p {
+        font-size: 1.5rem;
+        font-weight: normal;
+    }
+    .main-explanation {
+        width: 40%;
     }
 }
 /* design du bouton de retour en haut */
