@@ -8,7 +8,7 @@
 html {
     -webkit-text-size-adjust: 100%; /* Pour Safari */
     -ms-text-size-adjust: 100%; /* Pour IE */
-    min-width: 420px;
+
     background-color: var(--nature);
 }
 
@@ -493,7 +493,6 @@ strong {
 }
 .service-img-container {
     width: 240px;
-    min-width: 180px;
     max-height: 260px;
     margin: 5px;
     overflow: hidden;
