@@ -780,7 +780,11 @@ footer h3 {
     }
 }
 @media (min-width: 1400px) {
+    header {
+        height: 20vh;
+    }
     #home {
+        margin-top: 20vh;
         display: flex;
         flex-direction: row;
         justify-content: space-around;
