@@ -272,8 +272,19 @@ h2::after {
 }
 .video-list ul li a{
     cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: bold;
 }
-
+.video-list ul li a:hover{
+    text-decoration: underline;
+}
+.video-list ul li a:active{
+    color: var(--nature);
+}
+.video-list ul li a.active{
+    color: var(--nature);
+    text-decoration: underline;
+}
 h1 {
     display: none;
 }
@@ -628,6 +639,9 @@ footer h3 {
     .footervideo {
         flex-direction: row;
         justify-content: space-evenly;
+    }
+    #footerVideo {
+        min-width: 50%;
     }
     .video-list h3{
         font-size: 1.8rem;

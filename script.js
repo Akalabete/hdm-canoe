@@ -43,6 +43,10 @@ document.addEventListener('DOMContentLoaded', function() {
         link.addEventListener('click', function(e) {
             e.preventDefault();
             const videoSrc = this.getAttribute('data-video');
+            videoLinks.forEach(link => {
+                link.classList.remove('active');
+            });
+            this.classList.add('active');
             if (videoContainer) {
                 videoContainer.src = videoSrc;
                 videoContainer.play();
@@ -209,3 +213,4 @@ function injectImages(index) {
     carouselImg.sizes = carouselImages[index].sizes;
     carouselImg.alt = carouselImages[index].alt;
 }
+
