@@ -831,6 +831,7 @@ footer h3 {
         font-size: 2.5rem;
         font-weight: bold;
         margin: 10px auto;
+        color: var(--primary);
     }
     .home-container-lg p {
         font-size: 1.5rem;
