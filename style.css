@@ -588,6 +588,12 @@ footer h3 {
     border-radius: 20px;
 }
 @media (min-width: 600px) {
+    #travels h2, 
+    #services h2, 
+    #contact h2, 
+    .footer-container h2  {
+        font-size: 1.8rem;
+    }
     .contact-info-container {
         display: flex;
         flex-direction: row;
