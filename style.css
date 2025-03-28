@@ -274,49 +274,6 @@ h2::after {
     cursor: pointer;
 }
 
-/*
-
-.carousel-container {
-    position: relative;
-    width: 100%;
-    max-width: 800px; 
-    margin: auto;
-    overflow: hidden; 
-}
-
-.carousel {
-    display: flex; 
-    transition: transform 0.5s ease; 
-}
-
-.carousel__photo {
-    min-width: 100%; 
-    display: block; 
-}
-
-.carousel__photo.active {
-    display: block; 
-}
-
-.carousel__button--prev,
-.carousel__button--next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(255, 255, 255, 0.7);
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-}
-
-.carousel__button--prev {
-    left: 10px;
-}
-
-.carousel__button--next {
-    right: 10px;
-}
-*/
 h1 {
     display: none;
 }
@@ -394,6 +351,11 @@ strong {
     overflow: hidden;   
 }
 .carousel-next, .carousel-prev {
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -406,10 +368,10 @@ strong {
     color: var(--nature);
 }
 .carousel-next {
-    right: 0;
+    right: 1%;
 }
 .carousel-prev {
-    left: 0;
+    left: 1%;
 }
 .cover-photo-container img {
     width: 100%;
