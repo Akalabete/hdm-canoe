@@ -14,7 +14,7 @@ html {
 
 body {
     line-height: 1.5; /* Améliore la lisibilité */
-    font-family: Arial, sans-serif; /* Définit une police par défaut */
+    font-family: 'Roboto, sans-serif'; /* Définit une police par défaut */
     max-width: 1600px;
     margin: 0 auto;
     background-color: rgb(240, 240, 240);
@@ -184,6 +184,7 @@ header {
 .nav-desktop ul li a:hover, .nav-mobile-container ul li a:hover {
     color:#FF9F1C ;
     text-decoration: underline;
+    font-family: 'Space Mono', monospace;
 }
 .nav-item.active{
     color: var(--accent);
@@ -204,6 +205,7 @@ header {
 /* Style de base pour tous les h2 */
 h2 {
     position: relative;
+    font-family: 'Space Mono', monospace;
 }
 
 /* Ligne décorative sous les h2 */
@@ -498,6 +500,7 @@ strong {
     margin: 10px;
     object-fit: cover;
     float: left;
+    border-radius: 20px;
 }
 .service-container:nth-child(odd) img {
     float: right;
@@ -624,7 +627,7 @@ footer h3 {
         max-height: 150px;
     }
     .service-container {
-        min-height: 190px;
+        min-height: 220px;
     }
     
     .service-container p {
@@ -726,7 +729,7 @@ footer h3 {
         max-height: 200px;
     }
     .service-container {
-        min-height: 220px;
+        min-height: 270px;
         
     }
 }
@@ -772,7 +775,7 @@ footer h3 {
     }
     .service-container {
         max-width: 800px;
-        min-height: 250px;
+        min-height: 280px;
     }
     #travels h2, #services h2, #contact h2, .footer-container h2{
         margin: 40px auto;
@@ -886,6 +889,38 @@ footer h3 {
     font-size: 2rem;
     color: #fff;
     cursor: pointer;
+}
+
+@font-face {
+    font-family: 'Space Mono';
+    src: url('./assets/fonts/SpaceMono-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Space Mono';
+    src: url('./assets/fonts/SpaceMono-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Space Mono';
+    src: url('./assets/fonts/SpaceMono-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Space Mono';
+    src: url('./assets/fonts/SpaceMono-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
 }
 
 
