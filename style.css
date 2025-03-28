@@ -204,7 +204,6 @@ header {
 /* Style de base pour tous les h2 */
 h2 {
     position: relative;
-    color: var(--primary);
 }
 
 /* Ligne décorative sous les h2 */
@@ -441,20 +440,12 @@ strong {
 }
 
 /* les trajets */
-#travels h2, #services h2, #contact h2, .footer-container h2{
-    width: 80%;
-    margin: 10px auto;
-    font-size: 1.2rem;
-    font-weight: bold;
-    text-align: center;
-    color: var(--primary);
-   
-}
+
 .travel-cards-container {
     display: flex;
     flex-wrap: wrap;
     width: 90%;
-    margin: 10px auto;
+    margin: 20px auto;
 }
 
 .travel-card {
@@ -499,6 +490,13 @@ strong {
     text-align: left;
     padding: 10px;
 }
+.service-container h3, .video-list h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    color: var(--nature);
+    text-decoration: underline;
+}
 
 
 /* chaine video  opt */
@@ -533,7 +531,7 @@ strong {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin: 10px auto;
+    margin: 20px auto;
     text-align: center;
     padding: 10px;
 }
@@ -612,8 +610,14 @@ footer h3 {
     }
     
     .service-container p {
+        font-size: 1.3rem;
+        font-weight: bold;
+    }
+    .service-container h3, .video-list h3 {
         font-size: 1.5rem;
         font-weight: bold;
+        text-align: center;
+        color: var(--nature);
     }
 }
 
