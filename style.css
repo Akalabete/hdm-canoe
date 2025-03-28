@@ -94,6 +94,42 @@ header, .footer-links-container {
     --dark: #03045E;       /* Bleu foncé pour les textes */
     --nature: #47886b;     /* Vert forêt pour les éléments nature */
 }
+/* polices */
+
+@font-face {
+    font-family: 'Space Mono';
+    src: url('./assets/fonts/SpaceMono-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Space Mono';
+    src: url('./assets/fonts/SpaceMono-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Space Mono';
+    src: url('./assets/fonts/SpaceMono-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Space Mono';
+    src: url('./assets/fonts/SpaceMono-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+
+
 .main-reservBtn {
     color: white;
     padding: 15px 30px;
@@ -251,40 +287,6 @@ h2::after {
     border-color: white;
     margin: auto;
 }
-.video-list {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 10px;
-    width: 100%;
-}
-.video-list h3 {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin: 10px auto;
-}
-.video-list ul {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-.video-list ul li a{
-    cursor: pointer;
-    font-size: 1.2rem;
-    font-weight: bold;
-}
-.video-list ul li a:hover{
-    text-decoration: underline;
-}
-.video-list ul li a:active{
-    color: var(--nature);
-}
-.video-list ul li a.active{
-    color: var(--nature);
-    text-decoration: underline;
-}
 h1 {
     display: none;
 }
@@ -361,6 +363,7 @@ strong {
     position: relative;
     overflow: hidden;   
 }
+/* carousel */
 .carousel-next, .carousel-prev {
     height: 40px;
     width: 40px;
@@ -412,13 +415,6 @@ strong {
     border: none;
     box-shadow: none;
 }
-/* guidap main btn */
-.main-reservBtn{
-    position: absolute;
-    bottom: 10%;
-    right: 20%;
-}
-
 #home {
     margin-top: 18vh;
     padding-top: 10px;
@@ -431,6 +427,14 @@ strong {
     box-shadow: 0 4px 15px rgba(0,0,0,0.4);
     border-radius: 20px;
 }
+/* guidap main btn */
+.main-reservBtn{
+    position: absolute;
+    bottom: 10%;
+    right: 20%;
+}
+
+
 
 /* les trajets */
 
@@ -509,6 +513,41 @@ strong {
     min-height: 530px;
 }
 /* footer */
+
+.video-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    width: 100%;
+}
+.video-list h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 10px auto;
+}
+.video-list ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.video-list ul li a{
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.video-list ul li a:hover{
+    text-decoration: underline;
+}
+.video-list ul li a:active{
+    color: var(--nature);
+}
+.video-list ul li a.active{
+    color: var(--nature);
+    text-decoration: underline;
+}
 .footer-container {
     display: flex;
     flex-direction: column;
@@ -587,6 +626,28 @@ footer h3 {
     max-width: 100%;
     border-radius: 20px;
 }
+/* design du bouton de retour en haut */
+.upbtn {
+    position: fixed;
+    bottom: 40px; 
+    right: 40px;
+    width: 40px;
+    height: 40px;
+    background-color: var(--nature);
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    border-radius: 30px;
+}
+.fa-chevron-up {
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* media queries */
 @media (min-width: 600px) {
     #travels h2, 
     #services h2, 
@@ -853,57 +914,4 @@ footer h3 {
         float:right;
     }
 }
-/* design du bouton de retour en haut */
-.upbtn {
-    position: fixed;
-    bottom: 40px; 
-    right: 40px;
-    width: 40px;
-    height: 40px;
-    background-color: var(--nature);
-    z-index: 999;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    display: none;
-    border-radius: 30px;
-}
-.fa-chevron-up {
-    font-size: 2rem;
-    color: #fff;
-    cursor: pointer;
-}
-
-@font-face {
-    font-family: 'Space Mono';
-    src: url('./assets/fonts/SpaceMono-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Space Mono';
-    src: url('./assets/fonts/SpaceMono-Bold.ttf') format('truetype');
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Space Mono';
-    src: url('./assets/fonts/SpaceMono-Italic.ttf') format('truetype');
-    font-weight: normal;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Space Mono';
-    src: url('./assets/fonts/SpaceMono-BoldItalic.ttf') format('truetype');
-    font-weight: bold;
-    font-style: italic;
-    font-display: swap;
-}
-
 
