@@ -80,11 +80,15 @@ textarea:disabled {
 
 header, .footer-links-container {
     text-align: center;
-    padding: 20px;
     background-color: rgb(66, 65, 65);
     color: white;
 }
-
+.footer-links-container {
+    padding: 20px;
+}
+header {
+    padding: 10px;
+}
 :root {
     /* Palette de couleurs principale */
     --primary: #0077B6;    /* Bleu profond pour l'eau */
@@ -137,7 +141,7 @@ header, .footer-links-container {
     transition: all 0.3s ease;
 }
 header {
-    height: 18vh;
+    height: 20vh;
     position: fixed;
     top: 0;
     left: 0;
@@ -220,7 +224,6 @@ header {
 .nav-desktop ul li a:hover, .nav-mobile-container ul li a:hover {
     color:#FF9F1C ;
     text-decoration: underline;
-    font-family: 'Space Mono', monospace;
 }
 .nav-item.active{
     color: var(--accent);
@@ -303,19 +306,27 @@ strong {
     border-radius: 20px;
 }
 .header-container {
+    max-width: 1600px;
+    margin: 0 auto;
+    display:flex;
+    align-items: center;
     justify-content: space-around;
 }
 .logo-container {
-    width: 50%;
+    width: 33.33%;
+    height: 90%; /* Réduit à 90% de la hauteur du header */
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    margin: auto 0; /* Centre verticalement */
 }
 .logo-container img {
-    max-width: 100%;
-    height: auto;
+    width: 100%;
+    height: 100%;
     object-fit: contain;
+    overflow: hidden;
+    max-width: 200px;
 }
 .nav-container {
     width: 25%;
@@ -416,7 +427,7 @@ strong {
     box-shadow: none;
 }
 #home {
-    margin-top: 18vh;
+    margin-top: 20vh; /* Correspond à la hauteur du header */
     padding-top: 10px;
 }
 #home .main-explanation {
@@ -719,6 +730,12 @@ footer h3 {
         font-size: 1.5rem;
         font-weight: bold;
     }
+    header {
+        height: 20vh;
+    }
+    #home {
+        margin-top: 20vh;
+    }
     #home .main-explanation {
         font-size: 1.5rem;
         font-weight: bold;
@@ -726,12 +743,11 @@ footer h3 {
     .header-container {
         justify-content: space-around;
     }
+    
     .nav-mobile {
         display: none;
     }
-    .logo-container {
-        width: 25%;
-    }
+    
     
     .cart {
         width: 10%;
@@ -776,14 +792,17 @@ footer h3 {
         min-height: 270px;
         
     }
+    .logo-container img {
+        max-width: 200px;
+    }
 }
 
 @media (min-width: 1024px) {
     header {
-        height: 25vh;
+        height: 28vh;
     }
     #home {
-        margin-top: 25vh;
+        margin-top: 28vh;
     }
     .home-container p {
         font-size: 1.5rem;
@@ -804,15 +823,11 @@ footer h3 {
     .links a {
         font-size: 1.5rem;
     }
-    .logo-container img {
-        width: 200px;
-        height: auto;
-    }
     .nav-container {
         width: 45%;
     }
     .header-container {
-        justify-content: space-between;
+        justify-content: space-around;
     }
     .nav-desktop ul li a{
         font-size: 1.5rem;
@@ -847,16 +862,19 @@ footer h3 {
     .travel-card-info-sub, .service-info, .footer-container p {
         font-size: 1.5rem;
     }
+    .logo-container img {
+        max-width: 250px;
+    }
 }
 @media (min-width: 1400px) {
     header {
-        height: 20vh;
+        height: 25vh; /* Augmenté pour les grands écrans */
     }
     #home {
-        margin-top: 20vh;
+        margin-top: 25vh;
         display: flex;
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: space-evenly;
         align-items: center;
     }
     .cover-photo-container {
@@ -912,6 +930,21 @@ footer h3 {
     }
     .service-container:nth-child(2) img{
         float:right;
+    }
+    .logo-container img {
+        max-width: 250px;
+    }
+}
+
+@media (min-width: 1900px) {
+    header {
+        height: 30vh; /* Encore plus grand pour les très grands écrans */
+    }
+    #home {
+        margin-top: 30vh;
+    }
+    .logo-container img {
+        max-width: 350px;
     }
 }
 
