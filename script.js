@@ -2,6 +2,8 @@ document.addEventListener('DOMContentLoaded', function() {
     //windows resisze reloader
     window.addEventListener('resize', () => {
         window.location.reload();
+        updateHeaderClass();
+
     });
 
     // 1. Gestion de la classe active pour la navigation
@@ -34,16 +36,17 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     window.addEventListener('scroll', updateActiveLink);
     // header class change
-    window.addEventListener('scroll', () => {
-        const header = document.querySelector('.header-container');
-        const isMinified = header.classList.contains('not-home');
-        if (window.scrollY > 150 && !isMinified) {
-            header.classList.add('not-home');
-        } else if (window.scrollY < 50 && isMinified) {
-            header.classList.remove('not-home');
-        }
-        console.log(window.scrollY);
-    });
+    function updateHeaderClass() {
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.header-container');
+            const isMinified = header.classList.contains('not-home');
+            if (window.scrollY > 150 && !isMinified) {
+                header.classList.add('not-home');
+            } else if (window.scrollY < 50 && isMinified) {
+                header.classList.remove('not-home');
+            } 
+        });
+    }
     // 2. Gestion des vidéos
     const videoLinks = document.querySelectorAll('.video-list ul li a');
     const videoContainer = document.getElementById('footerVideo');
@@ -192,6 +195,7 @@ document.addEventListener('DOMContentLoaded', function() {
     updateCarousel(0, 'start');
     updateTimer();
     updateActiveLink();
+    updateHeaderClass();
 });
 
 
