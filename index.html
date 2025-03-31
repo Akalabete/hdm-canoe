@@ -18,8 +18,8 @@
 </head>
 
 <body>
-    <header>
-        <div class="upbtn"><i class="fa fa-chevron-up"></i></div>
+    <header role="banner">
+        <div class="upbtn" aria-label="button to go to the top of the page"><i class="fa fa-chevron-up"></i></div>
         <div class="header-container flex-row">
             <div tabindex="0" class="logo-container">
                 <h1>HDM Canoë</h1>
@@ -28,17 +28,18 @@
                 sizes="(max-width: 1023px) 220px,
                             350px"
                 src="./assets/images/slider/supp1opti.webp"
-                alt="HDM Canoë logo" />
+                alt="HDM Canoë logo" 
+                role="img"/>
             </div>
             
             <div class="nav-container flex-row">
                 <div class="nav-desktop">
-                    <nav>
+                    <nav role="navigation">
                         <ul>
-                            <li><a  class="nav-item" href="#home">Accueil</a></li>
-                            <li><a  class="nav-item" href="#travels">Activités</a></li>
-                            <li><a  class="nav-item" href="#services">Services</a></li>
-                            <li><a  class="nav-item" href="#contact">Contact</a></li>
+                            <li><a  class="nav-item" aria-label="link to the home page" href="#home">Accueil</a></li>
+                            <li><a  class="nav-item" aria-label="link to the activities page" href="#travels">Activités</a></li>
+                            <li><a  class="nav-item" aria-label="link to the services page" href="#services">Services</a></li>
+                            <li><a  class="nav-item" aria-label="link to the contact page" href="#contact">Contact</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -48,37 +49,38 @@
                     <div class="line"></div>
                 </div>
                 <div class="nav-mobile-container">
-                    <nav>
+                    <nav role="navigation">
                         <ul>
-                            <li><a class="nav-item" href="#home">Accueil</a></li>
-                            <li><a class="nav-item" href="#travels">Activités</a></li>
-                            <li><a class="nav-item" href="#services">Services</a></li>
-                            <li><a class="nav-item" href="#contact">Contact</a></li>
+                            <li><a class="nav-item" aria-label="link to the home page" href="#home">Accueil</a></li>
+                            <li><a class="nav-item" aria-label="link to the activities page" href="#travels">Activités</a></li>
+                            <li><a class="nav-item" aria-label="link to the services page" href="#services">Services</a></li>
+                            <li><a class="nav-item" aria-label="link to the contact page" href="#contact">Contact</a></li>
                         </ul>
                     </nav>
                 </div>
             </div>
         </div>
     </header>
-    <main>
-        <section id="home">
+    <main role="main">
+        <section id="home"role="region" aria-label="home section">
             <div class="cover-photo-container border">
-                <div class="carousel-next"><i class="fa fa-chevron-right"></i></div>
-                <div class="carousel-prev"><i class="fa fa-chevron-left"></i></div>
-                <img
+                <div class="carousel-next" tabindex="0" role="button" aria-label="next image"><i class="fa fa-chevron-right"></i></div>
+                <div class="carousel-prev" tabindex="0" role="button" aria-label="previous image"><i class="fa fa-chevron-left"></i></div>
+                <img 
                     srcset="./assets/images/slider/supp1optism.webp 480w, ./assets/images/slider/supp1opti.webp 800w"
                     sizes="(max-width: 600px) 480px,
                                 800px"
                     src="./assets/images/slider/supp1opti.webp"
-                    alt=""photo du débarcadère d'Aubeterre Sur Drone />
+                    role="img"
+                    alt="photo du débarcadère d'Aubeterre Sur Drone "/>
                 <div tabindex="0"  class="home-container border">
                     <h2>Bienvenue chez HDM Canoë</h2>
                     <p>Location de canoës, paddle et pédalos pour des excursions sport et nature sur la Dronne, en Périgord Vert, à Saint Aulaye</p>
                 </div>
                 
             </div>
-            <div tabindex="0" class="main-explanation">
-                <div tabindex="0"  class="home-container-lg border">
+            <div tabindex="0" class="main-explanation" >
+                <div tabindex="0"  role="contentinfo"class="home-container-lg border">
                     <h2>Bienvenue chez HDM Canoë</h2>
                     <p>Location de canoës, paddle et pédalos pour des excursions sport et nature sur la Dronne, en Périgord Vert, à Saint Aulaye</p>
                 </div>
@@ -91,11 +93,11 @@
                 <strong>souvenirs mémorables !</strong></p>
             </div>
         </section>
-        <section id="travels">
+        <section id="travels" role="region" aria-label="travels section">
             <h2 tabindex="0">Les différentes activités que nous proposons:</h2>
             <div class="travel-cards-container">
                 <div tabindex="0" class="travel-card">
-                    <div class="travel-card-info">
+                    <div class="travel-card-info" role="contentinfo">
                         <div class="travel-card-info-sub">
                             <p>Bersac</p>
                             <p>16km</p>
@@ -107,7 +109,8 @@
                         <div class="travel-card-info-sub" >
                             <guidap-booking-widget 
                                 activity-uuid="H9gGx7InohXUls4ZPuOybvm3awKBNzTQe820"
-                                class="guidap-booking-widget">
+                                class="guidap-booking-widget"
+                                aria-label="button to book the activity">
                                 <p>à partir de</p>
                                 <p>25€ p.p</p>
                             </guidap-booking-widget>
@@ -115,9 +118,11 @@
                             
                         </div>
                     </div>
-                    <img src="./assets/images/slider/p36optism.webp">
+                    <img src="./assets/images/slider/p36optism.webp"
+                    alt="photo de la dronne" 
+                    width="500" height="200">
                 </div>
-                <div tabindex="0" class="travel-card">
+                <div tabindex="0" class="travel-card" role="contentinfo">
                     <div class="travel-card-info">
                         <div class="travel-card-info-sub">
                             <p>Aubeterre</p>
@@ -130,15 +135,18 @@
                         <div class="travel-card-info-sub">
                             <guidap-booking-widget 
                                 activity-uuid="d8VW5nzxZXESKbI3NmATsrh4kvUJo2t1fpFQ"
-                                class="guidap-booking-widget">
+                                class="guidap-booking-widget"
+                                aria-label="button to book the activity">
                                 <p>à partir de</p>
                                 <p>23€ p.p</p>
                             </guidap-booking-widget>
                         </div>
                     </div>
-                    <img src="./assets/images/gallary/p41opti.webp">
+                    <img src="./assets/images/gallary/p41opti.webp" 
+                    alt="photo de la dronne" 
+                    width="500" height="200">
                 </div>
-                <div tabindex="0" class="travel-card">
+                <div tabindex="0" class="travel-card" role="contentinfo">
                     <div class="travel-card-info">
                         <div class="travel-card-info-sub">
                             <p>Bonnes</p>
@@ -151,15 +159,18 @@
                         <div class="travel-card-info-sub">
                             <guidap-booking-widget 
                                 activity-uuid="46v7UimYtL0OISxlTWbEA2hpMJNRjKywuFz1"
-                                class="guidap-booking-widget">
+                                class="guidap-booking-widget"
+                                aria-label="button to book the activity">
                                 <p>à partir de</p>
                                 <p>20€ p.p</p>
                             </guidap-booking-widget>
                         </div>
                     </div>
-                    <img src="./assets/images/slider/supp3optism.webp">
+                    <img src="./assets/images/slider/supp3optism.webp"
+                    alt="photo de la dronne" 
+                    width="500" height="200">
                 </div>
-                <div tabindex="0" class="travel-card">
+                <div tabindex="0" class="travel-card" role="contentinfo">
                     <div class="travel-card-info">
                         <div class="travel-card-info-sub">
                             <p>Canoës</p>
@@ -172,15 +183,18 @@
                         <div class="travel-card-info-sub">
                             <guidap-booking-widget 
                                 activity-uuid="bgIsqhGkSVKatf1XH6z7Mc94eAODYlBxpUJr"
-                                class="guidap-booking-widget">
+                                class="guidap-booking-widget"
+                                aria-label="button to book the activity">
                                 <p>à partir de</p>
                                 <p>10€ p.p</p>
                             </guidap-booking-widget>
                         </div>
                     </div>
-                    <img src="./assets/images/slider/p32optism.webp">
+                    <img src="./assets/images/slider/p32optism.webp"
+                    alt="photo de la dronne" 
+                    width="500" height="200">
                 </div>
-                <div tabindex="0" class="travel-card">
+                <div tabindex="0" class="travel-card" role="contentinfo">
                     <div class="travel-card-info">
                         <div class="travel-card-info-sub">
                             <p>Pédalos</p>
@@ -193,15 +207,18 @@
                         <div class="travel-card-info-sub">
                             <guidap-booking-widget 
                                 activity-uuid="xDJPNaE9vtMCLsud7wKrU8gVHhnA4jkZqcWl"
-                                class="guidap-booking-widget">
+                                class="guidap-booking-widget"
+                                aria-label="button to book the activity">
                                 <p>à partir de</p>
                                 <p>7€ p.p</p>
                             </guidap-booking-widget>
                         </div>
                     </div>
-                    <img src="./assets/images/gallary/p38opti.webp">
+                    <img src="./assets/images/gallary/p38opti.webp"
+                    alt="photo de la dronne" 
+                    width="500" height="200">
                 </div>
-                <div tabindex="0" class="travel-card">
+                <div tabindex="0" class="travel-card" role="contentinfo">
                     <div class="travel-card-info">
                         <div class="travel-card-info-sub">
                             <p>Paddle</p>
@@ -214,49 +231,60 @@
                         <div class="travel-card-info-sub">
                             <guidap-booking-widget 
                                 activity-uuid="0MhZfmTUE9SBRp3aVwidX1PFAOyn4oCxKs6e"
-                                class="guidap-booking-widget">
+                                class="guidap-booking-widget"
+                                aria-label="button to book the activity">>
                                 <p>à partir de</p>
                                 <p>11€ p.p</p>
                             </guidap-booking-widget>
                         </div>
                     </div>
-                    <img src="./assets/images/gallary/p46opti.webp">
+                    <img src="./assets/images/gallary/p46opti.webp"
+                    alt="photo de la dronne" 
+                    width="500" height="200">
                 </div>
             </div>
         </section>
-        <section id="services">
+        <section id="services" role="region" aria-label="services section">
             <h2>On s'occupe de tout !</h2>
             <div class="service-grid">
-                <div tabindex="0" class="service-container"> 
+                <div tabindex="0" class="service-container" role="contentinfo"> 
                     <h3>Sécurité pour votre aventure</h3>           
-                    <img src="./assets/images/gallary/p41opti.webp">
+                    <img src="./assets/images/gallary/p41opti.webp"
+                    alt="photo de la dronne" 
+                    width="500" height="200">
                     <p>En toute sérénité,
                         <strong>gilets de sauvetage</strong> et <strong>conteneurs hermétiques</strong>, 
                         garantissant la protection de vos <strong>objets sensibles</strong> lors de vos sorties en canoë.</p>
                 </div>
-                <div tabindex="0" class="service-container">
+                <div tabindex="0" class="service-container" role="contentinfo">
                     <h3>Restauration sur place</h3>
-                    <img src="./assets/images/gallary/p43opti.webp">
+                    <img src="./assets/images/gallary/p43opti.webp"
+                    alt="photo de la dronne" 
+                    width="500" height="200">
                     <p>Vous trouverez, à la base,
                             des <strong>snacks</strong> et des <strong>boissons rafraîchissantes</strong> pour 
                         agrémenter votre descente.</p>  
                 </div>
-                <div tabindex="0" class="service-container"> 
+                <div tabindex="0" class="service-container" role="contentinfo"> 
                     <h3>Des départs réguliers</h3>           
-                    <img src="./assets/images/gallary/p46opti.webp">
+                    <img src="./assets/images/gallary/p46opti.webp"
+                    alt="photo de la dronne" 
+                    width="500" height="200">
                     <p>Tout au long de la journée: dernier 
                         départ à <strong>12h30 </strong>pour le parcours long et <strong>16h30</strong>pour le 
                         parcours court. <strong>17h00 </strong>pour les locations de paddle et pédalos.</strong></p>
                 </div>
-                <div tabindex="0" class="service-container">
+                <div tabindex="0" class="service-container" role="contentinfo">
                     <h3>Week-ends d'excursion</h3>
-                    <img src="./assets/images/gallary/supp2opti.webp">  
+                    <img src="./assets/images/gallary/supp2opti.webp"
+                    alt="photo de la dronne" 
+                    width="500" height="200">  
                     <p>Venez vivre des <strong>week-ends </strong>inoubliables avec 
                         <strong>hébergement inclus au camping</strong>, alliant <strong>aventure</strong> et <strong>confort</strong> en pleine nature.</p>
                 </div>
             </div>
         </section>
-        <section id="contact">
+        <section id="contact" role="region" aria-label="contact section">
             <h2>Un avant goût :</h2>
             <div class="footervideo">
                 <div class="video-list">
@@ -271,48 +299,60 @@
             </div>
         </section>
     </main>
-    <footer>
+    <footer role="contentinfo">
         <div  class="footer-container">
             <h2>Nous sommes ici:</h2>
             <div class="footer-container-flex">
-                <div class="contact-info-container">
+                <div class="contact-info-container" role="contentinfo" aria-label="contact information" >
                     <p>Lieu dit: Les Ponts,</br> 24410 Saint Aulaye</p>
                     <div class="contact-container">
-                        <a href="phoneto:0633553861"><i class="fa fa-phone"></i><p class="p-desktop">&nbsp; 06 33 55 38 61</p></a>
-                        <a href="mailto:contact@hdm-canoe.fr"><i class="fa fa-envelope"></i><p class="p-desktop">&nbsp; contact@hdm-canoe.fr</p></a>
+                        <a href="phoneto:0633553861" aria-label="phone number of the company"><i class="fa fa-phone"></i><p class="p-desktop">&nbsp; 06 33 55 38 61</p></a>
+                        <a href="mailto:contact@hdm-canoe.fr" aria-label="email of the company"><i class="fa fa-envelope"></i><p class="p-desktop">&nbsp; contact@hdm-canoe.fr</p></a>
                     </div>
                 </div>
-                <div class="map-container">
-                    <a href="https://www.google.com/maps/place/hdm+cano%C3%AB/@45.2069678,0.1320087,17z/data=!4m6!3m5!1s0x47ffe5996bc54535:0x2e00489430dac3fc!8m2!3d45.20724!4d0.1335!16s%2Fg%2F11y4szmq21?hl=fr&entry=ttu&g_ep=EgoyMDI1MDMyMy4wIKXMDSoASAFQAw%3D%3D" target="_blank">
+                <div class="map-container" role="contentinfo" aria-label="map of the company">
+                    <a href="https://www.google.com/maps/place/hdm+cano%C3%AB/@45.2069678,0.1320087,17z/data=!4m6!3m5!1s0x47ffe5996bc54535:0x2e00489430dac3fc!8m2!3d45.20724!4d0.1335!16s%2Fg%2F11y4szmq21?hl=fr&entry=ttu&g_ep=EgoyMDI1MDMyMy4wIKXMDSoASAFQAw%3D%3D" 
+                    target="_blank" 
+                    aria-label="link to the map of the company">
                         <img src="./assets/images/home/locationmap.webp" alt="localisation de la base de kanöe" class="location-map" width="500" height="375">
                     </a>
                 </div>
             </div>
         </div>
-        <div class="footer-links-container">
-            <div class="links">
+        <div class="footer-links-container" role="contentinfo" aria-label="footer links lists">
+            <div class="links" role="contentinfo" aria-label="links to the company">
                 <h3>Aux alentours</h3>
                 <a>content</a>
                 <a>content</a>
                 <a>content</a>
                 <a>content</a>
             </div>
-            <div class="links">
+            <div class="links" role="contentinfo" aria-label="legal documents">
                 <h3>Documents légaux</h3>
-                <a href="./assets/docs/cgv hdm canoe vf.pdf" target="_blank">Conditions générales de vente</a>
-                <a href="./assets/docs/Contrat loc francais 2024.pdf" target="_blank">Contrat de location</a>
-                <a href="./assets/docs/Contrat loc anglais 2019.pdf" target="_blank">Lease agreement</a>
+                <a href="./assets/docs/cgv hdm canoe vf.pdf" 
+                target="_blank"
+                aria-label="link to General conditions of sale">Conditions générales de vente</a>
+                <a href="./assets/docs/Contrat loc francais 2024.pdf" 
+                target="_blank"
+                arial-label="link to Lease agreement">Contrat de location</a>
+                <a href="./assets/docs/Contrat loc anglais 2019.pdf" 
+                target="_blank"
+                aria-label="link to Lease agreement english version">Lease agreement</a>
             </div>
-            <div class="links">
+                <div class="links" role="contentinfo" aria-label="partners links">
                 <h3>Nos partenaires</h3>
-                <a href=".https://camping-dordogneverte.fr/" target="_blank">Camping La Dordogne Verte</a>
+                <a href=".https://camping-dordogneverte.fr/" 
+                target="_blank"
+                aria-label="link to Camping La Dordogne Verte">Camping La Dordogne Verte</a>
                 <a>content</a>
                 <a>content</a>
                 <a>content</a>
             </div>
         </div>
         <div class="webmaster-link">
-            <p>&copy; 2025 HDM Canoë by <a href="https://www.lacouralexandre.tech" target="_blank">Dev&apos;your synergy</a></p>
+            <p>&copy; 2025 HDM Canoë by <a href="https://www.lacouralexandre.tech" 
+                target="_blank"
+                aria-label="link to the webmaster website">Dev&apos;your synergy</a></p>
         </div>
     </footer>
 <script src="./script.js"></script>
