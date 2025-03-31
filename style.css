@@ -142,7 +142,7 @@ header, .footer-links-container {
 }
 header {
     
-    position: fixed;
+    position: sticky;
     top: 0;
     left: 0;
     right: 0;
@@ -275,6 +275,14 @@ h2::after {
     font-weight: bold;
     text-align: center;
     color: var(--primary);
+}
+.logo-container {
+    overflow: hidden;
+    padding: 15px;
+}
+.logo-container img {
+    
+    border-radius: 80% 100% 100% 80% / 80% 100% 100% 80%;
 }
 
 .nav-mobile {
