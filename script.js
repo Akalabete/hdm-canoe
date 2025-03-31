@@ -33,6 +33,14 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     window.addEventListener('scroll', updateActiveLink);
+    window.addEventListener('scroll', () => {
+        const header = document.querySelector('header');
+        if (window.scrollY > 100) {
+            header.classList.add('not-home');
+        } else {
+            header.classList.remove('not-home');
+        }
+    });
     // 2. Gestion des vidéos
     const videoLinks = document.querySelectorAll('.video-list ul li a');
     const videoContainer = document.getElementById('footerVideo');
