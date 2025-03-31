@@ -321,6 +321,7 @@ strong {
 }
 
 
+
 .nav-container {
     width: 25%;
     height: 100%;
@@ -913,23 +914,8 @@ footer h3 {
 }
 
 
-/* Styles d'accessibilité */
-:focus {
-    outline: 3px solid var(--accent);
-    outline-offset: 2px;
-}
 
-/* Style pour les liens au focus */
-a:focus {
-    outline: 3px solid var(--accent);
-    outline-offset: 2px;
-}
 
-/* Style pour les boutons au focus */
-button:focus {
-    outline: 3px solid var(--accent);
-    outline-offset: 2px;
-}
 
 /* Style pour les éléments interactifs au focus */
 [role="button"]:focus {
