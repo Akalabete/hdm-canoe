@@ -692,6 +692,13 @@ footer h3 {
         height: auto;
         object-fit: contain;
     }
+    .header-container.not-home {
+        height: 60px;
+    }
+    .header-container.not-home img {
+        height: 60px;
+    }
+
     .map-container{
         max-width: 800px;
     }
