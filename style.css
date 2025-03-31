@@ -141,7 +141,6 @@ header, .footer-links-container {
     transition: all 0.3s ease;
 }
 header {
-    
     position: sticky;
     top: 0;
     left: 0;
@@ -637,7 +636,7 @@ footer h3 {
     right: 40px;
     width: 40px;
     height: 40px;
-    background-color: var(--nature);
+    background-color: var(--accent);
     z-index: 999;
     display: flex;
     justify-content: center;
