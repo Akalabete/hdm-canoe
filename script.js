@@ -11,7 +11,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const navLinks = document.querySelectorAll('.nav-desktop ul li a');
     const mobileNavLinks = document.querySelectorAll('.nav-mobile ul li a');
     function updateActiveLink() {
-        
         let currentSection = '';
        
         sections.forEach(section => {
@@ -21,12 +20,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 currentSection = section.getAttribute('id')
             }
         });
+
         navLinks.forEach(link => {
             link.classList.remove('active');
-            if (link.getAttribute('href') === `#${currentSection}`) {
+            if (link.getAttribute('href') === `#${currentSection}-anchor` || link.getAttribute('href') === `#${currentSection}`) {
                 link.classList.add('active');
             } 
         });
+
         mobileNavLinks.forEach(link => {
             link.classList.remove('active');
             if (link.getAttribute('href') === `#${currentSection}`) {
