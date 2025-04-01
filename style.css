@@ -412,7 +412,13 @@ strong {
 .home-container  h2{ 
     font-size: 1.2rem;
     color: white;
-    
+}
+section {
+    position: relative;
+}
+.marker {
+    position: absolute;
+    top: -100px; 
 }
 /* caché en mobile first */
 .home-container p {
