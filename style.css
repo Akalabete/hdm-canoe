@@ -200,7 +200,7 @@ header {
 }
 .g-box button {
     padding: 3px !important;
-    background-color: var(--nature) !important;
+    background-color: var(--accent) !important;
     color: white !important;
     opacity: 1 !important;
     border: none !important;
@@ -307,7 +307,7 @@ h1 {
     align-items:center;  
 }
 strong {
-    color: var(--nature);
+    color: var(--accent);
     font-weight: bolder;
 } 
 .border {
@@ -385,7 +385,7 @@ strong {
     cursor: pointer;
     z-index: 2;
     font-size: 1.5rem;
-    color: var(--nature);
+    color: var(--accent);
 }
 .carousel-next {
     right: 1%;
@@ -503,7 +503,7 @@ section {
     font-size: 1.2rem;
     font-weight: bold;
     text-align: center;
-    color: var(--nature);
+    color: var(--accent);
     text-decoration: underline;
 }
 
@@ -553,10 +553,10 @@ section {
     text-decoration: underline;
 }
 .video-list ul li:active{
-    color: var(--nature);
+    color: var(--accent);
 }
 .video-list ul li.active{
-    color: var(--nature);
+    color: var(--accent);
     text-decoration: underline;
 }
 .footer-container {
@@ -689,7 +689,7 @@ footer h3 {
         font-size: 1.5rem;
         font-weight: bold;
         text-align: center;
-        color: var(--nature);
+        color: var(--primary);
     }
 }
 
