@@ -141,12 +141,13 @@ header, .footer-links-container {
     transition: all 0.3s ease;
 }
 header {
-    position: sticky;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 1000;
 }
+
 .main-reservBtn:hover {
     
     transform: scale(1.05);
@@ -421,7 +422,7 @@ strong {
     box-shadow: none;
 }
 #home {
-    padding-top: 10px;
+    padding-top: 20vh;
 }
 #home .main-explanation {
     margin: 20px;
@@ -857,7 +858,6 @@ footer h3 {
 @media (min-width: 1400px) {
     
     #home {
-       
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
