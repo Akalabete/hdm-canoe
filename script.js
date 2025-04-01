@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         mobileNavLinks.forEach(link => {
             link.classList.remove('active');
-            if (link.getAttribute('href') === `#${currentSection}`) {
+            if (link.getAttribute('href') === `#${currentSection}-anchor` || link.getAttribute('href') === `#${currentSection}`) {
                 link.classList.add('active');
             }
         });
