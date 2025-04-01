@@ -10,8 +10,8 @@ Options -Indexes
 
 # En-têtes de sécurité
 <IfModule mod_headers.c>
-    # Content Security Policy pour Guidap
-    Header set Content-Security-Policy "default-src 'self' https://*.guidap.com https://*.guidap.net; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://*.guidap.com https://*.guidap.net; style-src 'self' 'unsafe-inline' https://*.guidap.com https://*.guidap.net; img-src 'self' data: https://*.guidap.com https://*.guidap.net; connect-src 'self' https://*.guidap.com https://*.guidap.net;"
+    # Content Security Policy pour Guidap et CDN
+    Header set Content-Security-Policy "default-src 'self' https://*.guidap.com https://*.guidap.net; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://*.guidap.com https://*.guidap.net https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://*.guidap.com https://*.guidap.net https://cdnjs.cloudflare.com https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://*.guidap.com https://*.guidap.net; connect-src 'self' https://*.guidap.com https://*.guidap.net;"
     
     # Protection contre le clickjacking
     Header set X-Frame-Options "SAMEORIGIN"
