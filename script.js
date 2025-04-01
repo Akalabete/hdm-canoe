@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     // 2. Gestion des vidéos
-    const videoLinks = document.querySelectorAll('.video-list ul li a');
+    const videoLinks = document.querySelectorAll('.video-list ul li');
     const videoContainer = document.getElementById('footerVideo');
     videoLinks.forEach(link => {
         link.addEventListener('click', function(e) {

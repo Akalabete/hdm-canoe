@@ -4,6 +4,10 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://*.guidap.com https://*.guidap.net; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://*.guidap.com https://*.guidap.net; style-src 'self' 'unsafe-inline' https://*.guidap.com https://*.guidap.net; img-src 'self' data: https://*.guidap.com https://*.guidap.net; connect-src 'self' https://*.guidap.com https://*.guidap.net;">
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
     <meta name="description" content="HDM Canoë, location de canoës, paddle et pédalos pour excursions sport et nature sur la Dronne, en périgord vert, hébergement et bivouac possible">
     <meta property="og:site_name" content="hdm canoe, la dordogne verte"/>
     <meta property="og:title" content="hdm-canoe.fr: location de canoës, paddle et pédalos pour excursions sport et nature sur la Dronne, en périgord vert, hébergement et bivouac possible" />
@@ -293,12 +297,12 @@
                 <div class="video-list">
                     <h3>Liste des videos</h3>
                     <ul>
-                        <li><a tabindex="0" data-video="./assets/videos/v8opti4-3.mp4">video 2</a></li>
-                        <li><a tabindex="0" data-video="./assets/videos/v9opti4-3.mp4">video 3</a></li>
-                        <li><a tabindex="0" data-video="./assets/videos/v12opti4-3.mp4">video 4</a></li>
+                        <li tabindex="0" data-video="./assets/videos/v8opti4-3.mp4">video 2</li>
+                        <li tabindex="0" data-video="./assets/videos/v9opti4-3.mp4">video 3</li>
+                        <li tabindex="0" data-video="./assets/videos/v12opti4-3.mp4">video 4</li>
                     </ul>
                 </div>
-                <video id="footerVideo" preload="none" controls loop autoplay src="./assets/videos/v8opti4-3.mp4"></video>
+                <video id="footerVideo" preload="auto" controls loop autoplay src="./assets/videos/v8opti4-3.mp4"></video>
             </div>
         </section>
     </main>
@@ -325,10 +329,10 @@
         <div class="footer-links-container" role="contentinfo" aria-label="footer links lists">
             <div class="links" role="contentinfo" aria-label="links to the company">
                 <h3>Aux alentours</h3>
-                <a>content</a>
-                <a>content</a>
-                <a>content</a>
-                <a>content</a>
+                <a href="#" target="_blank" aria-label="link to the point of interest">content</a>
+                <a href="#" target="_blank" aria-label="link to the point of interest">content</a>
+                <a href="#" target="_blank" aria-label="link to the point of interest">content</a>
+                <a href="#" target="_blank" aria-label="link to the point of interest">content</a>
             </div>
             <div class="links" role="contentinfo" aria-label="legal documents">
                 <h3>Documents légaux</h3>
@@ -347,9 +351,9 @@
                 <a href=".https://camping-dordogneverte.fr/" 
                 target="_blank"
                 aria-label="link to Camping La Dordogne Verte">Camping La Dordogne Verte</a>
-                <a>content</a>
-                <a>content</a>
-                <a>content</a>
+                <a href="#" target="_blank" aria-label="link to partner">content</a>
+                <a href="#" target="_blank" aria-label="link to partner">content</a>
+                <a href="#" target="_blank" aria-label="link to partner">content</a>
             </div>
         </div>
         <div class="webmaster-link">
