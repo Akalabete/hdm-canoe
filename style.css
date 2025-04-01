@@ -91,12 +91,12 @@ header, .footer-links-container {
 
 :root {
     /* Palette de couleurs principale */
-    --primary: #0077B6;    /* Bleu profond pour l'eau */
-    --secondary: #00B4D8;  /* Bleu clair pour l'accent */
-    --accent: #FF9F1C;     /* Orange vif pour les CTA */
-    --light: #CAF0F8;      /* Bleu très clair pour les fonds */
-    --dark: #03045E;       /* Bleu foncé pour les textes */
-    --nature: #47886b;     /* Vert forêt pour les éléments nature */
+    --primary: #005B8C;    /* Bleu plus foncé pour l'eau */
+    --secondary: #0096C7;  /* Bleu plus vif pour l'accent */
+    --accent: #FF8C00;     /* Orange plus foncé pour les CTA */
+    --light: #E3F2FD;      /* Bleu plus contrasté pour les fonds */
+    --dark: #001F3F;       /* Bleu plus foncé pour les textes */
+    --nature: #2D5A27;     /* Vert plus foncé pour les éléments nature */
 }
 /* polices */
 
@@ -557,6 +557,7 @@ section {
 }
 .video-list ul li:hover{
     text-decoration: underline;
+    color: var(--accent);
 }
 .video-list ul li:active{
     color: var(--accent);
