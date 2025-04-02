@@ -126,17 +126,17 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     let carouselTimer;
     const carouselImages = [
-        {
+        {   
             srcset:"./assets/images/slider/sm/slider1.webp 480w, ./assets/images/slider/md/slider1.webp 800w",
             sizes:"(max-width: 1023px) 480px, 800px",
             src:"./assets/images/slider/md/slider1.webp",
-            alt:"deux hommes dans un canoë double sur la rivière Dronne" 
+            alt:"Deux jeunes hommes dans des canoës monoplaces, en train de level le pouce" 
         },
         {   
             srcset:"./assets/images/slider/sm/slider2.webp 480w, ./assets/images/slider/md/slider2.webp 800w",
             sizes:"(max-width: 1023px) 480px, 800px",
             src:"./assets/images/slider/md/slider2.webp",
-            alt:"Cascade d'un barrage sur la Dronne avec des arbres en arrière plan" 
+            alt:"deux canoës monoplaces sur la rivière Dronne, pris depuis un drone en hauteur" 
         },
         {   
             srcset:"./assets/images/slider/sm/slider3.webp 480w, ./assets/images/slider/md/slider3.webp 800w",
@@ -144,11 +144,11 @@ document.addEventListener('DOMContentLoaded', function() {
             src:"./assets/images/slider/md/slider3.webp",
             alt:"Prise de vue d'un barrage avec cascade d'eau, depuis une trouée entre les arbres, magnifique rendu du soleil sur l'eau" 
         },
-        {   
+        {
             srcset:"./assets/images/slider/sm/slider4.webp 480w, ./assets/images/slider/md/slider4.webp 800w",
             sizes:"(max-width: 1023px) 480px, 800px",
             src:"./assets/images/slider/md/slider4.webp",
-            alt:"Deux jeunes hommes dans des canoës monoplaces, en train de level le pouce" 
+            alt:"Deux hommes dans un canoë double sur la rivière Dronne" 
         },
         {   
             srcset:"./assets/images/slider/sm/slider5.webp 480w, ./assets/images/slider/md/slider5.webp 800w",
@@ -160,8 +160,12 @@ document.addEventListener('DOMContentLoaded', function() {
             srcset:"./assets/images/slider/sm/slider6.webp 480w, ./assets/images/slider/md/slider6.webp 800w",
             sizes:"(max-width: 1023px) 480px, 800px",
             src:"./assets/images/slider/md/slider6.webp",
-            alt:"deux canoës monoplaces sur la rivière Dronne, pris depuis un drone en hauteur" 
-        }
+            alt:"Cascade d'un barrage sur la Dronne avec des arbres en arrière plan" 
+        },
+        
+        
+        
+        
     ]
     // auto carousel
     function updateTimer() {
