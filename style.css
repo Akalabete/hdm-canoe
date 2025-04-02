@@ -512,10 +512,9 @@ section {
 }
 .service-container p {
     line-height: 1.2;
+    padding: 5px;
     font-size: 1.2rem;
     font-weight: bold;
-    
-    padding: 10px;
 }
 .service-container h3 {
     font-size: 1.2rem;
