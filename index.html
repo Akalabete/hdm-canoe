@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="shortcut icon" type="image/icon" href="assets/logo/favicon.webp"/>
+    <link rel="preload" as="image" href="https://www.hdm-canoe.fr/assets/images/home/smlogohdmcanoe.webp" media="(max-width: 1023px)" />
+    <link rel="preload" as="image" href="https://www.hdm-canoe.fr/assets/images/home/lglogohdmcanoe.webp" media="(min-width: 1024px)" />
     <link rel="preload" as="image" href="https://www.hdm-canoe.fr/assets/images/slider/md/slider1.webp" media="(min-width: 1024px)" />
     <link rel="preload" as="image" href="https://www.hdm-canoe.fr/assets/images/slider/sm/slider1.webp" media="(max-width: 1023px)" />
     <link rel="preload" as="image" href="https://www.hdm-canoe.fr/assets/images/slider/md/slider2.webp" media="(min-width: 1024px)" />
@@ -48,6 +50,16 @@
             "@context": "https://schema.org",
             "@type": "ImageGallery",
             "image": [
+                {
+                    "@context": "https://schema.org",
+                    "@type": "ImageObject",
+                    "author": "HDM Canoë",
+                    "contentLocation": "Parcours de canoës sur la Dronne, en Périgord Vert, à Saint Aulaye",
+                    "contentUrl": "https://www.hdm-canoe.fr/assets/images/home/smlogohdmcanoe.webp",
+                    "datePublished": "2025-04-02",
+                    "description": "logo hdm canoe",
+                    "name": "photo du logo hdm canoe"
+                },
                 {
                     "@context": "https://schema.org",
                     "@type": "ImageObject",
@@ -221,10 +233,10 @@
             <div tabindex="0" class="logo-container">
                 <h1>HDM&nbsp;Canoë</h1>
                 <img
-                srcset="./assets/images/home/smlogohdmcanoe.webp 220w, ./assets/images/home/lglogohdmcanoe.webp 450w"
+                srcset="./assets/images/home/smlogohdmcanoe.webp 220w, ./assets/images/home/lglogohdmcanoe.webp 350w"
                 sizes="(max-width: 1023px) 220px,
                             350px"
-                src="./assets/images/slider/supp1opti.webp"
+                src="./assets/images/home/lglogohdmcanoe.webp"
                 alt="HDM Canoë logo" 
                 role="img"/>
             </div>
@@ -377,6 +389,7 @@
                         sizes="(max-width: 799px) 300px, 480px"
                         src="./assets/images/activity/md/acti3.webp"
                         alt="prise de vue aérienne du parcours de saint aulaye" 
+                        loading="lazy"
                         role="img"/>
                 </div>
                 <div tabindex="0" class="travel-card" role="contentinfo">
@@ -403,7 +416,8 @@
                         srcset="./assets/images/activity/sm/acti4.webp 300w, ./assets/images/activity/md/acti4.webp 480w"
                         sizes="(max-width: 799px) 300px, 480px"
                         src="./assets/images/activity/md/acti4.webp"
-                        alt="prise de vue du débarcadère d'aubeterre s/dronne" 
+                        alt="prise de vue du débarcadère d'aubeterre s/dronne"
+                        loading="lazy"
                         role="img"/>
                 </div>
                 <div tabindex="0" class="travel-card" role="contentinfo">
@@ -431,6 +445,7 @@
                         sizes="(max-width: 799px) 300px, 480px"
                         src="./assets/images/activity/md/acti5.webp"
                         alt="prise de vue du débarcadère du moulin de poltrot sous les arbres" 
+                        loading="lazy"
                         role="img"/>
                 </div>
                 <div tabindex="0" class="travel-card" role="contentinfo">
@@ -458,6 +473,7 @@
                         sizes="(max-width: 799px) 300px, 480px"
                         src="./assets/images/activity/md/acti1.webp"
                         alt="prise de vue du parcours prés de bonnes" 
+                        loading="lazy"
                         role="img"/>
                 </div>
             </div>
@@ -473,6 +489,7 @@
                         sizes="(max-width: 799px) 250px, 350px"
                         src="./assets/images/services/sm/security.webp"
                         alt="professionnel en train d'ajuster un gilet de sauvetage à une jeune femme" 
+                        loading="lazy"
                         role="img"/> 
                     <p class="center">Nous vous proposons :</p>
                     <p> - Des <strong>gilets de sauvetage.</strong></p>
@@ -486,6 +503,7 @@
                         sizes="(max-width: 799px) 250px, 350px"
                         src="./assets/images/services/sm/picnic.webp"
                         alt="zone de pique-nique ombragée avec un homme et une femme en train de manger" 
+                        loading="lazy"
                         role="img"/>
                     <p class="center">Base de canoës de Saint-Aulaye :</p>
                     <p> - <strong>Parking privé gratuit</strong></p>
@@ -501,6 +519,7 @@
                         sizes="(max-width: 799px) 250px, 350px"
                         src="./assets/images/services/sm/depart.webp"
                         alt="photo de canoës avec la camionnette HDM canoë prête à partir" 
+                        loading="lazy"
                         role="img"/>
                     <p class="center">Tous les jours:</p>
                     <p> - Parcours 16km: dernier départ a <strong>12H30</strong></p>
@@ -515,6 +534,7 @@
                         sizes="(max-width: 799px) 250px, 350px"
                         src="./assets/images/services/sm/camping.webp"
                         alt="photo aérienne du camping de saint aulaye" 
+                        loading="lazy"
                         role="img"/> 
                     <p class="center">Séjours au Camping La Dordogne Verte :</p>
                     <p> - <strong>Emplacements ombragés</strong></p>
@@ -561,7 +581,13 @@
                     <a href="https://www.google.com/maps/place/hdm+cano%C3%AB/@45.2069678,0.1320087,17z/data=!4m6!3m5!1s0x47ffe5996bc54535:0x2e00489430dac3fc!8m2!3d45.20724!4d0.1335!16s%2Fg%2F11y4szmq21?hl=fr&entry=ttu&g_ep=EgoyMDI1MDMyMy4wIKXMDSoASAFQAw%3D%3D" 
                     target="_blank" 
                     aria-label="link to the map of the company">
-                        <img src="./assets/images/home/locationmap.webp" alt="localisation de la base de kanöe" class="location-map" width="500" height="375">
+                        <img 
+                        srcset="./assets/images/home/locationmapsm.webp 375w, ./assets/images/home/locationmaplg.webp 500w"
+                        sizes="(max-width: 799px) 375px, 500px"
+                        alt="localisation de la base de kanöe"
+                        src="./assets/images/home/locationmap.webp"  
+                        class="location-map" 
+                        loading="lazy">
                     </a>
                 </div>
             </div>
