@@ -147,7 +147,15 @@ header {
     right: 0;
     z-index: 1000;
 }
-
+.italic {
+    font-style: italic;
+}
+.bold {
+    font-weight: bold;
+}
+.center {
+    text-align: center;
+}
 .main-reservBtn:hover {
     
     transform: scale(1.05);
@@ -200,7 +208,7 @@ header {
 }
 .g-box button {
     padding: 3px !important;
-    background-color: var(--accent) !important;
+    background-color: var(--nature) !important;
     color: white !important;
     opacity: 1 !important;
     border: none !important;
@@ -226,7 +234,7 @@ header {
     text-decoration: underline;
 }
 .nav-item.active{
-    color: var(--accent);
+    color: var(--nature);
     text-decoration: underline;
 }
 
@@ -313,7 +321,7 @@ h1 {
     align-items:center;  
 }
 strong {
-    color: var(--accent);
+    color: var(--nature);
     font-weight: bolder;
 } 
 .border {
@@ -391,7 +399,7 @@ strong {
     cursor: pointer;
     z-index: 2;
     font-size: 1.5rem;
-    color: var(--accent);
+    color: var(--nature);
 }
 .carousel-next {
     right: 1%;
@@ -500,19 +508,24 @@ section {
     float: right;
 }
 .service-container p {
+    line-height: 1.2;
     font-size: 1.2rem;
     font-weight: bold;
-    text-align: left;
+    
     padding: 10px;
 }
-.service-container h3, .video-list h3 {
+.service-container h3 {
     font-size: 1.2rem;
     font-weight: bold;
     text-align: center;
-    color: var(--accent);
+    color: var(--primary);
     text-decoration: underline;
 }
-
+.video-list p {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    
+}
 
 /* chaine video  opt */
 
@@ -541,6 +554,8 @@ section {
 }
 .video-list h3 {
     font-size: 1.5rem;
+    text-decoration: underline;
+    color: var(--primary);
     font-weight: bold;
     margin: 10px auto;
 }
@@ -557,13 +572,13 @@ section {
 }
 .video-list ul li:hover{
     text-decoration: underline;
-    color: var(--accent);
+    color: var(--nature);
 }
 .video-list ul li:active{
-    color: var(--accent);
+    color: var(--nature);
 }
 .video-list ul li.active{
-    color: var(--accent);
+    color: var(--nature);
     text-decoration: underline;
 }
 .footer-container {
@@ -606,6 +621,12 @@ footer h3 {
     font-weight: bold;
     margin: 10px auto;
     color: var(--accent);
+}
+.footer-container p {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
 }
 .links{
     display: flex;
@@ -694,9 +715,6 @@ footer h3 {
     }
     .service-container h3, .video-list h3 {
         font-size: 1.5rem;
-        font-weight: bold;
-        text-align: center;
-        color: var(--primary);
     }
 }
 
@@ -805,8 +823,7 @@ footer h3 {
         max-height: 200px;
     }
     .service-container {
-        min-height: 270px;
-        
+        min-height: 270px; 
     }
     .logo-container {
         border-radius: 50%;
@@ -833,6 +850,7 @@ footer h3 {
     }
     .footer-container p {
         font-weight: bold;
+        
     }
     .links a {
         font-size: 1.5rem;
@@ -949,7 +967,7 @@ footer h3 {
 
 /* Style pour les éléments interactifs au focus */
 [role="button"]:focus {
-    outline: 3px solid var(--accent);
+    outline: 3px solid var(--nature);
     outline-offset: 2px;
 }
 
@@ -1029,7 +1047,7 @@ select:focus {
 /* Style pour les boutons de réservation */
 .main-reservBtn,
 .reservBtn {
-    background-color: var(--accent);
+    background-color: var(--nature);
     color: white;
     padding: 0.75rem 1.5rem;
     border-radius: 25px;
