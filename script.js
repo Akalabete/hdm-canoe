@@ -1,9 +1,16 @@
 document.addEventListener('DOMContentLoaded', function() {
-    //windows resisze reloader
+    //windows resize handler with debounce
+    let resizeTimeout;
     window.addEventListener('resize', () => {
-        window.location.reload();
-        updateHeaderClass();
-
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(() => {
+            const oldWidth = window.innerWidth;
+            // Only reload if width actually changes (not on height changes)
+            if (oldWidth !== window.innerWidth) {
+                window.location.reload();
+            }
+            updateHeaderClass();
+        }, 1000);
     });
 
     // 1. Gestion de la classe active pour la navigation
