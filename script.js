@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
         sections.forEach(section => {
             const sectionTop = section.offsetTop;
             const sectionHeight = section.clientHeight;
-            if (window.scrollY >= sectionTop - 60) {
+            if (window.scrollY >= sectionTop - 100) {
                 currentSection = section.getAttribute('id')
             }
         });
@@ -127,28 +127,40 @@ document.addEventListener('DOMContentLoaded', function() {
     let carouselTimer;
     const carouselImages = [
         {
-            src: './assets/images/slider/supp1opti.webp',
-            srcset: './assets/images/slider/supp1optism.webp 480w, ./assets/images/slider/supp1opti.webp 800w',
-            sizes: '(max-width: 600px) 480px, 800px',
-            alt: 'photo du débarcadère d\'Aubeterre Sur Drone'
+            srcset:"./assets/images/slider/sm/slider1.webp 480w, ./assets/images/slider/md/slider1.webp 800w",
+            sizes:"(max-width: 1023px) 480px, 800px",
+            src:"./assets/images/slider/md/slider1.webp",
+            alt:"deux hommes dans un canoë double sur la rivière Dronne" 
         },
         {   
-            src: './assets/images/slider/supp3opti.webp',
-            srcset: './assets/images/slider/supp3optism.webp 480w, ./assets/images/slider/supp3opti.webp 800w',
-            sizes: '(max-width: 600px) 480px, 800px',
-            alt: 'photo du débarcadère d\'Aubeterre Sur Drone'
+            srcset:"./assets/images/slider/sm/slider2.webp 480w, ./assets/images/slider/md/slider2.webp 800w",
+            sizes:"(max-width: 1023px) 480px, 800px",
+            src:"./assets/images/slider/md/slider2.webp",
+            alt:"Cascade d'un barrage sur la Dronne avec des arbres en arrière plan" 
         },
-        {
-            src: './assets/images/slider/p32opti.webp',
-            srcset: './assets/images/slider/p32optism.webp 480w, ./assets/images/slider/p32opti.webp 800w',
-            sizes: '(max-width: 600px) 480px, 800px',
-            alt: 'photo du débarcadère d\'Aubeterre Sur Drone'
+        {   
+            srcset:"./assets/images/slider/sm/slider3.webp 480w, ./assets/images/slider/md/slider3.webp 800w",
+            sizes:"(max-width: 1023px) 480px, 800px",
+            src:"./assets/images/slider/md/slider3.webp",
+            alt:"Prise de vue d'un barrage avec cascade d'eau, depuis une trouée entre les arbres, magnifique rendu du soleil sur l'eau" 
         },
-        {
-            src: './assets/images/slider/p36opti.webp',
-            srcset: './assets/images/slider/p36optism.webp 480w, ./assets/images/slider/p36opti.webp 800w',
-            sizes: '(max-width: 600px) 480px, 800px',
-            alt: 'photo du débarcadère d\'Aubeterre Sur Drone'
+        {   
+            srcset:"./assets/images/slider/sm/slider4.webp 480w, ./assets/images/slider/md/slider4.webp 800w",
+            sizes:"(max-width: 1023px) 480px, 800px",
+            src:"./assets/images/slider/md/slider4.webp",
+            alt:"Deux jeunes hommes dans des canoës monoplaces, en train de level le pouce" 
+        },
+        {   
+            srcset:"./assets/images/slider/sm/slider5.webp 480w, ./assets/images/slider/md/slider5.webp 800w",
+            sizes:"(max-width: 1023px) 480px, 800px",
+            src:"./assets/images/slider/md/slider5.webp",
+            alt:"Prise de vue d'un bras de la Dronne avec barrage et cascade près de saint aulaye" 
+        },
+        {   
+            srcset:"./assets/images/slider/sm/slider6.webp 480w, ./assets/images/slider/md/slider6.webp 800w",
+            sizes:"(max-width: 1023px) 480px, 800px",
+            src:"./assets/images/slider/md/slider6.webp",
+            alt:"deux canoës monoplaces sur la rivière Dronne, pris depuis un drone en hauteur" 
         }
     ]
     // auto carousel
