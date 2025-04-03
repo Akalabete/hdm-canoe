@@ -219,13 +219,35 @@ document.addEventListener('DOMContentLoaded', function() {
         carouselImg.sizes = carouselImages[index].sizes;
         carouselImg.alt = carouselImages[index].alt;
 
-        // Préchargement de la prochaine image
-        const nextIndex = (index + 1) % carouselImages.length;
-        const preloadLink = document.createElement('link');
-        preloadLink.rel = 'preload';
-        preloadLink.as = 'image';
-        preloadLink.href = carouselImages[nextIndex].src;
-        document.head.appendChild(preloadLink);
+        // Préchargement des images suivantes avec limite
+        let remainingPreloads = Math.min(2, carouselImages.length - 1); // On limite à 2 préchargements
+        let nextIndex = index;
+
+        while (remainingPreloads > 0) {
+            nextIndex = (nextIndex + 1) % carouselImages.length;
+            
+            // Vérifie si le lien de préchargement existe déjà
+            const existingPreload = document.querySelector(`link[rel="preload"][href="${carouselImages[nextIndex].src}"]`);
+            
+            if (!existingPreload) {
+                const preloadLink = document.createElement('link');
+                preloadLink.rel = 'preload';
+                preloadLink.as = 'image';
+                preloadLink.href = carouselImages[nextIndex].src;
+                preloadLink.setAttribute('data-carousel-preload', 'true');
+                document.head.appendChild(preloadLink);
+            }
+            
+            remainingPreloads--;
+        }
+
+        // Nettoyage des anciens préchargements
+        const oldPreloads = document.querySelectorAll('link[data-carousel-preload="true"]');
+        if (oldPreloads.length > 2) { // Garde seulement les 2 plus récents
+            Array.from(oldPreloads)
+                .slice(0, oldPreloads.length - 2)
+                .forEach(link => link.remove());
+        }
     }
     updateCarousel(0, 'start');
     updateTimer();
