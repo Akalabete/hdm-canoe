@@ -27,6 +27,27 @@ Options -Indexes
     
     # HSTS (à activer uniquement en production)
     # Header set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+
+    # Cache-Control pour différents types de fichiers
+    # Images
+    <FilesMatch "\.(jpg|jpeg|png|gif|webp|ico)$">
+        Header set Cache-Control "max-age=31536000, public"
+    </FilesMatch>
+    
+    # CSS, JavaScript
+    <FilesMatch "\.(css|js)$">
+        Header set Cache-Control "max-age=31536000, public"
+    </FilesMatch>
+    
+    # PDF Documents
+    <FilesMatch "\.(pdf)$">
+        Header set Cache-Control "max-age=86400, public"
+    </FilesMatch>
+    
+    # HTML et données dynamiques
+    <FilesMatch "\.(html|htm)$">
+        Header set Cache-Control "max-age=0, no-cache, no-store, must-revalidate"
+    </FilesMatch>
 </IfModule>
 
 # Compression GZIP

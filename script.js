@@ -218,11 +218,31 @@ document.addEventListener('DOMContentLoaded', function() {
         carouselImg.srcset = carouselImages[index].srcset;
         carouselImg.sizes = carouselImages[index].sizes;
         carouselImg.alt = carouselImages[index].alt;
+
+        // Préchargement de la prochaine image
+        const nextIndex = (index + 1) % carouselImages.length;
+        const preloadLink = document.createElement('link');
+        preloadLink.rel = 'preload';
+        preloadLink.as = 'image';
+        preloadLink.href = carouselImages[nextIndex].src;
+        document.head.appendChild(preloadLink);
     }
     updateCarousel(0, 'start');
     updateTimer();
     updateActiveLink();
     updateHeaderClass();
+
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/sw.js')
+                .then(registration => {
+                    console.log('ServiceWorker enregistré avec succès');
+                })
+                .catch(error => {
+                    console.log('Échec de l\'enregistrement du ServiceWorker:', error);
+                });
+        });
+    }
 });
 
 
