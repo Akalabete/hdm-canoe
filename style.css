@@ -596,7 +596,7 @@ section {
 }
 .contact-info-container, .footer-links-container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
     margin: 20px auto;
@@ -682,9 +682,17 @@ footer h3 {
     display: none;
     border-radius: 30px;
 }
-.fa-chevron-up {
+.chevron-up {
     font-size: 2rem;
-    color: #fff;
+    fill : #fff;
+    cursor: pointer;
+}
+.chevron-left, .chevron-right {
+    fill: var(--nature);
+}
+.phone-icon, .email-icon {
+    width: 1.5rem;
+    height: 1.5rem;
     cursor: pointer;
 }
 
