@@ -87,6 +87,7 @@ header, .footer-links-container {
 }
 .footer-links-container {
     padding: 20px;
+    display: row;
 }
 
 :root {
@@ -135,10 +136,16 @@ header, .footer-links-container {
 
 
 .main-reservBtn {
-    color: white;
+    color: white !important;
     padding: 15px 30px;
     border-radius: 25px;
     transition: all 0.3s ease;
+}
+.home-container button {
+    margin-top: 10px;
+}
+.gdp-scoped-ui .g-button.button.style-primary {
+    color: white !important;
 }
 header {
     position: fixed;
@@ -454,9 +461,11 @@ section {
 }
 /* guidap main btn */
 .main-reservBtn{
-    position: absolute;
-    bottom: 10%;
-    right: 20%;
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -596,15 +605,16 @@ section {
 }
 .contact-info-container, .footer-links-container {
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
     align-items: center;
     margin: 20px auto;
     text-align: center;
     padding: 10px;
 }
+
 .contact-info-container {
     width: 90%;
+    flex-direction: column;
 }
 .map-container {
     width: 80%;
@@ -1057,7 +1067,7 @@ select:focus {
 /* Style pour les boutons de réservation */
 .main-reservBtn,
 .reservBtn {
-    background-color: var(--nature);
+    background-color: transparent;
     color: white;
     padding: 0.75rem 1.5rem;
     border-radius: 25px;
@@ -1069,7 +1079,7 @@ select:focus {
 .main-reservBtn:focus,
 .reservBtn:hover,
 .reservBtn:focus {
-    background-color: #e68a00;
+    
     transform: scale(1.05);
 }
 
