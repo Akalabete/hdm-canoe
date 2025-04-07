@@ -291,6 +291,9 @@ h2::after {
     text-align: center;
     color: var(--primary);
 }
+.footer-container ul li{
+    font-size: 1.4rem;
+}
 .logo-container {
     overflow: hidden;
     width: 120px;
