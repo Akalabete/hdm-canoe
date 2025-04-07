@@ -10,7 +10,7 @@
     <meta property="og:url" content="https://www.hdm-canoe.fr"/>
     <meta property="og:image" content="http://www.hdm-canoe.fr/assets/home/logokayakdtoure.webp"/>
     <meta name="robots" content="index, follow">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style.css?v=1.0.1">
     <link rel="shortcut icon" type="image/icon" href="assets/logo/favicon.webp"/>
     <link rel="preload" as="image" href="https://www.hdm-canoe.fr/assets/images/home/smlogohdmcanoe.webp" media="(max-width: 1023px)" />
     <link rel="preload" as="image" href="https://www.hdm-canoe.fr/assets/images/home/lglogohdmcanoe.webp" media="(min-width: 1024px)" />
@@ -219,16 +219,15 @@
         }
         </script>
     <script src="https://cart.guidap.net/v1/" async defer data-token="0HnUcLDPJSaA2Oj753yiuvlxQqzMd4oXGmkT" data-lang="fr" data-currency="EUR"></script>
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-    <meta http-equiv="Pragma" content="no-cache">
-    <meta http-equiv="Expires" content="0">
 </head>
 
 <body>
     <header role="banner">
         <div tabindex="0" role="button" aria-label="button to go to the top of the page" class="upbtn">
-            <svg xmlns="http://www.w3.org/2000/svg" class="chevron-up" viewBox="0 0 512 512">
-                <path d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"/></svg></div>
+            <svg xmlns="http://www.w3.org/2000/svg" class="chevron-up" viewBox="0 0 512 512" width="24" height="24" fill="currentColor">
+                <path d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"/>
+            </svg>
+        </div>
         <div class="header-container flex-row">
             <div tabindex="0" class="logo-container">
                 <h1>HDM&nbsp;Canoë</h1>
@@ -319,6 +318,7 @@
             <h2 tabindex="0">Les différentes activités que nous proposons:</h2>
             <div class="travel-cards-container">
                 <div tabindex="0" class="travel-card">
+                    <div class="actiButtonContainer"><guidap-activity-details-button activity-uuid="H9gGx7InohXUls4ZPuOybvm3awKBNzTQe820"></guidap-activity-details-button></div>
                     <div class="travel-card-info" role="contentinfo">
                         <div class="travel-card-info-sub">
                             <p>De Bersac</p>
@@ -329,16 +329,10 @@
                             <p>5h30</p>
                         </div>
                         <div class="travel-card-info-sub" >
-                            <guidap-booking-widget 
-                                activity-uuid="H9gGx7InohXUls4ZPuOybvm3awKBNzTQe820"
-                                class="guidap-booking-widget"
-                                aria-label="button to book the activity">
-                                <p>à partir de</p>
-                                <p>25€</p>
-                            </guidap-booking-widget>
-
-                            
+                            <p>à partir de</p>
+                            <p>28€</p>
                         </div>
+                        
                     </div>
                     <img 
                         srcset="./assets/images/activity/sm/acti1.webp 300w, ./assets/images/activity/md/acti1.webp 480w"
@@ -348,6 +342,7 @@
                         role="img"/>
                 </div>
                 <div tabindex="0" class="travel-card" role="contentinfo">
+                    <div class="actiButtonContainer"><guidap-activity-details-button activity-uuid="d8VW5nzxZXESKbI3NmATsrh4kvUJo2t1fpFQ"></guidap-activity-details-button></div>
                     <div class="travel-card-info">
                         <div class="travel-card-info-sub">
                             <p>D'Aubeterre</p>
@@ -357,14 +352,9 @@
                             <p>10,5km</p>
                             <p>3h30</p>
                         </div>
-                        <div class="travel-card-info-sub">
-                            <guidap-booking-widget 
-                                activity-uuid="d8VW5nzxZXESKbI3NmATsrh4kvUJo2t1fpFQ"
-                                class="guidap-booking-widget"
-                                aria-label="button to book the activity">
-                                <p>à partir de</p>
-                                <p>23€</p>
-                            </guidap-booking-widget>
+                        <div class="travel-card-info-sub"> 
+                            <p>à partir de</p>
+                            <p>23€</p>
                         </div>
                     </div>
                     <img 
@@ -375,6 +365,7 @@
                         role="img"/>
                 </div>
                 <div tabindex="0" class="travel-card" role="contentinfo">
+                    <div class="actiButtonContainer"><guidap-activity-details-button activity-uuid="46v7UimYtL0OISxlTWbEA2hpMJNRjKywuFz1"></guidap-activity-details-button></div>
                     <div class="travel-card-info">
                         <div class="travel-card-info-sub">
                             <p>De Bonnes</p>
@@ -385,13 +376,8 @@
                             <p>1h30</p>
                         </div>
                         <div class="travel-card-info-sub">
-                            <guidap-booking-widget 
-                                activity-uuid="46v7UimYtL0OISxlTWbEA2hpMJNRjKywuFz1"
-                                class="guidap-booking-widget"
-                                aria-label="button to book the activity">
-                                <p>à partir de</p>
-                                <p>20€</p>
-                            </guidap-booking-widget>
+                            <p>à partir de</p>
+                            <p>20€</p>
                         </div>
                     </div>
                     <img 
@@ -403,6 +389,7 @@
                         role="img"/>
                 </div>
                 <div tabindex="0" class="travel-card" role="contentinfo">
+                    <div class="actiButtonContainer"><guidap-activity-details-button activity-uuid="bgIsqhGkSVKatf1XH6z7Mc94eAODYlBxpUJr"></guidap-activity-details-button></div>
                     <div class="travel-card-info">
                         <div class="travel-card-info-sub">
                             <p>Canoës</p>
@@ -413,13 +400,8 @@
                             <p>1h</p>
                         </div>
                         <div class="travel-card-info-sub">
-                            <guidap-booking-widget 
-                                activity-uuid="bgIsqhGkSVKatf1XH6z7Mc94eAODYlBxpUJr"
-                                class="guidap-booking-widget"
-                                aria-label="button to book the activity">
-                                <p>à partir de</p>
-                                <p>10€</p>
-                            </guidap-booking-widget>
+                            <p>à partir de</p>
+                            <p>10€</p>
                         </div>
                     </div>
                     <img 
@@ -431,6 +413,7 @@
                         role="img"/>
                 </div>
                 <div tabindex="0" class="travel-card" role="contentinfo">
+                    <div class="actiButtonContainer"><guidap-activity-details-button activity-uuid="xDJPNaE9vtMCLsud7wKrU8gVHhnA4jkZqcWl"></guidap-activity-details-button></div>
                     <div class="travel-card-info">
                         <div class="travel-card-info-sub">
                             <p>Pédalos</p>
@@ -441,13 +424,8 @@
                             <p>1h</p>
                         </div>
                         <div class="travel-card-info-sub">
-                            <guidap-booking-widget 
-                                activity-uuid="xDJPNaE9vtMCLsud7wKrU8gVHhnA4jkZqcWl"
-                                class="guidap-booking-widget"
-                                aria-label="button to book the activity">
-                                <p>à partir de</p>
-                                <p>7€</p>
-                            </guidap-booking-widget>
+                            <p>à partir de</p>
+                            <p>7€</p>
                         </div>
                     </div>
                     <img 
@@ -459,6 +437,7 @@
                         role="img"/>
                 </div>
                 <div tabindex="0" class="travel-card" role="contentinfo">
+                    <div class="actiButtonContainer"><guidap-activity-details-button activity-uuid="0MhZfmTUE9SBRp3aVwidX1PFAOyn4oCxKs6e"></guidap-activity-details-button></div>
                     <div class="travel-card-info">
                         <div class="travel-card-info-sub">
                             <p>Paddle</p>
@@ -469,13 +448,8 @@
                             <p>1h</p>
                         </div>
                         <div class="travel-card-info-sub">
-                            <guidap-booking-widget 
-                                activity-uuid="0MhZfmTUE9SBRp3aVwidX1PFAOyn4oCxKs6e"
-                                class="guidap-booking-widget"
-                                aria-label="button to book the activity">
-                                <p>à partir de</p>
-                                <p>11€</p>
-                            </guidap-booking-widget>
+                            <p>à partir de</p>
+                            <p>11€</p>
                         </div>
                     </div>
                     <img 
@@ -602,17 +576,6 @@
                     muted
                     aria-label="Vidéo de présentation des parcours de canoë sur la Dronne"
                     src="./assets/videos/v9opti4-3.mp4">
-                    <track 
-                        kind="captions" 
-                        src="./assets/videos/captions-fr.vtt" 
-                        srclang="fr" 
-                        label="Français" 
-                        default>
-                    <track 
-                        kind="descriptions" 
-                        src="./assets/videos/descriptions-fr.vtt" 
-                        srclang="fr" 
-                        label="Description audio">
                     <p>Votre navigateur ne supporte pas la lecture de vidéos. Voici une description du contenu : Vidéo de présentation des parcours de canoë sur la rivière Dronne, montrant les différents paysages et points de départ.</p>
                 </video>
                 <div class="video-transcript" hidden>
@@ -718,6 +681,6 @@
                 aria-label="link to the webmaster website">Dev&apos;your synergy</a></h2>
         </div>
     </footer>
-    <script src="./script.js"></script>
+    <script src="./script.js?v=1.0.1"></script>
 </body>
 </html>
