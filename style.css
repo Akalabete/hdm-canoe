@@ -2,19 +2,19 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Utilise le modèle de boîte pour tous les éléments */
+    box-sizing: border-box; 
 }
 
 html {
-    -webkit-text-size-adjust: 100%; /* Pour Safari */
-    -ms-text-size-adjust: 100%; /* Pour IE */
+    -webkit-text-size-adjust: 100%; 
+    -ms-text-size-adjust: 100%; 
 
     background-color: var(--nature);
 }
 
 body {
-    line-height: 1.5; /* Améliore la lisibilité */
-    font-family: 'Roboto, sans-serif'; /* Définit une police par défaut */
+    line-height: 1.5; 
+    font-family: 'Roboto, sans-serif';
     max-width: 1600px;
     margin: 0 auto;
     background-color: rgb(240, 240, 240);
@@ -24,61 +24,59 @@ body {
     line-height: 1.6;
 }
 
-/* Éléments de base */
 h1, h2, h3, h4, h5, h6 {
-    font-weight: normal; /* Normalise le poids de la police */
+    font-weight: normal; 
 }
 
 ul, ol {
-    list-style: none; /* Supprime les puces et numéros par défaut */
+    list-style: none;
 }
 
 a {
-    text-decoration: none; /* Supprime le soulignement des liens */
-    color: inherit; /* Hérite de la couleur du texte parent */
+    text-decoration: none; 
+    color: inherit; 
 }
 
 img {
-    max-width: 100%; /* Assure que les images ne débordent pas de leur conteneur */
-    height: auto; /* Maintient le ratio d'aspect */
-    display: block; /* Évite les espaces en bas des images */
+    max-width: 100%; 
+    height: auto; 
+    display: block; 
 }
 
 /* Boutons */
 button {
-    cursor: pointer; /* Change le curseur pour indiquer que c'est cliquable */
-    border: none; /* Supprime les bordures par défaut */
-    background: none; /* Supprime le fond par défaut */
+    cursor: pointer; 
+    border: none; 
+    background: none; 
 }
 
-/* Formulaires */
+
 input, textarea, select {
-    font-family: inherit; /* Hérite de la police du parent */
-    font-size: inherit; /* Hérite de la taille de police du parent */
+    font-family: inherit; 
+    font-size: inherit;
 }
 
-/* Styles pour les éléments de formulaire */
+
 input[type="text"],
 input[type="email"],
 input[type="password"],
 textarea {
-    border: 1px solid #ccc; /* Bordure par défaut */
-    border-radius: 4px; /* Coins arrondis */
-    padding: 10px; /* Espacement interne */
-    width: 100%; /* Prend toute la largeur du conteneur */
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    padding: 10px; 
+    width: 100%; 
 }
 
-/* Styles pour les éléments de formulaire au focus */
 input:focus,
 textarea:focus {
-    border-color: #4CAF50; /* Change la couleur de la bordure au focus */
-    outline: none; /* Supprime le contour par défaut */
+    border-color: #4CAF50; 
+    outline: none; 
 }
 
-/* Styles pour les éléments de formulaire désactivés */
 input:disabled,
 textarea:disabled {
-    background-color: #f5f5f5; /* Couleur de fond pour les éléments désactivés */}
+    background-color: #f5f5f5; 
+}
 
 header, .footer-links-container {
     text-align: center;
@@ -91,15 +89,13 @@ header, .footer-links-container {
 }
 
 :root {
-    /* Palette de couleurs principale */
-    --primary: #005B8C;    /* Bleu plus foncé pour l'eau */
-    --secondary: #0096C7;  /* Bleu plus vif pour l'accent */
-    --accent: #FF8C00;     /* Orange plus foncé pour les CTA */
-    --light: #E3F2FD;      /* Bleu plus contrasté pour les fonds */
-    --dark: #001F3F;       /* Bleu plus foncé pour les textes */
-    --nature: #2D5A27;     /* Vert plus foncé pour les éléments nature */
+    --primary: #005B8C;     
+    --secondary: #0096C7;  
+    --accent: #FF8C00;     
+    --light: #E3F2FD;      
+    --dark: #001F3F;      
+    --nature: #2D5A27;     
 }
-/* polices */
 
 @font-face {
     font-family: 'Space Mono';
@@ -639,7 +635,6 @@ section {
 .contact-info-container, .footer-links-container {
     display: flex;
     justify-content: space-between;
-    align-items: center;
     margin: 20px auto;
     text-align: center;
     padding: 10px;
@@ -649,6 +644,7 @@ section {
     width: 90%;
     margin: 10px auto;
     flex-direction: column;
+    text-align: center;
 }
 .map-container {
     width: 80%;
@@ -839,6 +835,11 @@ footer h3 {
     .video-list li{
         font-size: 1.5rem;
         font-weight: bold;
+        text-align: left;
+    }
+    .video-list ul {
+        margin-left: 10px;
+        align-items: flex-start;
     }
     
     #home .main-explanation {
@@ -898,6 +899,11 @@ footer h3 {
     }
     .service-container {
         min-height: 270px; 
+    }
+    .service-container li {
+        align-items: flex-start;
+        margin-left: 10px;
+        text-align: left;
     }
     .logo-container {
         border-radius: 50%;
